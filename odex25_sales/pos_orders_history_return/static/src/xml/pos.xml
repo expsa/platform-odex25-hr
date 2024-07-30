@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-inherit="pos_orders_history.OrdersHistoryScreen" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('order-row')]/div[hasclass('actions')]" position="inside">
+            <button class="return" t-on-click="click_return_order_by_id(order.id)">
+                <i class="fa fa-undo" /> Return
+            </button>            
+        </xpath>
+        <xpath expr="//div[hasclass('controls')]/div[hasclass('buttons')]" position="inside">
+            <button class="return-no-receipt" t-on-click="return_no_receipt()">
+                No Receipt
+            </button>
+        </xpath>
+    </t>
+
+    <t t-inherit="point_of_sale.ProductsWidgetControlPanel" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-if='props.subcategories.length > 0 and !env.pos.config.iface_display_categ_images and !env.isMobile']" position="replace">
+            <t t-set="order" t-value="env.pos.get_order()" />
+            <t t-if="order and order.get_mode() !== 'return' and order.get_mode() !== 'return_without_receipt'">
+                <t t-if="props.subcategories.length > 0 and !env.pos.config.iface_display_categ_images and !env.isMobile">
+                    <t t-foreach="props.subcategories" t-as="category" t-key="category.id">
+                        <CategorySimpleButton category="category" />
+                    </t>
+                </t>
+            </t>
+            <t t-elif="!env.pos.config.iface_display_categ_images">
+                <span class="breadcrumb">
+                    <img src="/point_of_sale/static/src/img/bc-arrow-big.png" class="breadcrumb-arrow"
+                         alt="Slash" />
+                    <span class="breadcrumb-button">
+                          <t t-esc="order.name" />
+                    </span>
+                </span>
+            </t>
+        </xpath>
+        
+        <xpath expr="//t[@t-if='props.subcategories.length > 0 and env.pos.config.iface_display_categ_images and !env.isMobile']" position="replace">
+            <t t-set="order" t-value="env.pos.get_order()" />
+            <t t-if="order and order.get_mode() !== 'return' and order.get_mode() !== 'return_without_receipt'">
+                <t t-if="props.subcategories.length > 0 and env.pos.config.iface_display_categ_images and !env.isMobile">
+                    <t t-foreach="props.subcategories" t-as="category" t-key="category.id">
+                        <CategoryButton category="category" />
+                    </t>
+                </t>
+            </t>
+            <t t-elif="env.pos.config.iface_display_categ_images">
+                <span class="breadcrumb">
+                    <img src="/point_of_sale/static/src/img/bc-arrow-big.png" class="breadcrumb-arrow"
+                         alt="Slash" />
+                    <span class="breadcrumb-button">
+                          <t t-esc="order.name" />
+                    </span>
+                </span>
+            </t>
+        </xpath>
+    </t>
+
+    <t t-inherit="product_available.ProductItemWithQuantity" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-esc='state.qty_available']" position="replace">
+            <t t-set="order" t-value="env.pos.get_order()" />
+            <t t-if="order and order.get_mode() !== 'return'">
+                <t t-esc="state.qty_available"/>
+            </t>
+            <t t-else="">
+                <t t-esc="max_return_qty.value"/>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

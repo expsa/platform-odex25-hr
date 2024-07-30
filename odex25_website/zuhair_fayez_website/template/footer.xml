@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="my_footer" inherit_id="website.layout" name="Footer">
+        <xpath expr="//footer" position="replace">
+
+            <div class="footer-container">
+                <div class="overlay-footer"></div>
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="/">
+                            <img src="/zuhair_fayez_website/static/img/logo-dark-lrg.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="footer-menu">
+                        <a href="/">home</a>
+                        <a href="/about">about</a>
+                        <a href="/services">services</a>
+                        <a href="/news">media center</a>
+                        <a href="/careers">careers</a>
+                        <a href="/contact">contact</a>
+                    </div>
+                    <div class="go-top">
+                        <div class="go-top-inner">
+                            <lottie-player class="go-top-lottie" src="/zuhair_fayez_website/static/img/go-top.json"
+                                           background="transparent" speed="1"
+                                           autoplay="autoplay" loop="loop">
+                            </lottie-player>
+                        </div>
+                    </div>
+                    <div class="social-small">
+                        <a href="#">
+                            <img src="/zuhair_fayez_website/static/img/facebook.png" alt=""/>
+                        </a>
+                        <a href="#">
+                            <img src="/zuhair_fayez_website/static/img/twitter.png" alt=""/>
+                        </a>
+                        <a href="#">
+                            <img src="/zuhair_fayez_website/static/img/instagram.png" alt=""/>
+                        </a>
+                        <a href="#">
+                            <img src="/zuhair_fayez_website/static/img/youtube.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="social">
+                        <a href="#">
+                            <img src="/zuhair_fayez_website/static/img/facebook.png" alt=""/>
+                        </a>
+                        <a href="#">
+                            <img src="/zuhair_fayez_website/static/img/twitter.png" alt=""/>
+                        </a>
+                        <a href="#">
+                            <img src="/zuhair_fayez_website/static/img/instagram.png" alt=""/>
+                        </a>
+                        <a href="#">
+                            <img src="/zuhair_fayez_website/static/img/youtube.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="copywrite">
+                        <p>© 2022 Zuhair Fayez Partnership All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+
+        </xpath>
+    </template>
+
+</odoo>

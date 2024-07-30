@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="pos_orders_history_return assets"
+        inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript"
+                src="/pos_orders_history_return/static/src/js/models.js" />
+            <script type="text/javascript"
+                src="/pos_orders_history_return/static/src/js/Screens/ProductScreen/ProductItem.js" />
+            <script type="text/javascript"
+                src="/pos_orders_history_return/static/src/js/Screens/ProductScreen/ProductsWidget.js" />
+            <script type="text/javascript"
+                src="/pos_orders_history_return/static/src/js/Screens/OrderHistoryScreen/OrderHistoryScreenReturn.js" />
+            <link rel="stylesheet" href="/pos_orders_history_return/static/src/css/pos.css" />
+        </xpath>
+    </template>
+</odoo>

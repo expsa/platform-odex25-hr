@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="about" name="about">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="about-cta-container animation">
+                    <div class="about-overlay"></div>
+                    <div class="animation-section-overlay"></div>
+                    <div class="about-cta">
+                        <div class="about-cta-content">
+                            <div class="upper">
+                                <div class="upper-content">
+                                    <p>about us</p>
+                                    <p>We are based on collective work and shared knowledge</p>
+                                </div>
+                            </div>
+                            <hr class="hr"/>
+                            <div class="bottom">
+                                <div class="bottom-content">
+                                    <p>Make with love all what we do</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explore-about">
+                        <p>scroll to explore</p>
+                        <span class="scroll-explore-container-about">
+                            <span class="scroll-roller-about"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="who-we-are">
+                    <div class="who-img-container">
+                        <div class="who-img">
+                            <img src="/zuhair_fayez_website/static/img/who-we-are.webp" alt=""/>
+                        </div>
+                    </div>
+                    <div class="who-content">
+                        <p>Who we are "<span>Zuhair Fayez</span>" ?
+                        </p>
+                        <p>Zuhair Fayez Partnership is Consultants in the Kingdom of Saudi Arabia with more than 47
+                            years of
+                            professional experience in the local, regional and international market since it was created
+                            in 1975 The
+                            organization headquarter is in Riyadh and the regional headquarter in Jeddah with branch
+                            offices in
+                            Dammam, Madinah, Makkah and Cairo.In January 1996, Zuhair Fayez Partnership was awarded the
+                            first ISO
+                            9001 + TickIT quality certification as an Architectural, Engineering and Information
+                            Technology
+                            Consultant in the Middle East and so is consudered as the pioneers in the middle east for
+                            QMS
+                            implementation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="miss-visi">
+                    <div class="vision">
+                        <img src="/zuhair_fayez_website/static/img/vision.png" alt=""/>
+                        <p class="vision-title">our vision</p>
+                        <p class="vision-desc">Provide our clients with innovative, quality solutions.</p>
+                    </div>
+                    <div class="mission">
+                        <img src="/zuhair_fayez_website/static/img/mission.png" alt=""/>
+                        <p class="mission-title">our mission</p>
+                        <p class="mission-desc">Be the Architectural and Engineering Consultant of choice.</p>
+                    </div>
+                    <span class="miss-visi-divider"></span>
+                </div>
+
+                <div class="values-container">
+                    <p class="values-title">our values</p>
+                    <div class="values">
+                        <div class="value">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48.926" height="37.065"
+                                 viewBox="0 0 48.926 37.065">
+                                <g id="handle-with-care-svgrepo-com" transform="translate(0 -46.699)">
+                                    <path id="Path_743" data-name="Path 743"
+                                          d="M107.988,65.913a10.3,10.3,0,0,1,3.277,3.128H115.6a10.293,10.293,0,0,1,3.275-3.127c2.081-1.157,5.421-2.856,5.681-2.988a4.146,4.146,0,0,1,.4-.19V46.7H116.3v6.59h-.461l-1.163-1.163-1.163,1.163h-.169l-1.163-1.163-1.163,1.163h-.461V46.7h-8.649V62.735a4.159,4.159,0,0,1,.4.19C102.568,63.058,105.908,64.757,107.988,65.913Z"
+                                          transform="translate(-88.969 0)" fill="#fff"/>
+                                    <path id="Path_744" data-name="Path 744"
+                                          d="M223.82,93.972a2.626,2.626,0,0,0-3.239,1.825l-2.706,9.682a4.015,4.015,0,0,1,.6,2.713,4.671,4.671,0,0,1-2.508,3.174l-.041.023-4.658,2.451a.936.936,0,0,1-.871-1.656l4.636-2.439a2.924,2.924,0,0,0,1.6-1.855,2.3,2.3,0,0,0-.479-1.628h0a2.28,2.28,0,0,0-2.845-.505l-.033.018c-.035.018-3.51,1.782-5.634,2.963a8.757,8.757,0,0,0-4.062,6.446l-1.032,9.769h8.1l.67-5.163a.935.935,0,0,1,.436-.676l8.532-5.27a2.628,2.628,0,0,0,1.151-1.53l4.218-15.1A2.634,2.634,0,0,0,223.82,93.972Z"
+                                          transform="translate(-176.817 -41.184)" fill="#fff"/>
+                                    <path id="Path_745" data-name="Path 745"
+                                          d="M18.109,108.732c-2.124-1.181-5.6-2.945-5.633-2.962l-.033-.018A2.207,2.207,0,0,0,9.12,107.9a2.939,2.939,0,0,0,1.593,1.841l4.637,2.439a.936.936,0,1,1-.871,1.656L9.82,111.387l-.041-.023a4.67,4.67,0,0,1-2.508-3.174,4.015,4.015,0,0,1,.6-2.713L5.162,95.8A2.63,2.63,0,1,0,.1,97.212l4.218,15.1a2.629,2.629,0,0,0,1.151,1.531L14,119.108a.936.936,0,0,1,.436.676l.671,5.163h8.1l-1.033-9.779A8.749,8.749,0,0,0,18.109,108.732Z"
+                                          transform="translate(0 -41.183)" fill="#fff"/>
+                                </g>
+                            </svg>
+                            <p>integrity</p>
+                            <p>Respect and Integrity</p>
+                        </div>
+                        <div class="value">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+                                <g id="Group_938" data-name="Group 938" transform="translate(-654 -2858)">
+                                    <path id="Vector" d="M1.935.967A.967.967,0,1,1,.967,0,.967.967,0,0,1,1.935.967Z"
+                                          transform="translate(675.57 2860.44)" fill="#fff"/>
+                                    <path id="Vector-2" data-name="Vector"
+                                          d="M42.77,13.576a3.376,3.376,0,0,0-3.242,2.757H37.463a.751.751,0,0,0-.631.715v3.171H32.78a10.992,10.992,0,0,0-5.136-6.039c-.257-.14-.59-.27-.861-.387a10.151,10.151,0,0,0-3.794-.878v-5.3H23.8c.324,0,.42-.13.42-.454V6.036c0-.032.1-.066.143-.094a3.316,3.316,0,0,0,1.426-2.67A3.239,3.239,0,0,0,22.178.02,3.28,3.28,0,0,0,20.62,5.946c.034.024,0,.058,0,.09V7.16c0,.324.371.454.7.454h.632v5.3a10.775,10.775,0,0,0-9.654,7.3H9.15V17.049a.723.723,0,0,0-.6-.715H6.491a3.376,3.376,0,0,0-3.242-2.757A3.284,3.284,0,0,0,0,16.882a2.847,2.847,0,0,0,1.471,2.745V20.8c0,.324.213.46.537.46H4.493c.324,0,.58-.136.58-.46V19.627A3.867,3.867,0,0,0,6.442,17.66h1.38V20.8c0,.324.4.46.725.46h3.417a14.135,14.135,0,0,0-.242,1.747l-.014.063v1.244l-1.921,5.3a.774.774,0,0,0,.77,1.031h1.165l-.009,6.112a2.219,2.219,0,0,0,2.152,2.229h7.1a.525.525,0,1,1,0,1.043h-3.1v4.426A1.566,1.566,0,0,0,19.481,46h9.9a1.456,1.456,0,0,0,1.477-1.545V33.2a9.566,9.566,0,0,1,1.2-4.435,10.776,10.776,0,0,0,1.273-4.778c0-.086.018-.175.018-.263,0-.169.007-.4,0-.569a12.638,12.638,0,0,0-.238-1.892h4.353c.324,0,.411-.136.411-.46V17.66h1.7a4.454,4.454,0,0,0,1.331,1.967V20.8c0,.324.294.46.618.46h2.485c.324,0,.5-.136.5-.46V19.627A3.487,3.487,0,0,0,46,16.882,3.268,3.268,0,0,0,42.77,13.576Zm-21.4-8.59A2.093,2.093,0,1,1,24.66,3.272a2.118,2.118,0,0,1-.908,1.712,1.316,1.316,0,0,0-.573,1.052v.535H21.948V6.036A1.319,1.319,0,0,0,21.373,4.986ZM5.222,17.635a2.243,2.243,0,0,1-1.08,1.139.676.676,0,0,0-.4.52v.925H2.514v-.925a.554.554,0,0,0-.275-.52,2.076,2.076,0,0,1-1.11-1.86,2.11,2.11,0,0,1,4.22,0A2.081,2.081,0,0,1,5.222,17.635ZM29.79,21.348a3.518,3.518,0,0,1-3.53,3.136H18.432A3.515,3.515,0,0,1,14.9,21.35,2.835,2.835,0,0,1,14.881,21a3.08,3.08,0,0,1,.089-.779h0s0,0,0,0a3.55,3.55,0,0,1,3.462-2.753,3.506,3.506,0,0,1,.962.137,3.3,3.3,0,0,1,2.554-2.2h0a3.03,3.03,0,0,1,.759-.107l.42,0h0a3.653,3.653,0,0,1,2.853,2.163c.094-.009.188,0,.281,0a3.562,3.562,0,0,1,3.551,3.555A2.7,2.7,0,0,1,29.79,21.348Zm13.971-2.574a.57.57,0,0,0-.294.52v.925H41.951v-.925a.525.525,0,0,0-.235-.52c-.049-.026-.057-.053-.1-.085-.028-.015-.033-.032-.059-.053a1.7,1.7,0,0,1-.288-.25c-.026-.024-.044-.049-.068-.075a.232.232,0,0,1-.027-.036c-.034-.038-.065-.077-.095-.117a.113.113,0,0,0-.014-.021,1.789,1.789,0,0,1-.1-.156,1.266,1.266,0,0,1-.089-.168,1.761,1.761,0,0,1-.075-.177c-.019-.049-.034-.1-.049-.151s-.028-.1-.038-.158c0-.026-.011-.051-.013-.077-.009-.049-.015-.1-.019-.147a1.854,1.854,0,0,1-.009-.188,2.087,2.087,0,0,1,.013-.23c0-.038.009-.075.015-.111s.015-.081.024-.121.023-.1.038-.143c0-.013.009-.028.015-.043a.818.818,0,0,1,.043-.124c.019-.047.038-.092.062-.138.011-.024.023-.049.036-.073s.038-.07.06-.1a.726.726,0,0,1,.056-.085,2.019,2.019,0,0,1,.3-.35c.034-.034.07-.066.109-.1a.038.038,0,0,1,.015-.011,1.1,1.1,0,0,1,.117-.087,1.9,1.9,0,0,1,.292-.173c.026-.013.053-.026.081-.036a.879.879,0,0,1,.115-.047,1.63,1.63,0,0,1,.171-.053c.056-.015.113-.028.171-.038a.019.019,0,0,1,.011,0,1.547,1.547,0,0,1,.177-.023,1.787,1.787,0,0,1,.186-.009,2.113,2.113,0,0,1,2.112,2.1A2.084,2.084,0,0,1,43.762,18.774Z"
+                                          transform="translate(654 2858)" fill="#fff"/>
+                                    <path id="Vector-3" data-name="Vector"
+                                          d="M1.935.967A.967.967,0,1,1,.967,0,.967.967,0,0,1,1.935.967Z"
+                                          transform="translate(695.78 2874.081)" fill="#fff"/>
+                                    <path id="Vector-4" data-name="Vector"
+                                          d="M1.935.967A.967.967,0,1,1,.967,0,.967.967,0,0,1,1.935.967Z"
+                                          transform="translate(656.262 2874.081)" fill="#fff"/>
+                                    <path id="Vector-5" data-name="Vector"
+                                          d="M3.071,0H.587A.658.658,0,0,0,0,.664a.658.658,0,0,0,.587.664H3.071A.658.658,0,0,0,3.658.664.658.658,0,0,0,3.071,0Z"
+                                          transform="translate(655.388 2880.115)" fill="#fff"/>
+                                    <path id="Vector-6" data-name="Vector"
+                                          d="M3.072,0H.587A.658.658,0,0,0,0,.664a.658.658,0,0,0,.587.664H3.072A.658.658,0,0,0,3.658.664.658.658,0,0,0,3.072,0Z"
+                                          transform="translate(694.919 2880.115)" fill="#fff"/>
+                                    <path id="Vector-7" data-name="Vector"
+                                          d="M3.64,2.749H2.132L3.047.359A.331.331,0,0,0,3.029.138C3,.093,2.946,0,2.891,0H1.413c-.072,0-.136.114-.159.182L.008,4.007a.21.21,0,0,0,.024.17.19.19,0,0,0,.135.089H1.638L.886,6.39a.187.187,0,0,0,.092.234.2.2,0,0,0,.092.022.191.191,0,0,0,.155-.082L3.775,3.019a.171.171,0,0,0,.013-.176A.169.169,0,0,0,3.64,2.749Z"
+                                          transform="translate(674.62 2874.808)" fill="#fff"/>
+                                </g>
+                            </svg>
+                            <p>integrity</p>
+                            <p>Respect and Integrity</p>
+                        </div>
+                        <div class="value">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="46.629" height="46.632"
+                                 viewBox="0 0 46.629 46.632">
+                                <g id="sprout-svgrepo-com" transform="translate(-0.016)">
+                                    <g id="Group_985" data-name="Group 985" transform="translate(3.064)">
+                                        <g id="Group_984" data-name="Group 984">
+                                            <path id="Path_746" data-name="Path 746"
+                                                  d="M65.419,0H59.337a7.611,7.611,0,0,0-7.6,7.6v5.453A14.306,14.306,0,0,0,50.213,14.7a14.425,14.425,0,0,0-1.531-1.641V7.6A7.6,7.6,0,0,0,41.09,0H35.008a1.52,1.52,0,0,0-1.521,1.521V7.6a7.611,7.611,0,0,0,7.6,7.6h5.453c1.014,1.014,2.15,1.968,2.15,4.04v2.111a19.642,19.642,0,0,0-11.2,4.609c.1.085.2.169.287.261l3.16,3.159a6.242,6.242,0,0,1,5.9-4.043h4.254a1.512,1.512,0,0,0,.6-.091,15.17,15.17,0,0,1,5.752-2.579,19.757,19.757,0,0,0-5.717-1.311V19.246c0-2.072,1.147-3.026,2.16-4.04h5.453a7.611,7.611,0,0,0,7.6-7.6V1.521A1.521,1.521,0,0,0,65.419,0ZM45.652,10.015,42.165,6.528a1.52,1.52,0,0,0-2.15,2.15L43.5,12.165H41.09A4.576,4.576,0,0,1,36.518,7.6V3.041H41.09A4.567,4.567,0,0,1,45.652,7.6ZM63.9,7.6a4.567,4.567,0,0,1-4.562,4.562H56.926l3.487-3.487a1.52,1.52,0,0,0-2.15-2.15l-3.5,3.487V7.6a4.576,4.576,0,0,1,4.572-4.562H63.9Z"
+                                                  transform="translate(-33.487)" fill="#fff"/>
+                                        </g>
+                                    </g>
+                                    <g id="Group_987" data-name="Group 987" transform="translate(0.016 25.341)">
+                                        <g id="Group_986" data-name="Group 986" transform="translate(0)">
+                                            <path id="Path_747" data-name="Path 747"
+                                                  d="M45.134,278.239h-7.1a1.521,1.521,0,0,0-1.521,1.521v.038a12.643,12.643,0,0,0-13.459.807,4.07,4.07,0,0,1-2.39.676H16.415a3.157,3.157,0,0,0-3.209,2.878,3.041,3.041,0,0,0,3.037,3.2H28.914a1.521,1.521,0,0,1,0,3.041H14.968a1.52,1.52,0,0,1-1.075-.445l-8.686-8.686a3.041,3.041,0,0,0-4.3,4.3l9.577,9.577a4.563,4.563,0,0,0,3.227,1.336H36.517v1.521a1.521,1.521,0,0,0,1.521,1.521h7.1a1.512,1.512,0,0,0,1.51-1.521V279.76A1.512,1.512,0,0,0,45.134,278.239Zm-1.521,18.247H39.548V281.28h4.065Z"
+                                                  transform="translate(-0.016 -278.237)" fill="#fff"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <p>integrity</p>
+                            <p>Respect and Integrity</p>
+                        </div>
+                        <div class="value">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                                <g id="Group_932" data-name="Group 932" transform="translate(-266 -3062)">
+                                    <path id="Vector" d="M0,0H14.06V4.524H0Z" transform="translate(281.738 3102.476)"
+                                          fill="#fff"/>
+                                    <path id="Vector-2" data-name="Vector"
+                                          d="M266,3072.229l9.942-10.131,2.616,2.666-9.942,10.131Z"
+                                          fill="#fff"/>
+                                    <path id="Vector-3" data-name="Vector"
+                                          d="M298.442,3064.666l2.616-2.666L311,3072.131l-2.616,2.666Z" fill="#fff"/>
+                                    <path id="Vector-4" data-name="Vector"
+                                          d="M27.5,1.3l-1.992-.086a3.677,3.677,0,0,0-1.71.159,3.732,3.732,0,0,0-1.46.92L18.266,6.447,14.008,2.109a2.826,2.826,0,0,0-1.334-.747,2.79,2.79,0,0,0-1.521.062,2.629,2.629,0,0,1-1.429.037A2.665,2.665,0,0,1,8.481.742L7.849.1,0,8.1,1.279,9.4l-.084,2.029a3.882,3.882,0,0,0,.156,1.742,3.826,3.826,0,0,0,.9,1.488l7.113,7.248a3.783,3.783,0,0,1,1.251-2.457L8.4,17.191l.523-.533,2.315,2.359a3.621,3.621,0,0,1,1.053-.408V15.823l-1.274-1.3.523-.533.751.765V10.723a2.753,2.753,0,0,1,.653-1.817,2.657,2.657,0,0,1,1.673-.916,2.547,2.547,0,0,1,.733.034l-.91-.927.523-.533,1.329,1.354a2.649,2.649,0,0,1,1.047-1.1,2.581,2.581,0,0,1,1.471-.334,2.647,2.647,0,0,1,1.62.824,2.74,2.74,0,0,1,.729,1.689,2.59,2.59,0,0,1,1.351-.25,2.664,2.664,0,0,1,1.7.918,2.761,2.761,0,0,1,.658,1.844v2.582a3.68,3.68,0,0,1,1.793.958A3.788,3.788,0,0,1,27.7,16.818l2.064-2.1.523.533-2.453,2.5c0,.01,0,.02,0,.03v2.5a2.91,2.91,0,0,0,1.76-.851l5.062-5.158a2.911,2.911,0,0,0,.733-1.359,2.947,2.947,0,0,0-.061-1.55,2.778,2.778,0,0,1-.036-1.456A2.742,2.742,0,0,1,36,8.642L36.628,8,28.779,0Z"
+                                          transform="translate(270.186 3066.265)" fill="#fff"/>
+                                    <path id="Vector-5" data-name="Vector"
+                                          d="M6.636,3.168A1.888,1.888,0,0,0,5.96,1.922a1.819,1.819,0,0,0-1.34-.4,1.913,1.913,0,0,0-1.2.67A1.982,1.982,0,0,0,2.96,3.5v8.564a2.932,2.932,0,0,0-2.093.883A3.045,3.045,0,0,0,0,15.081v7.294a2.935,2.935,0,0,0,.425,1.489,2.862,2.862,0,0,0,1.118,1.052,2.7,2.7,0,0,1,1.036,1,2.767,2.767,0,0,1,.381,1.4v.911h11.1V26.392l1.468-1.374a3.8,3.8,0,0,0,1.1-1.344,3.873,3.873,0,0,0,.394-1.7V10.557a3.045,3.045,0,0,0-.867-2.133,2.932,2.932,0,0,0-2.093-.883V4.281A2,2,0,0,0,13.6,2.946a1.93,1.93,0,0,0-1.221-.677,1.821,1.821,0,0,0-1.3.392,1.887,1.887,0,0,0-.686,1.191h.339V15.5H9.99V3.852h.37V2.019A2,2,0,0,0,9.9.684,1.93,1.93,0,0,0,8.676.008,1.818,1.818,0,0,0,7.919.1a1.843,1.843,0,0,0-.657.395,1.885,1.885,0,0,0-.445.631,1.916,1.916,0,0,0-.157.76V3.168h.37V14.813H6.29V3.168ZM3.255,18.514h-.74V12.481h.74ZM13.69,7.775h.74V15.65h-.74Z"
+                                          transform="translate(280.19 3073.436)" fill="#fff"/>
+                                </g>
+                            </svg>
+                            <p>integrity</p>
+                            <p>Respect and Integrity</p>
+                        </div>
+                        <div class="value">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                                <g id="Group_934" data-name="Group 934" transform="translate(-655 -3062)">
+                                    <path id="Vector"
+                                          d="M5.626,2.813A2.813,2.813,0,1,1,2.813,0,2.813,2.813,0,0,1,5.626,2.813Z"
+                                          transform="translate(674.687 3081.688)" fill="#fff"/>
+                                    <path id="Vector-2" data-name="Vector"
+                                          d="M22.5,5.626A16.874,16.874,0,1,1,5.626,22.5,16.893,16.893,0,0,1,22.5,5.626ZM22.5,0A22.5,22.5,0,1,0,45,22.5,22.5,22.5,0,0,0,22.5,0Z"
+                                          transform="translate(655 3062)" fill="#fff"/>
+                                    <path id="Vector-3" data-name="Vector"
+                                          d="M12.416,5.626a6.79,6.79,0,1,1-6.79,6.79A6.8,6.8,0,0,1,12.416,5.626Zm0-5.626A12.416,12.416,0,1,0,24.831,12.416,12.416,12.416,0,0,0,12.416,0Z"
+                                          transform="translate(665.084 3072.083)" fill="#fff"/>
+                                </g>
+                            </svg>
+                            <p>integrity</p>
+                            <p>Respect and Integrity</p>
+                        </div>
+                        <div class="value">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                                <g id="Group" transform="translate(-1042 -3062)">
+                                    <path id="Vector"
+                                          d="M44.056,20.087l-2.482-.546a1.214,1.214,0,0,1-.926-.939,18.367,18.367,0,0,0-1.966-5.214,1.216,1.216,0,0,1,.036-1.253l1.518-2.369a1.219,1.219,0,0,0-.164-1.519L37.553,5.729a1.219,1.219,0,0,0-1.519-.165L33.916,6.921a1.219,1.219,0,0,1-1.32-.005,18.393,18.393,0,0,0-5.108-2.294,1.215,1.215,0,0,1-.864-.911l-.6-2.742A1.228,1.228,0,0,0,24.834,0H21.273a1.227,1.227,0,0,0-1.19.968l-.543,2.48a1.22,1.22,0,0,1-.932.931,18.371,18.371,0,0,0-5.2,2,1.217,1.217,0,0,1-1.259-.031L9.761,4.811a1.219,1.219,0,0,0-1.519.165L5.724,7.494a1.219,1.219,0,0,0-.165,1.519L6.96,11.2a1.219,1.219,0,0,1,0,1.314,18.4,18.4,0,0,0-2.233,5.019,1.216,1.216,0,0,1-.912.866l-2.849.623A1.225,1.225,0,0,0,0,20.213v3.561a1.225,1.225,0,0,0,.965,1.191l2.6.57a1.22,1.22,0,0,1,.929.929,18.369,18.369,0,0,0,1.943,5.065,1.217,1.217,0,0,1-.033,1.255l-1.6,2.5a1.218,1.218,0,0,0,.165,1.519L7.49,39.323a1.219,1.219,0,0,0,1.519.164l2.272-1.455a1.219,1.219,0,0,1,1.316,0,18.4,18.4,0,0,0,4.924,2.215,1.216,1.216,0,0,1,.858.91l.639,2.9a1.2,1.2,0,0,0,1.19.941H23.77a1.2,1.2,0,0,0,1.19-.941l.573-2.606a1.214,1.214,0,0,1,.936-.925,18.374,18.374,0,0,0,5.084-1.913,1.216,1.216,0,0,1,1.249.038l2.479,1.588a1.218,1.218,0,0,0,1.519-.164l2.519-2.518a1.219,1.219,0,0,0,.165-1.519l-1.41-2.2a1.22,1.22,0,0,1,.007-1.322A18.393,18.393,0,0,0,40.355,27.5a1.215,1.215,0,0,1,.909-.856l2.791-.615A1.207,1.207,0,0,0,45,24.839V21.278A1.206,1.206,0,0,0,44.056,20.087ZM22.4,36.582A13.794,13.794,0,1,1,36.193,22.788,13.795,13.795,0,0,1,22.4,36.582Z"
+                                          transform="translate(1042 3062)" fill="#fff"/>
+                                    <path id="Vector-2" data-name="Vector"
+                                          d="M2.176,4.353A2.176,2.176,0,1,0,0,2.177,2.176,2.176,0,0,0,2.176,4.353Z"
+                                          transform="translate(1056.881 3078.496)" fill="#fff"/>
+                                    <path id="Vector-3" data-name="Vector"
+                                          d="M2.176,4.353A2.176,2.176,0,1,0,0,2.177,2.176,2.176,0,0,0,2.176,4.353Z"
+                                          transform="translate(1067.943 3078.496)" fill="#fff"/>
+                                    <path id="Vector-4" data-name="Vector"
+                                          d="M4.353,2.176A2.177,2.177,0,1,1,2.177,0,2.176,2.176,0,0,1,4.353,2.176Z"
+                                          transform="translate(1062.404 3079.897)" fill="#fff"/>
+                                    <path id="Vector-5" data-name="Vector"
+                                          d="M4.167,0A4.174,4.174,0,0,0,0,4.213v.865a.336.336,0,0,0,.318.327H8.134c.168,0,.2-.159.2-.327V4.213A4.174,4.174,0,0,0,4.167,0Z"
+                                          transform="translate(1060.333 3085.114)" fill="#fff"/>
+                                    <path id="Vector-6" data-name="Vector"
+                                          d="M7.139,1.07A4.369,4.369,0,0,0,4.282,0,4.265,4.265,0,0,0,0,4.2v.864c0,.169.275.342.444.342H4.625A5.306,5.306,0,0,1,7.139,1.07Z"
+                                          transform="translate(1054.685 3083.72)" fill="#fff"/>
+                                    <path id="Vector-7" data-name="Vector"
+                                          d="M2.8,0A4.2,4.2,0,0,0,0,1.085,5.3,5.3,0,0,1,2.5,5.419H6.7a.341.341,0,0,0,.309-.342V4.212A4.217,4.217,0,0,0,2.8,0Z"
+                                          transform="translate(1067.306 3083.711)" fill="#fff"/>
+                                </g>
+                            </svg>
+                            <p>integrity</p>
+                            <p>Respect and Integrity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="member-popup-container">
+                    <div class="member-popup-overlay"></div>
+                    <div class="member-popup-section1">
+                        <div class="member-popup-section-container">
+                            <div class="member-popup-img">
+                                <img class="sequence1" id="member1-1-close"
+                                     src="/zuhair_fayez_website/static/img/popup-close-gray.png" alt=""/>
+                                <div class="member-img sequence1">
+                                    <img src="/zuhair_fayez_website/static/img/Zuhair-Hamed-Fayez.png" alt=""/>
+                                </div>
+                                <div class="member-name sequence1">
+                                    <p>Zuhair Hamed Fayez</p>
+                                    <p>Executive Chairman</p>
+                                </div>
+                            </div>
+                            <div class="member-popup-content">
+                                <img class="sequence1" id="member1-close"
+                                     src="/zuhair_fayez_website/static/img/popup-close-gray.png" alt=""/>
+                                <p class="about sequence1"><img src="/zuhair_fayez_website/static/img/info.png" alt=""/>
+                                    About
+                                </p>
+                                <p class="about-description sequence1">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                    elitr, sed
+                                    diam nonumy eirmod tempor invidunt
+                                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                    et justo duo
+                                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                                </p>
+                                <p class="achievement sequence1"><img
+                                        src="/zuhair_fayez_website/static/img/achievement.png" alt=""/>Achievements
+                                </p>
+                                <ul class="sequence1">
+                                    <li>Founding member, Chairman, Board of Trustees of Dar AlHekma University for Girls
+                                        in Jeddah,
+                                        Saudi Arabia.
+                                    </li>
+                                    <li>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor
+                                        invidunt ut labore
+                                        et dolore magna aliquyam erat, sed.
+                                    </li>
+                                    <li>Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod invidunt ut
+                                        labore et
+                                        dolore magna aliquyam.
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-popup-section2">
+                        <div class="member-popup-section-container">
+                            <div class="member-popup-img">
+                                <img class="sequence2" id="member2-2-close"
+                                     src="/zuhair_fayez_website/static/img/popup-close-gray.png" alt=""/>
+                                <div class="member-img sequence2">
+                                    <img src="/zuhair_fayez_website/static/img/Abdullah-Al-Saady.png" alt=""/>
+                                </div>
+                                <div class="member-name sequence2">
+                                    <p>Abdullah Al-Saady</p>
+                                    <p>Executive Chairman</p>
+                                </div>
+                            </div>
+                            <div class="member-popup-content">
+                                <img class="sequence2" id="member2-close"
+                                     src="/zuhair_fayez_website/static/img/popup-close-gray.png" alt=""/>
+                                <p class="about sequence2"><img src="/zuhair_fayez_website/static/img/info.png" alt=""/>
+                                    About
+                                </p>
+                                <p class="about-description sequence2">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                    elitr, sed
+                                    diam nonumy eirmod tempor invidunt
+                                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                    et justo duo
+                                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                                </p>
+                                <p class="achievement sequence2"><img
+                                        src="/zuhair_fayez_website/static/img/achievement.png" alt=""/>Achievements
+                                </p>
+                                <ul class="sequence2">
+                                    <li>Founding member, Chairman, Board of Trustees of Dar AlHekma University for Girls
+                                        in Jeddah,
+                                        Saudi Arabia.
+                                    </li>
+                                    <li>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor
+                                        invidunt ut labore
+                                        et dolore magna aliquyam erat, sed.
+                                    </li>
+                                    <li>Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod invidunt ut
+                                        labore et
+                                        dolore magna aliquyam.
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-popup-section3">
+                        <div class="member-popup-section-container">
+                            <div class="member-popup-img">
+                                <img class="sequence3" id="member3-3-close"
+                                     src="/zuhair_fayez_website/static/img/popup-close-gray.png" alt=""/>
+                                <div class="member-img sequence3">
+                                    <img src="/zuhair_fayez_website/static/img/Abdulaziz-Al-Assaf.png" alt=""/>
+                                </div>
+                                <div class="member-name sequence3">
+                                    <p>Abdulaziz Al-Assaf</p>
+                                    <p>Executive Chairman</p>
+                                </div>
+                            </div>
+                            <div class="member-popup-content">
+                                <img class="sequence3" id="member3-close"
+                                     src="/zuhair_fayez_website/static/img/popup-close-gray.png" alt=""/>
+                                <p class="about sequence3"><img src="/zuhair_fayez_website/static/img/info.png" alt=""/>
+                                    About
+                                </p>
+                                <p class="about-description sequence3">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                    elitr, sed
+                                    diam nonumy eirmod tempor invidunt
+                                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                    et justo duo
+                                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                                </p>
+                                <p class="achievement sequence3"><img
+                                        src="/zuhair_fayez_website/static/img/achievement.png" alt=""/>Achievements
+                                </p>
+                                <ul class="sequence3">
+                                    <li>Founding member, Chairman, Board of Trustees of Dar AlHekma University for Girls
+                                        in Jeddah,
+                                        Saudi Arabia.
+                                    </li>
+                                    <li>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor
+                                        invidunt ut labore
+                                        et dolore magna aliquyam erat, sed.
+                                    </li>
+                                    <li>Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod invidunt ut
+                                        labore et
+                                        dolore magna aliquyam.
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-container">
+                    <div class="about-container-overlay-bg"></div>
+                    <!--Swiper-->
+                    <div class="swiper slider-about">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide about">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/Zuhair-Hamed-Fayez2.jpg"
+                                     alt=""/>
+                            </div>
+                            <div class="swiper-slide about">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/Abdullah-Al-Saady.png"
+                                     alt=""/>
+                            </div>
+                            <div class="swiper-slide about">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/Abdulaziz-Al-Assaf.jpg"
+                                     alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper slider-about-info">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide about-info">
+                                <p class="about-animation">Zuhair Hamed Fayez</p>
+                                <p class="about-animation">Executive Chairman</p>
+                                <p class="about-animation member1">more about</p>
+                            </div>
+                            <div class="swiper-slide about-info">
+                                <p class="about-animation">Abdullah Al-Saady</p>
+                                <p class="about-animation">Executive Chairman</p>
+                                <p class="about-animation member2">more about</p>
+                            </div>
+                            <div class="swiper-slide about-info">
+                                <p class="about-animation">Abdulaziz Al-Assaf</p>
+                                <p class="about-animation">Executive Chairman</p>
+                                <p class="about-animation member3">more about</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-next-about">
+                        <div class="swiper slider-about-name-next">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide about-name-next">
+                                    <p class="about-animation-names-next">Abdullah Al-Saady</p>
+                                    <p class="about-animation-names-next">Executive Chairman</p>
+                                </div>
+                                <div class="swiper-slide about-name-next">
+                                    <p class="about-animation-names-next">Abdulaziz Al-Assaf</p>
+                                    <p class="about-animation-names-next">Executive Chairman</p>
+                                </div>
+                                <div class="swiper-slide about-name-next">
+                                    <p class="about-animation-names-next">Zuhair Hamed Fayez</p>
+                                    <p class="about-animation-names-next">Executive Chairman</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper slider-about-img-next">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide about-img-next">
+                                    <img class="news-img"
+                                         src="/zuhair_fayez_website/static/img/Abdullah-Al-Saady-thumb.png" alt=""/>
+                                </div>
+                                <div class="swiper-slide about-img-next">
+                                    <img class="news-img"
+                                         src="/zuhair_fayez_website/static/img/Abdulaziz-Al-Assaf-thumb.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide about-img-next">
+                                    <img class="news-img"
+                                         src="/zuhair_fayez_website/static/img/Zuhair-Hamed-Fayez-thumb.jpg" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="about-arrow" src="/zuhair_fayez_website/static/img/about-right-arrow.png" alt=""/>
+                    </div>
+                    <div class="swiper-button-prev-about">
+                        <div class="swiper slider-about-name-prev">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide about-name-prev">
+                                    <p class="about-animation-names-prev">Abdulaziz Al-Assaf</p>
+                                    <p class="about-animation-names-prev">Executive Chairman</p>
+                                </div>
+                                <div class="swiper-slide about-name-prev">
+                                    <p class="about-animation-names-prev">Zuhair Hamed Fayez</p>
+                                    <p class="about-animation-names-prev">Executive Chairman</p>
+                                </div>
+                                <div class="swiper-slide about-name-prev">
+                                    <p class="about-animation-names-prev">Abdullah Al-Saady</p>
+                                    <p class="about-animation-names-prev">Executive Chairman</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper slider-about-img-prev">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide about-img-prev">
+                                    <img class="news-img"
+                                         src="/zuhair_fayez_website/static/img/Abdulaziz-Al-Assaf-thumb.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide about-img-prev">
+                                    <img class="news-img"
+                                         src="/zuhair_fayez_website/static/img/Zuhair-Hamed-Fayez-thumb.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide about-img-prev">
+                                    <img class="news-img"
+                                         src="/zuhair_fayez_website/static/img/Abdullah-Al-Saady-thumb.png" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/zuhair_fayez_website/static/img/about-left-arrow.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

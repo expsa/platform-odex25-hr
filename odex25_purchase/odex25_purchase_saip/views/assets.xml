@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend" name="Module name backend assets">
+        <xpath expr="." position="inside">
+            <script src="/odex25_purchase_saip/static/src/js/relational_fields.js" type="text/javascript" />
+        </xpath>
+    </template>
+</odoo>

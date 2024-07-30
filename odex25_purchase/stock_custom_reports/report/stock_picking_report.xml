@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="minutes_receipt_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row col-12 mt32 mb32" id="information">
+                            <div class="col-4 pull-right" dir="rtl">
+                                <table class="table table-borderless" style="width:100%; border: none !important;"
+                                       dir="rtl">
+                                    <tr>
+                                        <th>المملكة العربية السعودية</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">الجهة</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">رقم الجهة</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">مستودع</th>
+                                        <t t-if="o.picking_type_code == 'incoming'">
+                                            <td style="text-align:right;border: none !important;">
+                                                <span t-esc="o.location_dest_id.name"/>
+                                            </td>
+                                        </t>
+                                        <t t-else="">
+                                            <td style="text-align:right;border: none !important;">
+                                                <span t-esc="o.location_id.name"/>
+                                            </td>
+                                        </t>
+
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">المورد</th>
+                                        <td style="text-align:right;border: none !important;">
+                                            <span t-esc="o.partner_id.name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-4 pull-right" dir="rtl">
+                                <center>
+                                    <h2 classs="text-center">محضر استلام</h2>
+                                    <span t-field="o.name"/>
+                                </center>
+                            </div>
+                            <div class="col-4 pull-left" dir="rtl">
+                                <table class="table table-borderless" style="width:100%; border: none !important;"
+                                       dir="rtl">
+                                    <tr>
+                                        <th style="text-align:right;">الرقم التسلسل</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;"> تاريخ الاستلام</th>
+                                        <td style="text-align:right;border: none !important;">
+                                            <span t-esc="o.scheduled_date"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <strong>الرقم</strong>
+                                    </th>
+                                    <th>
+                                        <strong>مرجع المنتج</strong>
+                                    </th>
+                                    <th>
+                                        <strong>المنتج</strong>
+                                    </th>
+                                    <th>
+                                        <strong>وحدة القياس</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>الكمية</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>سعر الوحدة</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>المجموع</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>الملاحظات</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="index" t-value="0"/>
+                                <t t-set="total" t-value="0"/>
+                                <t t-foreach="o.move_ids_without_package" t-as="line">
+                                    <t t-set="index" t-value="index + 1"/>
+                                    <tr>
+                                         <td><span t-esc="index"/></td>
+                                        <td>
+                                            <span t-field="line.product_id.default_code"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.product_id"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.product_uom"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.quantity_done"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.product_id.standard_price"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="line.quantity_done * line.product_id.standard_price"/>
+                                            <t t-set="total" t-value="total + line.quantity_done * line.product_id.standard_price"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.note"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <div>
+                            <table class="table table-borderless" style="border: none;page-break-inside: avoid;">
+                                <tr>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;">الاجمالي</td>
+                                    <td style="border:none;"><t t-esc="total"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="clearfix mt32 mb32 mt-5"/>
+                        <div class="row col-12 mt32 mb32" id="information">
+                            <div class="col-4 pull-right" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>المستلم</strong>
+                                </div>
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>الاسم</strong>
+                                </div>
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>التوقيع</strong>
+                                </div>
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>التاريخ</strong>
+                                </div>
+
+                            </div>
+                            <div class="col-4 pull-right" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>العضو الفني</strong>
+                                </div>
+                            </div>
+                            <div class="col-4 pull-right" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>الرئيس المسؤول</strong>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="report_minutes_receipt" model="ir.actions.report">
+        <field name="name">Minutes receipt Report</field>
+        <field name="model">stock.picking</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_custom_reports.minutes_receipt_report_template</field>
+        <field name="report_file">stock_custom_reports.minutes_receipt_report_template</field>
+        <field name="print_report_name">'Stock Inventory - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="stock_custom_reports.stock_custom_paperformat"/>
+    </record>
+
+
+</odoo>

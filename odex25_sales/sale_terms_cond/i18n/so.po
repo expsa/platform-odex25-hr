@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_automation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-01 06:39+0000\n"
+"PO-Revision-Date: 2024-05-01 06:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_automation
+#: model:ir.model.fields,field_description:sale_order_automation.field_stock_warehouse__create_invoice
+msgid "Create Invoice?"
+msgstr "إنشاء فاتورة ؟"
+
+#. module: sale_order_automation
+#: model:ir.model.fields,field_description:sale_order_automation.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_order_automation.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: sale_order_automation
+#: model:ir.model.fields,field_description:sale_order_automation.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_order_automation.field_stock_warehouse__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: sale_order_automation
+#: model:ir.model.fields,field_description:sale_order_automation.field_stock_warehouse__is_delivery_set_to_done
+msgid "Is Delivery Set to Done"
+msgstr ""
+
+#. module: sale_order_automation
+#: model:ir.model.fields,field_description:sale_order_automation.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sale_order_automation.field_stock_warehouse____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: sale_order_automation
+#: model:ir.model,name:sale_order_automation.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: sale_order_automation
+#: model:ir.model.fields,field_description:sale_order_automation.field_stock_warehouse__validate_invoice
+msgid "Validate invoice?"
+msgstr "التحقق من الفاتورة ؟"
+
+#. module: sale_order_automation
+#: model:ir.model,name:sale_order_automation.model_stock_warehouse
+msgid "Warehouse"
+msgstr "مستودع"

@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_category_commitee,category_stock_custom,product.model_product_category,inventory_committee_member,1,0,0,0
+access_product_product_commitee,product_stock_custom,product.model_product_product,inventory_committee_member,1,0,0,0
+stock_inventory_commitee,stock_inventory,stock.model_stock_inventory,inventory_committee_member,1,1,0,0
+stock_inventory_line_commitee,stock_inventory_line,stock.model_stock_inventory_line,inventory_committee_member,1,0,0,0
+stock_move_cmmittee,stock_move_cmmittee,stock.model_stock_move,inventory_committee_member,1,0,0,0
+access_product_category_commitee_head,category_stock_custom,product.model_product_category,inventory_committee_head,1,0,0,0
+access_product_product_commitee_head,product_stock_custom,product.model_product_product,inventory_committee_head,1,0,0,0
+stock_inventory_commitee_head,stock_inventory,stock.model_stock_inventory,inventory_committee_head,1,1,0,0
+stock_inventory_line_commitee_head,stock_inventory_line,stock.model_stock_inventory_line,inventory_committee_head,1,0,0,0
+stock_move_cmmittee_head,stock_move_cmmittee,stock.model_stock_move,inventory_committee_head,1,0,0,0
+gift_product_quant,gift_product_quant,socpa_stock_custom.model_gift_product_quant,base.group_user,1,1,1,1
+res_user_committee_head,res_user_committee_head,base.model_res_users,inventory_committee_head,1,1,1,1
+access_stock_scrap_line_user,stock.scrap.line.user,model_stock_scrap_line,stock.group_stock_user,1,1,1,0
+access_stock_scrap_line_manager,stock.scrap.line.manager,model_stock_scrap_line,stock.group_stock_manager,1,1,1,1

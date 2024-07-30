@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//th[@id='th_quantity']" position="after">
+            <th id="th_uom"
+                style="font-size: 10px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                <span>
+                    الوحدة
+                    <br/>
+                    :UOM
+                </span>
+            </th>
+        </xpath>
+            
+        <xpath expr="//td[@id='td_quantity']" position="after">
+            <td style="white-space: nowrap !important; font-size: 10px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                <t t-esc="orderline.unit_name"/>
+            </td>
+        </xpath>
+    </t>
+
+</templates>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_pos_product_available_negative_config_form" model="ir.ui.view">
+        <field name="name">pos.pin.config.form.view</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr='//div[@id="inventory_location"]' position='after'>
+                <h2>Pos Stock</h2>
+                <div class="row mt16 o_settings_container" id="pos_stock">
+                    <div class="col-xs-12 col-md-6 o_setting_box"
+                         title="Show quantity available in POS.">
+                        <div class="o_setting_left_pane">
+                            <field name="show_qty_available"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="show_qty_available" string="Display Stock"/>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 o_setting_box"
+                         attrs="{'invisible':[('show_qty_available','=',False)]}">
+                        <div class="o_setting_right_pane">
+                            <label for="min_reserve_qty" string="Min Quantity"
+                                   attrs="{'invisible':[('allow_out_of_stock','=',True)]}"/>
+                            <div class="text-muted" attrs="{'invisible':[('allow_out_of_stock','=',True)]}">
+                                Deny order when quantity available lower than
+                            </div>
+                            <field name="min_reserve_qty" attrs="{'invisible':[('allow_out_of_stock','=',True)]}"/>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 o_setting_box"
+                         attrs="{'invisible':[('show_qty_available','=',False)]}">
+                        <div class="o_setting_left_pane">
+                            <field name="allow_out_of_stock"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="allow_out_of_stock" string="Allow Out-of-Stock"/>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-md-6 o_setting_box" groups="stock.group_stock_multi_locations"
+                         attrs="{'invisible':[('show_qty_available','=',False)]}">
+                        <div class="o_setting_left_pane">
+                            <field name="hide_out_of_stock_products"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="hide_out_of_stock_products" string="Hide out of stock products"/>
+                            <div class="text-muted">
+                                Hide Products not in POS Location.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

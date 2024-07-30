@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="service" name="service">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+                <!--Page Code-->
+                <div class="our-projects">
+                    <div class="swiper architectural-grid">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <t  t-foreach="sub_service" t-as="child_service">
+                                <div class="swiper-slide service-card">
+                                <a t-attf-href="/service_sub_projects?id=#{child_service.id}" class='btn w-100 btn-secondary'
+                                   style="color:white;text-decoration:none;">
+                                    <p t-esc="child_service.name"/>
+                                    <img t-if="child_service.image"
+                                         t-att-src="'data:image/png;base64,%s' %to_text(child_service.image)"/>
+                                </a>
+                            </div>
+                            </t>
+
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/office-building.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Office Buildings</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/Admin-Commercial-Facilities.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Admin and Commercial Facilities</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/medical.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Medical</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/residential-housing-villa.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Residential, Houses, Villas &amp; Palaces</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/educational.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Educational</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/airport-airbase.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Airports and Airbases</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/banks.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Banks</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/hotels.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Hotels</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/mosques.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Mosques and Islamic Centers</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/road-bridge-tunnels.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Roads, Bridges and Tunnels</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/museum.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Museums</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/planning.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Planning</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/maritime.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Maritime</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="swiper-slide service-card">-->
+                            <!--                                <a class="projects" href="service_sub_projects.html"></a>-->
+                            <!--                                <img src="/zuhair_fayez_website/static/img/Residential-Housing.webp" alt=""/>-->
+                            <!--                                <p class="project-name">Storm water</p>-->
+                            <!--                                <img class="zoom-in" src="/zuhair_fayez_website/static/img/zoom-in.png" alt=""/>-->
+                            <!--                            </div>-->
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

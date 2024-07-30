@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sale_order_job_card_from_view" model="ir.ui.view">
+            <field name="name">sale.order.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='note']" position="before">
+                    <label for="terms_id" class="oe_inline" string="Terms&amp;Conditions"/>
+                    <field name="terms_id" class="oe_inline" string="Terms&amp;Conditions"/>
+                    <br/>
+                    <field name="terms_desc" attrs="{'invisible':[('terms_id','=',False)]}" readonly="1"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

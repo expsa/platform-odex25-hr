@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <record id="inherited_stock_scrap_form_view" model="ir.ui.view">
+            <field name="name">inherited.stock.scrap.form</field>
+            <field name="model">stock.scrap</field>
+            <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="attributes">
+                    <attribute name="required">0</attribute>
+                </xpath>
+                <xpath expr="//form" position="replace">
+                    <form string="Scrap">
+                    <header>
+                        <button name="action_confirm" states="draft" string="Confirm" type="object"
+                                class="oe_highlight" />
+                        <button name="action_validate" states="confirm" string="Validate" type="object"
+                                class="oe_highlight" context="{'not_unlink_on_discard': True}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="action_get_stock_picking"
+                                    string="Stock Operation" type="object"
+                                    attrs="{'invisible':[('picking_id','=',False)]}" icon="fa-cogs"/>
+                            <field name="picking_id" invisible="1"/>
+                            <button class="oe_stat_button" name="action_get_stock_move_lines"
+                                    string="Product Moves" type="object"
+                                    attrs="{'invisible':[('move_id','=',False)]}" icon="fa-exchange"/>
+                            <field name="move_id" invisible="1"/>
+                        </div>
+                        <div class="oe_title">
+                            <h1><field name="name" nolabel="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="tracking" invisible="1"/>
+                                <field name="owner_id" groups="stock.group_tracking_owner"/>
+                                <field name="location_id" options="{'no_create': True, 'no_open': True}"
+                                       groups="stock.group_stock_multi_locations" force_save="1"/>
+                                <field name="scrap_location_id" options="{'no_create': True, 'no_open': True}"
+                                       groups="stock.group_stock_multi_locations" force_save="1"/>
+                                <field name="origin"/>
+                                <field name="date_done" attrs="{'invisible': [('state', '=', 'draft')]}"/>
+                                <field name="picking_id" attrs="{'invisible': [('picking_id', '=', False)]}"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="lines" string="Lines">
+                                <field name="line_ids">
+                                     <tree editable="bottom">
+                                         <field name="company_id" invisible="1"/>
+                                         <field name="tracking" invisible="1"/>
+                                        <field name="product_id" context="{'default_type': 'product'}"/>
+                                         <field name="package_id" groups="stock.group_tracking_lot"/>
+                                        <field name="lot_id" context="{'default_product_id': product_id,
+                                                                        'default_company_id': company_id}"
+                                               attrs="{'invisible': ['|',('product_id', '=', False),
+                                               ('tracking', '=', 'none')],
+                                               'required': [('tracking', '!=', 'none')]}"
+                                               groups="stock.group_production_lot"/>
+                                        <field name="scrap_qty"/>
+                                        <field name="product_uom_id" required="1" groups="uom.group_uom"/>
+                                        <field name="reason"/>
+                                    </tree>
+                                </field>
+                        </page>
+                        <page name="committee_members" string="Committee Members">
+                            <field name="committee_members" />
+                        </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+
+                </xpath>
+
+<!--                <xpath expr="//form/sheet/group/group[1]" position="replace"/>-->
+<!--                <xpath expr="//notebook" position="inside">-->
+<!--                        <page name="lines" string="Lines">-->
+<!--                            <field name="line_ids">-->
+<!--                                 <tree editable="bottom">-->
+<!--                                    <field name="product_id"/>-->
+<!--                                    <field name="scrap_qty"/>-->
+<!--                                    <field name="product_uom_id"/>-->
+<!--                                    <field name="reason"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+
+<!--                        </page>-->
+<!--                        <page name="committee_members">-->
+<!--                            <field name="committee_members" />-->
+<!--                        </page>-->
+<!--                </xpath>-->
+            </field>
+        </record>
+</odoo>

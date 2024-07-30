@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Incoming Outgoing Report wizard -->
+        <record id="incoming_outgoing_report_wizard" model="ir.ui.view">
+            <field name="name">Incoming Outgoing Report</field>
+            <field name="model">incoming.outgoing.report</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Incoming Outgoing Report">
+                    <sheet>
+                        <group colspan="2">
+                            <group>
+                                <field name="date_from" />
+                                <field name="type" required="1"/>
+                                <field name="location_id" required="1" />
+                                <field name="product_ids" widget="many2many_tags" context="{'default_type':'product'}" domain="[('type','=','product'),('categ_id', 'child_of', category_id)]"/>
+                                <field name="partner_ids" widget="many2many_tags" attrs="{'invisible' : [('detailing' ,'!=' , 'detailed')]}"/>
+                             </group>
+                            <group>
+                                <field name="date_to" />   
+                                <field name="category_id" />
+                                <!-- <field name="with_prices" /> -->
+                                <field name="detailing" required="1"/>
+                                <field name="group_by" attrs="{'invisible' : [('detailing' ,'!=' , 'detailed')],'required' : [('detailing' ,'=' , 'detailed')]}" />
+                            </group>
+                        </group>
+                    </sheet> 
+                    <footer>
+                        <button name="print_report" string="Print" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+<!-- Incoming Outgoing Report Action -->
+        <act_window id="id_incoming_outgoing_report_action"
+                    target="new"
+                    name="Incoming/Outgoing Products Report"
+                    res_model="incoming.outgoing.report"
+                    view_mode="form"/>
+
+<!-- Incoming Outgoing Report Menitem -->
+
+<menuitem
+            id= "stock_reports_main_menu"
+            name= "PDF Reports"
+            parent= "stock.menu_warehouse_report"
+            groups="group_stock_additional_reports"
+
+        />
+
+<menuitem
+            id= "id_incoming_outgoing_report_menu"
+            name= "Incoming Outgoing Report"
+            parent= "stock_reports_main_menu"
+            action= "id_incoming_outgoing_report_action"
+            groups="group_stock_additional_reports"
+
+        />
+
+
+</data>
+</odoo>

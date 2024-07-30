@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='website_service_category_action' model='ir.actions.act_window'>
+        <field name="name">Website Services Categories</field>
+        <field name="res_model">website.project.service</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Website Services Categories" id="website_services_category_menu"
+              parent="website.menu_website_global_configuration" action="website_service_category_action" sequence="4"/>
+
+    <!-- Form View -->
+    <record id="website_services_category_view_form" model="ir.ui.view">
+        <field name="name">Website Categories Form</field>
+        <field name="model">website.project.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar" options='{"preview_image": "image", "size": [80, 80]}'/>
+                    <div class="oe_left">
+                        <group>
+                            <field name="name"/>
+                            <field name="parent_service_id" attrs="{'invisible': [('is_main', '=', True)]}"/>
+                            <field name="sequence"/>
+                        </group>
+                    </div>
+                    <div class="oe_right">
+                        <group>
+                             <field name="is_main" widget="toggle_button"/>
+                    </group>
+                    </div>
+                    <notebook>
+                        <page name="Sub_Service" string="Sub Services" attrs="{'invisible': [('is_main', '=', True)]}">
+                            <group>
+                                <field name="child_ids"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="library_book_category_view_tree" model="ir.ui.view">
+        <field name="name">Website Services List</field>
+        <field name="model">website.project.service</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="parent_service_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <!--    <record id="website_services_view_search" model="ir.ui.view">-->
+    <!--        <field name="name">Website Service Search</field>-->
+    <!--        <field name="model">website.project.service</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <search>-->
+    <!--                <field name="name"/>-->
+    <!--                <field name="author_ids"/>-->
+    <!--                <filter string="Without Authors" name="without_author" domain="[('author_ids','=',False)]"/>-->
+    <!--            </search>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+</odoo>

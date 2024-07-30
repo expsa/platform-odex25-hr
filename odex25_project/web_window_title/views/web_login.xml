@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="web_login_inherit" inherit_id="web.login">
+        <!--        <xpath expr="//body/div[@id='wrapwrap']" position="attributes">-->
+        <!--            <attribute name="style">background-color: #137EC6;</attribute>-->
+        <!--        </xpath>-->
+        <xpath expr="//button[@type='submit']" position="attributes">
+            <attribute name="style">background-color : #137EC6;</attribute>
+        </xpath>
+        <xpath expr="//input[@name='login']" position="attributes">
+            <attribute name="style">border-color: #137EC6;</attribute>
+        </xpath>
+        <xpath expr="//input[@name='password']" position="attributes">
+            <attribute name="style">border-color: #137EC6;</attribute>
+        </xpath>
+
+    </template>
+    <template id="web_login_reset_inherit" inherit_id="auth_signup.login">
+        <xpath expr="//div[@class='justify-content-between mt-2 d-flex small']" position="replace">
+            <div class="justify-content-between mt-2 d-flex small">
+                <a t-if="signup_enabled" t-attf-href="/web/signup?{{ keep_query() }}" style="color: #137EC6;">Don't have an
+                    account?
+                </a>
+                <a t-if="reset_password_enabled" t-attf-href="/web/reset_password?{{ keep_query() }}" style="color: #137EC6;">
+                    Reset Password
+                </a>
+            </div>
+        </xpath>
+    </template>
+    <template id="web_login_layout_inherit" inherit_id="web.login_layout">
+        <xpath expr="//t[@t-set='body_classname']" position="attributes">
+            <attribute name="style">background-color : #137EC6;</attribute>
+        </xpath>
+        <xpath expr="//a[@href='/web/database/manager']" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+    </template>
+</odoo>

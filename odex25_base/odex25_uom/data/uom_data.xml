@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="area_uom_category" model="uom.category">
+        <field name="name">Area</field>
+    </record>
+
+    <record id="meter_area_uom" model="uom.uom">
+        <field name="name">m²</field>
+        <field name="category_id" ref="odex25_uom.area_uom_category"/>
+        <field name="uom_type">reference</field>
+        <field name="rounding">0.001</field>
+        <field name="active">True</field>
+    </record>
+
+</odoo>

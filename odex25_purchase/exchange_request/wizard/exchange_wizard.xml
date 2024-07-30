@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- wizard -->
+        <record id="exchange_wizard_form" model="ir.ui.view">
+            <field name="name">Done pickngs</field>
+            <field name="model">exchange.wizard</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                            <div style="font-size:20pt;margin-left:10pt" width="24" height="24">
+                                <field name="name" readonly="1"/>
+                            </div>
+                        <notebook>
+                            <page string="Products">
+                                <field name="line_ids" force_save="1">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name"  force_save="1" readonly="1"/>
+                                        <field name="Uom_id"  force_save="1" readonly="1"/>
+                                        <field name="note"  force_save="1" readonly="1"/>
+                                        <field name="product_qty"  force_save="1" readonly="1" class="prdct"/>
+                                        <field name="qty_available"  force_save="1" readonly="1" class="qty_av"/>
+                                        <field name="picking_done"  force_save="1" readonly="1" class="don"/>
+                                        <field name="picking_quantity" required="1" class="pick"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button name="print_report" id="didi" string="Create Picking" type="object" class="btn-primary"/>
+                        <!-- <button name="Test" string="Picking" type="object" class="btn-primary"/>                         -->
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- purchase wizard -->
+        <record id="purchase_wizard_form" model="ir.ui.view">
+            <field name="name">Purchase Requisition</field>
+            <field name="model">purchase.wizard</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                            <div style="font-size:20pt;margin-left:10pt" width="24" height="24">
+                                <field name="name" readonly="1"/>
+                            </div>
+                        <notebook>
+                            <page string="Products">
+                                <field name="line_ids" force_save="1">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="product_id" force_save="1" readonly="1"/>
+                                        <field name="name"  force_save="1" invisible="1"/>
+                                        <field name="Uom_id"  force_save="1" readonly="1"/>
+                                        <field name="note"  force_save="1"/>
+                                        <field name="product_qty"  force_save="1" class="prdct"/>
+                                        <field name="qty_available"  force_save="1"  class="qty_av"/>
+                                        <!-- <field name="picking_done"  force_save="1" readonly="1" class="don"/> -->
+                                        <!-- <field name="picking_quantity" required="1" class="pick"/> -->
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button name="print_report" string="Create Purchase Request" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+
+        <!--partial Exchange --> 
+        <record id="partial_exchange_wizard_form" model="ir.ui.view">
+        <field name="name">partial_exchange_wizard_form</field>
+        <field name="model">partial.exchange</field>
+        <field name="arch" type="xml">
+            <form string="Partial delivary?">
+                <group>
+                    <p>
+                        The Following Prodcts are not Fully available in the stock<br/> 
+                        What do you  want to do with remain.
+                    </p>
+                </group>
+                <field name="partial_lines" readonly="1">
+                    <tree>
+                        <field name="product_id" />
+                        <field name="product_qty" />
+                        <field name="qty_available" /> 
+                    </tree>
+                </field>
+                <footer>
+                    <button string="Deliver Available and Close" name="action_close" type="object" class="oe_highlight"/>
+                    <!-- <button string="Deliver Available and create new request" name="action_create" type="object" class="oe_highlight"  /> -->
+                    <button string="Purchase The Remain" type="object" name="action_purchase" class="oe_highlight"  />
+                </footer>
+            </form>
+        </field>
+    </record>
+    </data>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!-- >maintenance.request view -->
+    <!-- <record id="hr_equipment_order_view_form_inherit" model="ir.ui.view">
+        <field name="name">maintenance.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="team_ids" widget="many2many_tags"/>
+            </field>
+
+            <field name="user_id" position="attributes">
+                <attribute name="domain">[('id','=',2)]</attribute>
+            </field>
+        </field>
+
+    </record> -->
+    <!-- maintenance.equipment view -->
+    <record id="hr_equipment_view_form_inherit_safola" model="ir.ui.view">
+        <field name="name">maintenance.equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <field name="priority"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- team view -->
+
+    <record id="maintenance_team_view_tree_inherit" model="ir.ui.view">
+        <field name="name">maintenance.team.form</field>
+        <field name="model">maintenance.team</field>
+        <field name="inherit_id" ref="maintenance.maintenance_team_view_tree" />
+        <field name="arch" type="xml">
+            <field name="member_ids" position="after">
+                <field name = "department_id"/>
+            </field>
+        </field>
+    </record>
+
+
+</odoo>

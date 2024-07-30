@@ -1,0 +1,780 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odex25_purchase_saip
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-22 12:10+0000\n"
+"PO-Revision-Date: 2023-08-22 16:13+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__strategic_objective__e_d_p
+msgid "3.1.1 Ease of doing business"
+msgstr "3.1.1 تسهيل ممارسة الأعمال"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__strategic_objective__a_f_d_i
+msgid "3.1.6 Attracting foreign direct investment"
+msgstr "3.1.6 جذب الاستثمارات الأجنبية المباشرة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__strategic_objective__d_r_s
+msgid "3.3.5 Development of the retail sector"
+msgstr "3.3.5 تطوير قطاع التجزئة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__strategic_objective__i_c_e
+msgid "4.3.2 Increasing SMEs contribution to the economy"
+msgstr "4.3.2 زيادة مساهمة الشركات الصغيرة والمتوسطة في الاقتصاد"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.purchase_requisition_custom_setting
+msgid "Activate Budget check in purchase"
+msgstr "تفعيل التحقق من الميزانية في الشراء"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__activities
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__activity_description
+msgid "Activity Description"
+msgstr "وصف النشاط"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__cso_agreed
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__cso_agreed__agreed
+msgid "Agreed"
+msgstr "موافق"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+msgid "Aligned with the scope of the draft national strategy"
+msgstr "التأكد مع نطاق الاستراتيجية "
+
+#. module: odex25_purchase_saip
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_all_group
+msgid "All Purchaser Rquest"
+msgstr "كل طلبات الشراء"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__alternative_offer_allowed
+msgid "Alternative Offer Allowed ?"
+msgstr "يسمح بالعرض البديل؟"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__applying_address
+msgid "Applying Address"
+msgstr "عنوان تقديم الضمان"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.initiative_purchase_request_inherit
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.view_ordinary_purchase_request_inherit
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__attachment_scope_project
+msgid "Attachment Scope Project"
+msgstr "نطاق عمل المشروع (إرفاق مستند)"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__body_technical
+msgid "Body Technical"
+msgstr "اسم الجهة الفنية"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.purchase_requisition_custom_setting
+msgid "Booklet"
+msgstr "الكراسة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model,name:odex25_purchase_saip.model_budget_confirmation
+msgid "Budget Confirmation"
+msgstr "تعميد الموازنة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model,name:odex25_purchase_saip.model_budget_confirmation_line
+msgid "Budget Confirmation details"
+msgstr "تفاصيل تصديق الموازنة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model,name:odex25_purchase_saip.model_crossovered_budget_lines
+msgid "Budget Line"
+msgstr "عناصر بنود الموازنة"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__send_budget
+#, python-format
+msgid "Budget Management"
+msgstr "انتظار الارسال"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_view_budget_confirmation_form
+#, python-format
+msgid "Budget Management"
+msgstr "إدارة الميزانية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation__budget_scope
+msgid "Budget Scope"
+msgstr "نطاق الميزانية"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__cancel
+#, python-format
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__chairman_vision_office
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_chairman_vision_office_group
+#, python-format
+msgid "Chairman Vision Office Committee"
+msgstr "رئيس لجنة مكتب تحقيق الرؤية"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__dm
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__dm1
+#, python-format
+msgid "Chief Executive Officer"
+msgstr "الرئيس التنفيذي"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__general_supervisor
+#, python-format
+msgid "Chief Procurement Executive"
+msgstr "الرئيس التنفيذي للمشتريات"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__cso
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_cso_group
+#, python-format
+msgid "Chief Strategy Officer-CSO"
+msgstr "المدير التنفيذي للادارة الاستراتيجية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__classify_des
+msgid "Classify"
+msgstr "توضيح"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__cso_compatible
+msgid "Compatible"
+msgstr "موائم للنطاق"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__cso_compatible__compatible
+msgid "Compatible with scope "
+msgstr "موائم للنطاق"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__competion_description
+msgid "Competion Description"
+msgstr "وصف المنافسة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model,name:odex25_purchase_saip.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation_line__analytic_account_id
+msgid "Cost Center"
+msgstr "الحساب التحليلي (بند الموازنة)"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__date_time
+msgid "Date and Time"
+msgstr "التاريخ والوقت"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.view_ordinary_purchase_request_inherit
+msgid "Delivery Info"
+msgstr "معلومات التسليم"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__Delivery_place
+msgid "Delivery_place"
+msgstr "مكان التسليم"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+msgid "Deparments Use"
+msgstr "الإدارة الطالبة"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.view_ordinary_purchase_request_inherit
+msgid "Deparments Use Base info"
+msgstr "المعلومات الأساسية للطلب"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation__display_name
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation_line__display_name
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_crossovered_budget_lines__display_name
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__display_name
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_res_company__display_name
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__is_delivered
+msgid "Do samples need to delivered"
+msgstr "هل يتطلب تسليم عينات؟"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__document_cost
+msgid "Document cost"
+msgstr "قيمة الوثائق"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__done
+#, python-format
+msgid "Done"
+msgstr "تم"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__draft
+#, python-format
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__purchase_request_type__emarket
+#: model:ir.ui.menu,name:odex25_purchase_saip.menu_emarket_purchase_request
+#: model_terms:ir.actions.act_window,help:odex25_purchase_saip.action_emarket_purchase_request
+msgid "E-market Purchase Request"
+msgstr "طلب شراء السوق الإلكتروني"
+
+#. module: odex25_purchase_saip
+#: model:ir.actions.act_window,name:odex25_purchase_saip.action_emarket_purchase_request
+msgid "E-market Purchase Request "
+msgstr "طلب شراء السوق الإلكتروني."
+
+#. module: odex25_purchase_saip
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_emarket_group
+msgid "E-market Purchaser Rquest"
+msgstr "طلب شراء السوق الالكتروني"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__ceo_purchase
+#, python-format
+msgid "Executive Director of Procurement and Contracts"
+msgstr "المدير التنفيذي للمشتريات والعقود"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__budget_approve
+#, python-format
+msgid "Executive Vice President of Corporate Resources"
+msgstr "نائب الرئيس التنفيذي لقطاع الموارد المؤسسية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__delivery_floor
+msgid "Floor"
+msgstr "الطابق"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+msgid "For technical management use"
+msgstr "الادراة الفنية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation__id
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation_line__id
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_crossovered_budget_lines__id
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__id
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_res_company__id
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__cso_compatible__incompatible
+msgid "Incompatible with scope "
+msgstr "غير موائم للنطاق"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__initial_guarantee_percentage
+msgid "Initial Guarantee Percentage (%)"
+msgstr "نسبة الضمان الابتدائي (%)"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__budget_confirmation__budget_scope__initiative
+msgid "Initiative"
+msgstr "المبادرة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__initiative_end_date
+msgid "Initiative End Date"
+msgstr "تاريخ انتهاء المبادرة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__initiative_name
+msgid "Initiative Name"
+msgstr "اسم المبادرة"
+
+#. module: odex25_purchase_saip
+#: model:ir.actions.act_window,name:odex25_purchase_saip.action_initiative_purchase_request1
+#: model:ir.ui.menu,name:odex25_purchase_saip.menu_initiative_purchase_request
+#: model_terms:ir.actions.act_window,help:odex25_purchase_saip.action_initiative_purchase_request1
+msgid "Initiative Purchase Request"
+msgstr "طلب شراء المبادرات"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__purchase_request_type__initiative
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_initiative_group
+msgid "Initiative Purchaser Rquest"
+msgstr "طلب شراء المبادرات"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__Delivery_place__inside
+msgid "Inside  Saudi Arabia"
+msgstr "داخل المملكة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__is_competition_divisible
+msgid "Is Competition Divisible?"
+msgstr "هل المنافسة قابلة للتجزئة؟"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__budget_confirmation__permission__allowed
+msgid "Item Allows"
+msgstr "البند يسمح"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__budget_confirmation__permission__not_allowed
+msgid "Item Not Allows"
+msgstr "البند لايسمح"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+msgid "Items"
+msgstr "الاصناف والخدمات"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__budget_confirmation__budget_scope__ksagreement_budget
+msgid "Korean Side Agreement Budget"
+msgstr "ميزانية اتفاقية الجانب الكوري"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation____last_update
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation_line____last_update
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_crossovered_budget_lines____last_update
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request____last_update
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_res_company____last_update
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__list_documentaries
+msgid "List documentaries"
+msgstr "قائمة الوثائق"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__is_delivered__no
+msgid "NO"
+msgstr "لا"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__purchase_request_type__strategy
+#: model:ir.ui.menu,name:odex25_purchase_saip.menu_national_strategy_purchase_request
+#: model_terms:ir.actions.act_window,help:odex25_purchase_saip.action_national_strategy_purchase_request
+msgid "National Strategy Purchase Request"
+msgstr "طلب شراء الاستراتيجية الوطنية"
+
+#. module: odex25_purchase_saip
+#: model:ir.actions.act_window,name:odex25_purchase_saip.action_national_strategy_purchase_request
+msgid "National Strategy Purchase Request "
+msgstr "طلب شراء الاستراتيجية الوطنية"
+
+#. module: odex25_purchase_saip
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_national_strategy_group
+msgid "National Strategy Purchaser Rquest"
+msgstr "طلب شراء الاستراتيجية الوطنية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__alternative_offer_allowed__no
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__is_competition_divisible__no
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__pre_qualification__no
+msgid "No"
+msgstr "لا"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__cso_agreed__not_agreed
+msgid "Not Agreed"
+msgstr "غير موافق"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__budget_confirmation__budget_scope__operational_budget
+msgid "Operational Budget"
+msgstr "الميزانية التشغلية للهيئة"
+
+#. module: odex25_purchase_saip
+#: model:ir.actions.act_window,name:odex25_purchase_saip.action_ordinary_purchase_request
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__purchase_request_type__ordinary
+#: model:ir.ui.menu,name:odex25_purchase_saip.menu_ordinary_purchase_request
+#: model_terms:ir.actions.act_window,help:odex25_purchase_saip.action_ordinary_purchase_request
+msgid "Ordinary Purchase Request"
+msgstr "طلب شراء عادي"
+
+#. module: odex25_purchase_saip
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_ordinary_group
+msgid "Ordinary Purchaser Rquest"
+msgstr "طلب شراء عادي"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__strategic_objective__other
+msgid "Other"
+msgstr "اخرى"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__other_strategic_objective
+msgid "Other Strategic objective"
+msgstr "هدف استراتيجي آخر "
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__other_details
+msgid "Other details"
+msgstr "تفاصيل أخرى"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__Delivery_place__out
+msgid "Out of Saudi Arabia"
+msgstr "خارج المملكة"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__wait_budget
+#, python-format
+msgid "Pending Budget Approve"
+msgstr "في انتظار إدارة الميزانية"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__ppmm
+#, python-format
+msgid "Performance & planing Management manager"
+msgstr "مدير إدراة التخطيط والاداء"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__ppmo
+#, python-format
+msgid "Performance & planing Management officer"
+msgstr "مسؤول إدراة التخطيط والاداء"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.initiative_purchase_request_inherit
+msgid "Performance and planing Management Use"
+msgstr "إدارة التخطيط والأداء"
+
+#. module: odex25_purchase_saip
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_ppmm_group
+msgid "Performance and planing Management manager"
+msgstr "مدير إدراة التخطيط والأداء"
+
+#. module: odex25_purchase_saip
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_ppmo_group
+msgid "Performance and planing Management officer"
+msgstr "مسؤول إدراة التخطيط والأداء"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation__permission
+msgid "Permission"
+msgstr "السماح"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__pre_qualification
+msgid "Pre-Qualification Linked ?"
+msgstr "مربوط بتأهيل مسبق؟"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__waiting
+#, python-format
+msgid "Procurement Department"
+msgstr "إدارة المشتريات"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__procurement
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_procurement_group
+#, python-format
+msgid "Procurement Manager"
+msgstr "مدير إدراة المشتريات"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__procurement_unit
+#, python-format
+msgid "Procurement Unit"
+msgstr "إدارة المشتريات"
+
+#. module: odex25_purchase_saip
+#: model:res.groups,name:odex25_purchase_saip.purchase_request_procurement_unit_group
+msgid "Procurement Unit officer"
+msgstr "مسؤول إدارة المشتريات"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.view_ordinary_purchase_request_inherit
+msgid "Procurement use"
+msgstr "استخدام إدارة المشتريات"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__program_action
+msgid "Program of action"
+msgstr "برنامج العمل"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.view_ordinary_purchase_request_inherit
+msgid "Project Location"
+msgstr "موقع المشروع"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__project_name
+msgid "Project Name"
+msgstr "اسم المشروع"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.purchase_requisition_custom_setting
+msgid "Purchase Booklet"
+msgstr "الكراسة الالكترونية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model,name:odex25_purchase_saip.model_purchase_request
+msgid "Purchase Request"
+msgstr "طلبات الشراء"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_budget_confirmation__purchase_request_type
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__purchase_request_type
+msgid "Purchase Request Type"
+msgstr "أنواع طلب الشراء"
+
+#. module: odex25_purchase_saip
+#: model:ir.module.category,name:odex25_purchase_saip.module_category_purchase_approve_request
+msgid "Purchaser Request Permission Approve Group."
+msgstr "صلاحيات موافقات طلبات الشراء"
+
+#. module: odex25_purchase_saip
+#: model:ir.module.category,name:odex25_purchase_saip.module_category_purchase_request
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_all_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_chairman_vision_office_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_cso_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_emarket_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_initiative_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_national_strategy_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_ordinary_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_ppmm_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_ppmo_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_procurement_group
+#: model:res.groups,comment:odex25_purchase_saip.purchase_request_procurement_unit_group
+msgid "Purchaser Rquest Permission Group."
+msgstr "نوع طلب الشراء"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__purpose_of_tender
+msgid "Purpose of Tender "
+msgstr "الغرض من المنافسة"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__refuse
+#, python-format
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+msgid "Requesting ِAdministration"
+msgstr "لإستخدام الإدارة الطالبة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model,name:odex25_purchase_saip.model_res_company
+msgid "Res Company SMS Configuration"
+msgstr ""
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_view_budget_confirmation_form
+msgid "Rest To Draft"
+msgstr "ارجاع الي مبدئي"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__budget_confirmation__budget_scope__revenue_budget
+msgid "Revenue Budget"
+msgstr "ميزانية الايرادات"
+
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__budget_confirmation__budget_scope__strategy
+msgid "National Strategy Budget"
+msgstr "ميزانية الاستراتجية الوطنية"
+
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__budget_confirmation__budget_scope__other
+msgid "other"
+msgstr "ميزانية اخري"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__samples_delivery_address
+msgid "Samples  Address"
+msgstr "عنوان تسليم العينات"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__is_direct_manager
+msgid "Sent Technical Department"
+msgstr "إرسال للإدارة الفنية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__strategic_objective
+msgid "Strategic Objective"
+msgstr "الهدف الاستراتيجي"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+msgid "Strategy Management Use"
+msgstr "لإستخدام الاستراتجية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__sub_project
+msgid "Sub Project"
+msgstr "اسم المشروع الفرعي"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/purchase_request.py:0
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__state__direct_manager
+#, python-format
+msgid "Technical Department"
+msgstr "الإدارة الفنية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__tender_name
+msgid "Tender Name"
+msgstr "اسم المنافسة"
+
+#. module: odex25_purchase_saip
+#: model:ir.module.category,description:odex25_purchase_saip.module_category_purchase_approve_request
+#: model:ir.module.category,description:odex25_purchase_saip.module_category_purchase_request
+msgid "The Purchaser Rquest Applilcation"
+msgstr "منظومة طلبات الشراء"
+
+#. module: odex25_purchase_saip
+#: code:addons/odex25_purchase_saip/models/crossovered_budget.py:0
+#, python-format
+msgid "This analytic account account is already exit"
+msgstr "الحساب التحليلي موجود في موازنة في نفس الفترة المالية"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+msgid "Total amount"
+msgstr "إجمالي المبلغ"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__delivery_unit
+msgid "Unit"
+msgstr "الغرفة/الادارة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__attachment_booklet_uploade
+msgid "Upload Booklet"
+msgstr "رفع ملف الكراسة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,help:odex25_purchase_saip.field_res_company__attachment_booklet_exp
+#: model:ir.model.fields,help:odex25_purchase_saip.field_res_config_settings__attachment_booklet_exp
+msgid "Upload Booklet file"
+msgstr "إرفاق الكراسة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__vision_program_name
+msgid "Vision Program Name"
+msgstr "اسم برنامج الرؤية"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__work_location_city
+msgid "Work Location City"
+msgstr "المدينة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__work_location_district
+msgid "Work Location District"
+msgstr "الحي"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__work_location_GPS
+msgid "Work Location GPS"
+msgstr "احداثيات"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__work_location_state
+msgid "Work Location State"
+msgstr "المحافظة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__is_delivered__yes
+msgid "YES"
+msgstr "نعم"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__alternative_offer_allowed__yes
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__is_competition_divisible__yes
+#: model:ir.model.fields.selection,name:odex25_purchase_saip.selection__purchase_request__pre_qualification__yes
+msgid "Yes"
+msgstr "نعم"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__delivery_building
+msgid "building"
+msgstr "المبنى"
+
+#. module: odex25_purchase_saip
+#: model_terms:ir.ui.view,arch_db:odex25_purchase_saip.inherit_purchase_request_form
+msgid "download Booklet"
+msgstr "تنزيل الكراسة"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_res_company__attachment_booklet_exp
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_res_config_settings__attachment_booklet_exp
+msgid "file"
+msgstr "الملف"
+
+#. module: odex25_purchase_saip
+#: model:ir.model.fields,field_description:odex25_purchase_saip.field_purchase_request__project_duration
+msgid "numbers of project duration"
+msgstr "عدد سنوات او مدة تنفيذ المشروع"

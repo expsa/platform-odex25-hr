@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="sequence_rental_contract_seq" model="ir.sequence">
+            <field name="name">Rental Contract</field>
+            <field name="code">rental.contract</field>
+            <field name="padding">4</field>
+            <field name="prefix">CO:%(y)s/%(month)s/</field>
+            <field name="company_id" eval="False"/>
+            <field name="number_increment" eval="1"/>
+        </record>
+
+         <record id="sequence_rent_payment_seq" model="ir.sequence">
+            <field name="name">Rent Payment</field>
+            <field name="code">rent.payment</field>
+            <field name="padding">4</field>
+            <field name="prefix">RP:%(y)s/%(month)s/</field>
+            <field name="company_id" eval="False"/>
+            <field name="number_increment" eval="1"/>
+        </record>
+
+         <record  id="contract_transfer_seq" model="ir.sequence">
+            <field name="name">transfer.contract</field>
+            <field name="code">transfer.contract</field>
+            <field name="prefix">CT:%(y)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+            <field eval="1" name="number_increment"/>
+        </record>
+
+
+    </data>
+</odoo>

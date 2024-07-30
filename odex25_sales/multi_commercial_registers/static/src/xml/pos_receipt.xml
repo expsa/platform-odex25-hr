@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@id='logo_div']/center/img" position="replace">
+            <t t-log="env.pos.config.print_by_branch"/>
+            <t t-if="env.pos.config.print_by_branch">
+                <img class="pos-receipt-logo" t-attf-src="data:image/png;base64,{{receipt.branch.logo}}" alt="Logo"
+                                style="width:100%"/>
+            </t>
+            <t t-else="">
+                <img class="pos-receipt-logo" t-att-src="receipt.company.logo" alt="Logo"
+                                style="width:100%"/>
+            </t>
+        </xpath>
+        
+        <xpath expr="//div[@id='div_company_name']/span/t" position="replace">
+            <t t-if="env.pos.config.print_by_branch">
+                <t t-esc="receipt.branch.name" />
+            </t>
+            <t t-else="">
+                <t t-esc="receipt.company.name" />
+            </t>
+        </xpath>
+        
+        <xpath expr="//div[@id='company_street']/t" position="replace">
+            <t t-if="env.pos.config.print_by_branch">
+                <t t-esc="receipt.branch.street"/>
+            </t>
+            <t t-else="">
+                <t t-esc="receipt.company.street"/>
+            </t>
+        </xpath>
+        
+        <xpath expr="//div[@id='company_city']/t" position="replace">
+            <t t-if="env.pos.config.print_by_branch">
+                <t t-esc="receipt.branch.city"/>
+            </t>
+            <t t-else="">
+                <t t-esc="receipt.company.city"/>
+            </t>
+        </xpath>
+        
+        <xpath expr="//div[@id='company_zip']/t" position="replace">
+            <t t-if="env.pos.config.print_by_branch">
+                <t t-esc="receipt.branch.zip"/>
+            </t>
+            <t t-else="">
+                <t t-esc="receipt.company.zip"/>
+            </t>
+        </xpath>
+
+        <xpath expr="//t[@id='barcode_seller']" position="replace">
+            <t t-if="env.pos.config.print_by_branch">
+                <t t-esc="receipt.branch.name"/>
+            </t>
+            <t t-else="">
+                <t t-esc="receipt.company.name"/>
+            </t>
+        </xpath>
+
+    </t>
+
+</templates>

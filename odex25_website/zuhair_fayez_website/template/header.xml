@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="my_header" inherit_id="website.layout" name="Header">
+        <xpath expr="//header//nav" position="replace">
+            <div class="nav-container">
+                <div class="main-nav">
+                    <div class="logo">
+                        <a href="/">
+                            <img class="website-logo" src="/zuhair_fayez_website/static/img/logo-dark-lrg.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <a class="current" href="/">home</a>
+                        <a href="/about">about</a>
+                        <a href="/services">services</a>
+                        <a href="/news">media center</a>
+                        <a href="/careers">careers</a>
+                        <a href="/contact">contact</a>
+                    </div>
+                    <div class="language-selector">
+                        <p>EN</p>
+                    </div>
+                    <div class="menu-container">
+                        <div class="hamburger-menu">
+                            <span class="span1"></span>
+                            <span></span>
+                            <span class="span3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-container">
+                <div class="popup-overlay"></div>
+                <div class="popup-menu">
+                    <div class="popup-menu-container">
+                        <div class="popup-close">
+                            <img id="close" src="/zuhair_fayez_website/static/img/popup-close-white.png" alt=""/>
+                        </div>
+                        <div class="popup-content">
+                            <div class="popup-links">
+                                <a class="sequence" href="/">Home</a>
+                                <a class="sequence" href="/about">About</a>
+                                <a id="services-menu" class="sequence" href="#">Services
+                                    <img src="/zuhair_fayez_website/static/img/sub-menu.png" alt=""/>
+                                </a>
+                                <a id="media-center-menu" class="sequence" href="#">Media Center
+                                    <img src="/zuhair_fayez_website/static/img/sub-menu.png" alt=""/>
+                                </a>
+                                <a class="sequence" href="/careers">Careers</a>
+                                <a class="sequence" href="/contact">Contact</a>
+                            </div>
+                            <div class="brand">
+                                <p class="sequence">Zuhair Fayez</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-sub-menu">
+                    <div class="popup-menu-container">
+                        <div class="popup-close">
+                            <img class="back1" src="/zuhair_fayez_website/static/img/sub-menu.png" alt=""/>
+                        </div>
+                        <div class="popup-content">
+                            <div class="popup-links">
+                                <a class="sequence-two" href="/services">Main Services Page</a>
+                                <a class="sequence-two" href="/service">architectural and engineering design</a>
+                                <a class="sequence-two" href="/service">construction management &amp; project
+                                    management
+                                </a>
+                                <a class="sequence-two" href="/service">construction supervision</a>
+                                <a class="sequence-two" href="/service">technical services and manpower supply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-sub-menu-2">
+                    <div class="popup-menu-container">
+                        <div class="popup-close">
+                            <img class="back2" src="/zuhair_fayez_website/static/img/sub-menu.png" alt=""/>
+                        </div>
+                        <div class="popup-content">
+                            <div class="popup-links">
+                                <a class="sequence-three" href="/news">News</a>
+                                <a class="sequence-three" href="/awards">Awards</a>
+                                <a class="sequence-three" href="/activites">activities</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </xpath>
+    </template>
+</odoo>

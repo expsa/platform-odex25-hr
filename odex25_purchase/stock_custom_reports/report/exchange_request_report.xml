@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="exchange_request_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row col-12 mt32 mb32" id="information">
+                            <div class="col-4 pull-right" dir="rtl">
+                                <table class="table table-borderless" style="width:100%; border: none !important;"
+                                       dir="rtl">
+                                    <tr>
+                                        <th>المملكة العربية السعودية</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">الجهة</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">رقم الجهة</th>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">الادارة الطالبة</th>
+                                        <td style="text-align:right;border: none !important;">
+                                            <span t-esc="o.department_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">مستودع</th>
+                                        <td style="text-align:right;border: none !important;">
+                                            <span t-esc="o.location_id.name"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-4 pull-right" dir="rtl">
+                                <center>
+                                    <h2 classs="text-center">طلب صرف مواد</h2>
+                                </center>
+                            </div>
+                            <div class="col-4 pull-left" dir="rtl">
+                                <table class="table table-borderless" style="width:100%; border: none !important;"
+                                       dir="rtl">
+                                    <tr>
+                                        <th style="text-align:right;">الرقم المتسلسل</th>
+                                        <td style="text-align:right;border: none !important;">
+                                            <span t-field="o.name"/>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:right;">التاريخ</th>
+                                        <td style="text-align:right;border: none !important;">
+                                            <span t-esc="o.request_date"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <strong>الرقم</strong>
+                                    </th>
+                                    <th>
+                                        <strong>مرجع المنتج</strong>
+                                    </th>
+                                    <th>
+                                        <strong>المنتج</strong>
+                                    </th>
+                                    <th>
+                                        <strong>وحدة القياس</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>الكمية المطلوبة</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>الكمية الفعلية</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>التكلفة</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>المجموع</strong>
+                                    </th>
+                                    <th class="text-right">
+                                        <strong>الملاحظات</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="index" t-value="0"/>
+                                <t t-set="qty_done" t-value="0"/>
+                                <t t-set="total" t-value="0"/>
+                                <t t-foreach="o.line_ids" t-as="line">
+                                    <t t-set="index" t-value="index + 1"/>
+                                    <tr>
+                                         <td><span t-esc="index"/></td>
+                                        <td>
+                                            <span t-field="line.product_id.default_code"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.product_id"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.Uom_id"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.product_qty"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-set="qty_done" t-value="0"/>
+                                            <t t-foreach="o.stock_picking" t-as="picking">
+                                                    <t t-foreach="picking.move_ids_without_package" t-as="move">
+                                                        <t t-if="move.product_id == line.product_id">
+                                                            <t t-set="qty_done" t-value="qty_done + move.quantity_done"/>
+                                                        </t>
+                                                    </t>
+                                            </t>
+                                            <span t-esc="qty_done"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.product_id.standard_price"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="qty_done * line.product_id.standard_price"/>
+                                            <t t-set="total" t-value="total + qty_done * line.product_id.standard_price"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.note"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <div>
+                            <table class="table table-borderless" style="border: none;page-break-inside: avoid;">
+                                <tr>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;"></td>
+                                    <td style="border:none;">الاجمالي</td>
+                                    <td style="border:none;"><t t-esc="total"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="clearfix mt32 mb32 mt-5"/>
+                        <div class="row col-12 mt32 mb32">
+                            <div class="col-3 pull-right" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>مدير الادارة الطالبة</strong>
+                                </div>
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>الاسم</strong>
+                                </div>
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>التاريخ</strong>
+                                </div>
+
+                            </div>
+                            <div class="col-3 pull-right" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>ادارة المستودعات</strong>
+                                </div>
+                            </div>
+                            <div class="col-3 pull-right" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>امين المستودع</strong>
+                                </div>
+
+                            </div>
+                            <div class="col-3 pull-right" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>المستلم</strong>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row col-12 mt32 mb32 mt-3">
+                            <div class="col-6 pull-right" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>لا مانع من الصرف في حدود ما تسمح به الارصدة</strong>
+                                </div>
+                            </div>
+                             <div class="col-6 pull-left" dir="rtl">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>التوقيع</strong>
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="report_exchange_request" model="ir.actions.report">
+        <field name="name">Exchange Request Report</field>
+        <field name="model">exchange.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_custom_reports.exchange_request_report_template</field>
+        <field name="report_file">stock_custom_reports.exchange_request_report_template</field>
+        <field name="print_report_name">'Exchange Request - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="exchange_request.model_exchange_request"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="stock_custom_reports.stock_custom_paperformat"/>
+    </record>
+
+
+</odoo>

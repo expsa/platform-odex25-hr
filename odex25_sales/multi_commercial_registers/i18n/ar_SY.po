@@ -1,0 +1,120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* multi_branch_invoices
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20201201\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-20 23:03+0000\n"
+"PO-Revision-Date: 2023-03-20 23:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: multi_branch_invoices
+#: model:ir.model.fields,field_description:multi_branch_invoices.field_pos_session_address
+msgid "Address"
+msgstr "العنوان"
+
+#. module: multi_branch_invoices
+#: model:ir.model,name:multi_branch_invoices.model_res_branch
+msgid "Branch"
+msgstr "الفروع"
+
+#. module: multi_branch_invoices
+#: model:ir.model.fields,field_description:multi_branch_invoices.field_pos_config_print_by_branch
+#: model:ir.model.fields,field_description:multi_branch_invoices.field_pos_order_print_by_branch
+#: model:ir.model.fields,field_description:multi_branch_invoices.field_pos_session_print_by_branch
+msgid "Branch Invoice"
+msgstr "فاتورة الفرع"
+
+#. module: multi_branch_invoices
+#: model:ir.model.fields,field_description:multi_branch_invoices.field_pos_session_branch_logo
+msgid "Branch Logo"
+msgstr "شعار الفرع"
+
+#. module: multi_branch_invoices
+#: model:ir.model.fields,field_description:multi_branch_invoices.field_pos_session_branch_registry
+msgid "Branch Registry"
+msgstr "سجل الفرع"
+
+#. module: multi_branch_invoices
+#: model:ir.model,name:multi_branch_invoices.model_account_invoice
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: multi_branch_invoices
+#: model:ir.model.fields,field_description:multi_branch_invoices.field_account_invoice_print_by_branch
+msgid "Invoice with Branch"
+msgstr "فاتورة للفرع"
+
+#. module: multi_branch_invoices
+#: model:ir.ui.view,arch_db:multi_branch_invoices.branch_pos_report_e_invoice_header
+#: model:ir.ui.view,arch_db:multi_branch_invoices.branch_report_e_invoice_header
+msgid "Logo"
+msgstr "الشعار"
+
+#. module: multi_branch_invoices
+#: model:ir.model,name:multi_branch_invoices.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "طلبات نقطة البيع"
+
+#. module: multi_branch_invoices
+#: model:ir.ui.view,arch_db:multi_branch_invoices.pos_config_view_form
+msgid "Print the invoice by branch"
+msgstr "طباعة الفاتورة للفرع"
+
+#. module: multi_branch_invoices
+#: model:ir.ui.view,arch_db:multi_branch_invoices.inherit_view_res_branch_form
+msgid "Social Media"
+msgstr "المواقع الاجتماعية"
+
+#. module: multi_branch_invoices
+#: model:ir.ui.view,arch_db:multi_branch_invoices.inherit_view_res_branch_form
+msgid "e.g. www.odoo.com"
+msgstr "مثلا www.odoo.com"
+
+#. module: multi_branch_invoices
+#: model:ir.model,name:multi_branch_invoices.model_pos_config
+msgid "pos.config"
+msgstr "نقطة البيع.تعريفات"
+
+#. module: multi_branch_invoices
+#: model:ir.model,name:multi_branch_invoices.model_pos_session
+msgid "pos.session"
+msgstr "pos.session"
+
+#. module: multi_branch_invoices
+#: model:ir.ui.view,arch_db:multi_branch_invoices.branch_report_e_invoice
+msgid "الاسم - Name"
+msgstr "الاسم - Name"
+
+#. module: multi_branch_invoices
+#: model:ir.ui.view,arch_db:multi_branch_invoices.branch_report_e_invoice
+msgid "الرقم الضريبي - VAT"
+msgstr "الرقم الضريبي - VAT"
+
+#. module: multi_branch_invoices
+#: model:ir.ui.view,arch_db:multi_branch_invoices.branch_report_e_invoice
+msgid "العنوان - Address"
+msgstr "العنوان - Address"
+
+#. module: multi_branch_invoices
+#. openerp-web
+#: code:addons/local_prod/odex-electronic-invoice/multi_branch_invoices/static/src/xml/pos_receipt.xml:45
+#: code:addons/local_prod/odex-electronic-invoice/multi_branch_invoices/static/src/xml/pos_receipt.xml:56
+#: code:addons/multi_branch_invoices/static/src/xml/pos_receipt.xml:45
+#: code:addons/multi_branch_invoices/static/src/xml/pos_receipt.xml:56
+#, python-format
+msgid "العنوان:"
+msgstr "العنوان:"
+
+#. module: multi_branch_invoices
+#: model:ir.ui.view,arch_db:multi_branch_invoices.branch_report_e_invoice
+msgid "رقم المعرف - NUM I"
+msgstr "رقم المعرف - NUM I"
+

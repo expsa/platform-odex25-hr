@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_partner_form_sequence_inherit" model="ir.ui.view">
+            <field name="name">res.partner.inherit.seuqnece.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='type']" position="before">
+                    <field name="sequence"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_partner_tree_sequence_inherit" model="ir.ui.view">
+            <field name="name">res.partner.inherit.seuqnece.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='display_name']" position="before">
+                    <field name="sequence"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_res_partner_filter_sequence_inherit" model="ir.ui.view">
+            <field name="name">res.partner.inherit.seuqnece.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="replace">
+                    <field name="name"
+                           filter_domain="['|','|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self),('sequence','ilike',self)]"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

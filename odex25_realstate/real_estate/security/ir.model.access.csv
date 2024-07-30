@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_realestate_configuration_property_type,internal.property.type,model_internal_property_type,,1,1,1,1
+access_realestate_configuration_unit_type,unit.type,model_unit_type,,1,1,1,1
+access_realestate_configuration_property_face,property.faces,model_property_faces,,1,1,1,1
+access_realestate_configuration_property_state,re.property.state,model_re_property_state,,1,1,1,1
+access_realestate_internal_property,internal.property,model_internal_property,,1,1,1,1
+access_realestate_re_unit,re.unit,model_re_unit,,1,1,1,1
+access_realestate_configuration_property_sketchs,sketchs.sketchs,model_sketchs_sketchs,,1,1,1,1
+

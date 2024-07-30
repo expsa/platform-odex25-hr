@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="service_sub_projects" name="service_sub_projects">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="projects-container">
+                    <t t-foreach="projects" t-as="project">
+                       <a t-attf-href="#" class='btn w-100 btn-secondary'
+                           style="color:white;text-decoration:none;">
+                            <div class="project-card">
+                                <div class="project-card-info">
+                                    <p class="description" t-esc="project.name"/>
+                                </div>
+                            </div>
+                        </a>
+                    </t>
+
+                    <!--                    <div class="project-card">-->
+                    <!--                        <div class="project-card-img">-->
+                    <!--                            <a class="project-link" href="project_details.html"></a>-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/basateen-residential.webp" alt=""/>-->
+                    <!--                            <p class="project-name">AL-BASATEEN RESIDENTIAL</p>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="project-card-info">-->
+                    <!--                            <p class="description">This project is the design of the Al-Basateen Residential Compound in-->
+                    <!--                                Riyadh for-->
+                    <!--                                United Financial House (UFH). The Al-Basateen Residential Compound site location is an-->
+                    <!--                                undeveloped-->
+                    <!--                            </p>-->
+                    <!--                            <a href="project_details.html">Read More-->
+                    <!--                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"-->
+                    <!--                                     viewBox="0 0 32 32">-->
+                    <!--                                    <path-->
+                    <!--                                            d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/>-->
+                    <!--                                </svg>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="project-card">-->
+                    <!--                        <div class="project-card-img">-->
+                    <!--                            <a class="project-link" href="project_details.html"></a>-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/ITCC-RESIDENTIAL.webp" alt=""/>-->
+                    <!--                            <p class="project-name">ITCC RESIDENTIAL</p>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="project-card-info">-->
+                    <!--                            <p class="description">The project is located at the Northwest corner of the intersection of-->
+                    <!--                                Takhasussi-->
+                    <!--                                road with Imam Saud road in Riyadh, ITCC residential complex (2nd phase of information-->
+                    <!--                            </p>-->
+                    <!--                            <a href="project_details.html">Read More-->
+                    <!--                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"-->
+                    <!--                                     viewBox="0 0 32 32">-->
+                    <!--                                    <path-->
+                    <!--                                            d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/>-->
+                    <!--                                </svg>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="project-card">-->
+                    <!--                        <div class="project-card-img">-->
+                    <!--                            <a class="project-link" href="project_details.html"></a>-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/KING-ABDULLAH-HOUSING.webp" alt=""/>-->
+                    <!--                            <p class="project-name">KING ABDULLAH HOUSING</p>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="project-card-info">-->
+                    <!--                            <p class="description">The project involves master planning, designing and construction-->
+                    <!--                                supervision of-->
+                    <!--                                6,000 two storey’s villas distributed over 5 sites for the housing of the displaced-->
+                    <!--                                Saudi citizen-->
+                    <!--                            </p>-->
+                    <!--                            <a href="project_details.html">Read More-->
+                    <!--                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"-->
+                    <!--                                     viewBox="0 0 32 32">-->
+                    <!--                                    <path-->
+                    <!--                                            d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/>-->
+                    <!--                                </svg>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="project-card">-->
+                    <!--                        <div class="project-card-img">-->
+                    <!--                            <a class="project-link" href="project_details.html"></a>-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/NASAMAT-AL-RIYADH.webp" alt=""/>-->
+                    <!--                            <p class="project-name">NASAMAT AL-RIYADH</p>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="project-card-info">-->
+                    <!--                            <p class="description">This project is the design of the training staff housing for the-->
+                    <!--                                Institute of-->
+                    <!--                                Public Administration in Dammam The project comprises 2000 villas of different sizes and-->
+                    <!--                                2000-->
+                    <!--                                apartments.-->
+                    <!--                            </p>-->
+                    <!--                            <a href="project_details.html">Read More-->
+                    <!--                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"-->
+                    <!--                                     viewBox="0 0 32 32">-->
+                    <!--                                    <path-->
+                    <!--                                            d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/>-->
+                    <!--                                </svg>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="project-card">-->
+                    <!--                        <div class="project-card-img">-->
+                    <!--                            <a class="project-link" href="project_details.html"></a>-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/UMM-AL-QURA-UNIVERSITY.webp" alt=""/>-->
+                    <!--                            <p class="project-name">UMM AL QURA UNIVERSITY</p>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="project-card-info">-->
+                    <!--                            <p class="description">The Umm Al Qura University Housing Project includes 6 buildings in 2-->
+                    <!--                                different-->
+                    <!--                                locations. The female student housing, female staff housing (with a total built up area-->
+                    <!--                                of 28,500 m²-->
+                    <!--                            </p>-->
+                    <!--                            <a href="project_details.html">Read More-->
+                    <!--                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"-->
+                    <!--                                     viewBox="0 0 32 32">-->
+                    <!--                                    <path-->
+                    <!--                                            d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/>-->
+                    <!--                                </svg>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem name="Real Estate" id="real_estate_main_menu" 
+            web_icon="real_estate,static/description/icon.png"/>
+
+        <menuitem name="Real Estate &amp; Units" id="real_estate_menu"
+            parent="real_estate_main_menu" sequence="4"/>
+
+        <menuitem name="Configuration" id="configuration_main_menu"
+            parent="real_estate_main_menu" sequence="4"/>
+
+
+    </data>
+</odoo>

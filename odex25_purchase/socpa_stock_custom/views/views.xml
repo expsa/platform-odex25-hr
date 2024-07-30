@@ -1,0 +1,251 @@
+<odoo>
+    <data>
+        <!-- TODO move this code to custody module -->
+        <!--  add allowd jobs to product -->
+        <!-- <record id="product_custom_form_view" model="ir.ui.view">
+          <field name="name">product.template.inherit.view.form</field>
+          <field name="model">product.template</field>
+          <field name="inherit_id" ref="product.product_template_only_form_view"/>
+          <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+              <page string="Allowed Jobs" attrs="{'invisible' : [('is_asset' , '!=' , True)]}">
+                  <field name="allowed_jobs" options="{'no_create': True,'no_open':True}"/>
+              </page>
+            </xpath>
+
+
+          </field>
+        </record> -->
+
+        <!-- Reject wizard -->
+        <record id="reject_wizard" model="ir.ui.view">
+            <field name="name">Reject Reason</field>
+            <field name="model">reject.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="origin" invisible="1"/>
+                    <field name="reject_reason" required="1"/>
+                    <footer>
+                        <div>
+                            <button name="action_reject" string="Reject" type="object" default_focus="1"
+                                    class="oe_highlight"/>
+                            or
+                            <button string="Close" class="oe_link" special="cancel"/>
+                        </div>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Product Category  -->
+
+        <!-- product.category inherit form view -->
+        <record id="product_category_custom_form" model="ir.ui.view">
+            <field name="name">product.category.inherit.view.form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_stock_valuation_account_id']" position="after">
+                    <field name="property_consignment_account"
+                           attrs="{'required':[('property_valuation' , '=','real_time')]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- product.template inherit form view -->
+        <record id="custom_product_for_view" model="ir.ui.view">
+            <field name="name">product.template.inherit.view.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="git_product"/>
+                    <field name="available_for"
+                           attrs="{'invisible' : [('git_product' , '!=' , True)] , 'required' : [('git_product' , '=' , True)]}"/>
+                </xpath>
+                <xpath expr="//notebook[1]" position="inside">
+                    <page string="Gift Quant Configuration" name="Gift Quant Configuration"
+                          groups="socpa_stock_custom.pruduct_quants_config"
+                          attrs="{'invisible' : [('git_product' , '!=' , True)]}">
+                        <field name="gift_quants" groups="socpa_stock_custom.pruduct_quants_config">
+                            <tree editable="bottom">
+                                <field name="department_id"
+                                       attrs="{'column_invisible' : [('parent.available_for' , '!=' ,'department')] , 'required' : [('parent.available_for' , '=' ,'department')]}"/>
+                                <field name="job_id"
+                                       attrs="{'column_invisible' : [('parent.available_for' , '!=' ,'job')] , 'required' : [('parent.available_for' , '=' ,'job')]}"/>
+                                <field name="employee_id"
+                                       attrs="{'column_invisible' : [('parent.available_for' , '!=' ,'employee')] , 'required' : [('parent.available_for' , '=' ,'employee')]}"/>
+                                <field name="planned_qty" required="1"/>
+                                <field name="actual_qty" readonly="1"/>
+                                <field name="remain_qty" readonly="1"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                </xpath>
+            </field>
+        </record>
+
+
+        <!-- exchange.request inherit form view -->
+        <record id="exchange_request_custom_form" model="ir.ui.view">
+            <field name="name">exchange.request.inherit.view.form</field>
+            <field name="model">exchange.request</field>
+            <field name="inherit_id" ref="exchange_request.exchange_request_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='location_id']" position="after">
+                    <field name="dest_location_id" domain="[('usage' , '=' , 'transit')]"
+                           attrs="{'invisible' :[('requisition_type' , '!=' , 'stock_transfer')] , 'required' : [('requisition_type' , '=' , 'stock_transfer') ]}"/>
+
+                </xpath>
+                <xpath expr="//field[@name='other_employee']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly':[('state','not in',('draft','confirm','direct_manager'))],
+                        'invisible' : [('requisition_type' ,'=' , 'stock_transfer')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='stock_journal_id']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly':[('state','not in',('draft','confirm','direct_manager'))],
+                        'invisible' : ['|',('type' , 'not in' , ['product','gift']),
+                        ('state' , 'in' , ['draft' , 'direct_manager'])],
+                        'required' : ['&amp;',('type' , 'in' , ['product','gift']),
+                        ('state' , 'not in' , ['draft' , 'direct_manager','cancel'])]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='warehouse_id']" position="attributes">
+                    <attribute name="attrs">{'readonly':['&amp;',('requisition_type' ,'!=' ,
+                        'stock_transfer'),('state','!=','confirm')],'invisible':['|','&amp;',('requisition_type' ,'!=' ,
+                        'stock_transfer'),('state','in',('draft','direct_manager')),('type','=','service')],'required':['|',('requisition_type'
+                        ,'=' , 'stock_transfer'),'&amp;',('type','in',('product','gift')),('state','not in',('direct_manager','draft','cancel'))]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='location_id']" position="attributes">
+                    <attribute name="attrs">{
+                        'readonly':[('state','not in',('draft','confirm','direct_manager'))],
+                        'invisible':['|','&amp;',('requisition_type' ,'!=' ,
+                        'stock_transfer'),('state','in',('draft','direct_manager')),('type','=','service')],
+                        'required':['|',('requisition_type' ,'=' , 'stock_transfer'),'&amp;',
+                        ('type','in',('product','gift')),('state','not in',('direct_manager','draft','cancel'))]}
+                    </attribute>
+                    <attribute name="context">{'get_all' : True , 'requisition_type' :requisition_type }</attribute>
+
+                </xpath>
+
+                <xpath expr="//field[@name='type']" position="attributes">
+                    <attribute name="attrs">{'readonly':['|','|',('requisition_type' , '=' ,
+                        'stock_transfer'),('requisition_type','=','return'),('state','not in',('draft','confirm','direct_manager'))]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='stock_picking']" position="after">
+                    <field name="recieve_picking_id" readonly="1"
+                           attrs="{'invisible' :[('requisition_type' , '!=' , 'stock_transfer')]}"/>
+                </xpath>
+                <field name="purpose" position="after">
+                    <field name="product_type" readonly="1"/>
+                </field>
+            </field>
+        </record>
+
+
+        <!-- stock.picking inherit form view -->
+        <record id="stock_picking_custom_form" model="ir.ui.view">
+            <field name="name">stock.picking.inherit.view.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="before">
+                    <field name="is_consigment"/>
+
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <!-- stock.scrap inherit form view -->
+        <record id="stock_scrap_custom_form" model="ir.ui.view">
+            <field name="name">stock.scrap.inherit.view.form</field>
+            <field name="model">stock.scrap</field>
+            <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[last()]" position="after">
+                    <notebook>
+                        <page string="Scrappring Reason">
+                            <field name="scrapping_reason" required="1"/>
+                        </page>
+                    </notebook>
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <!-- stock.location inherit form view -->
+        <record id="stock_location_form_custom" model="ir.ui.view">
+            <field name="name">stock.location.inherit.view.form</field>
+            <field name="model">stock.location</field>
+            <field name="inherit_id" ref="stock.view_location_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='return_location']" position="after">
+                    <field name="is_supply"/>
+
+                </xpath>
+                <xpath expr="//group[last()]" position="after">
+                    <notebook>
+                        <page string="Responsible">
+                            <field name="user_ids"/>
+
+                        </page>
+                    </notebook>
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <record id="stock_picking_type_form_custom" model="ir.ui.view">
+            <field name="name">stock.location.inherit.view.form</field>
+            <field name="model">stock.picking.type</field>
+            <field name="inherit_id" ref="stock.view_picking_type_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='warehouse_id']" position="after">
+                    <field name="user_ids" widget="many2many_tags"/>
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <!-- exchange.request action window -->
+        <record id="exchange_request_stock_internal_transfer_action" model="ir.actions.act_window">
+            <field name="name">Supply Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">exchange.request</field>
+            <field name="domain">[('requisition_type' , '=' , 'stock_transfer')]</field>
+            <field name="context">{'default_requisition_type' : 'stock_transfer' , 'default_type' : 'product'}</field>
+            <field name="view_mode">tree,form</field>
+            <!--        <field name="view_type">form</field>-->
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create Supply request
+                </p>
+                <p>
+
+                </p>
+            </field>
+        </record>
+        <menuitem action="exchange_request_stock_internal_transfer_action"
+                  id="exchange_request_stock_internal_transfer_menu"
+                  parent="stock.menu_stock_warehouse_mgmt"
+                  groups="socpa_stock_custom.supply_request"
+                  name="Supply Request"
+                  sequence="30"/>
+        <menuitem action="stock.action_inventory_form" id="stock.menu_action_inventory_form"
+                  parent="stock.menu_stock_warehouse_mgmt"
+                  groups="socpa_stock_custom.inventory_committee_member,socpa_stock_custom.inventory_committee_head"
+                  sequence="30"/>
+    </data>
+</odoo>

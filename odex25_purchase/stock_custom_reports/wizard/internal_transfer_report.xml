@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Incoming Outgoing Report wizard -->
+        <record id="id_internal_transfer_wizard" model="ir.ui.view">
+            <field name="name">internal_transfer_report</field>
+            <field name="model">internal.transfer.report</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Internal Transfer Report">
+                    <sheet>
+                        <group colspan="2">
+                            <group>
+                                <field name="date_from" />
+                                <field name="location_id" required="1" />
+                                <field name="product_ids" widget="many2many_tags"  domain="[('type','=','product'),('categ_id', 'child_of', category_id)]" attrs="{'invisible' : [('type' , '!=' , 'detailed')]}"/>
+                                <field name="state"/>
+                            </group>
+                            <group>
+                                <field name="date_to" />  
+                                <field name="type" required="1"/> 
+                                <field name="category_id" attrs="{'invisible' : [('type' , '!=' , 'detailed')]}" />
+                                <field name="operation_type"  required="1"/>
+                            </group>
+                        </group>
+                    </sheet> 
+                    <footer>
+                        <button name="print_report" string="Print" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+<!-- Incoming Outgoing Report Action -->
+        <act_window id="internal_transfer_report_action"
+                    target="new"
+                    name="Internal Transfer Report"
+                    res_model="internal.transfer.report"
+                    view_mode="form"/>
+
+<!-- Incoming Outgoing Report Menitem -->
+
+
+<menuitem
+            id= "internal_transfer_report_menu"
+            name= "Internal Transfer Report"
+            parent= "stock_reports_main_menu"
+            action= "internal_transfer_report_action"
+            groups="group_stock_additional_reports"
+
+        />
+
+
+</data>
+</odoo>

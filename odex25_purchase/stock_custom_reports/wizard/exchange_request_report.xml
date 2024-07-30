@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Incoming Outgoing Report wizard -->
+        <record id="id_exchange_request_wizard" model="ir.ui.view">
+            <field name="name">Exchange Request Report</field>
+            <field name="model">exchange.request.report</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Exchange Request Report">
+                    <sheet>
+                        <group col="4" colspan="2">
+                            <field name="date_from" />
+                            <field name="date_to" />   
+                            <field name="purpose" attrs="{'invisible' : [('requisition_type' ,'!=' , 'exchange')],'required' : [('requisition_type' ,'=' , 'exchange')] }" />
+                            <field name="location_id" attrs="{'invisible' : [('purpose' ,'=' , 'service')],'required' : [('purpose' ,'!=' , 'service')] }" />
+                            <field name="category_id" />
+                            <field name="product_ids" widget="many2many_tags" attrs="{'invisible' : [('type' ,'!=' , 'detailed')]}" context="{'default_type':'product'}" domain="[('type','=','product'),('categ_id', 'child_of', category_id)]"/>
+                            <field name="department_ids" widget="many2many_tags" attrs="{'invisible' : [('type' ,'!=' , 'detailed')]}"/>
+                            <!-- <field name="with_prices" /> -->
+                            <field name="type" required="1"/>
+                            <field name="group_by" required="1"/>
+                            <field name="employee_ids" widget="many2many_tags" attrs="{'invisible' : [('type' ,'!=' , 'detailed')]}"/>
+                            <field name="requisition_type" invisible="1"/>
+                        </group>
+                    </sheet> 
+                    <footer>
+                        <button name="print_report" string="Print" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+<!-- Incoming Outgoing Report Action -->
+        <act_window id="id_exchange_request_report_action"
+                    target="new"
+                    name="Exchange Request Report"
+                    res_model="exchange.request.report"
+                    view_mode="form"
+                    context="{'default_requisition_type' : 'exchange'}"/>
+
+
+        <act_window id="id_return_request_report_action"
+            target="new"
+            name="Return Report"
+            res_model="exchange.request.report"
+            view_mode="form"
+            context="{'default_requisition_type' : 'return' , 'default_purpose' : 'product'}"/>
+
+<!-- Incoming Outgoing Report Menitem -->
+
+
+<menuitem
+            id= "id_exchange_request_report_menu"
+            name= "Exchange Request Report"
+            parent= "stock_reports_main_menu"
+            action= "id_exchange_request_report_action"
+            groups="group_stock_additional_reports"
+
+        />
+
+        <menuitem
+        id= "id_return_request_report_menu"
+        name= "Return Report"
+        parent= "stock_reports_main_menu"
+        action= "id_return_request_report_action"
+        groups="group_stock_additional_reports"
+
+    />
+
+
+</data>
+</odoo>

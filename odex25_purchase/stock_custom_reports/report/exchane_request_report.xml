@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+    <!-- Incoming Outgoing With Prices Report template -->
+    <template id="exchange_request_report">
+        <t t-call="web.html_container">
+        <t t-call="web.external_layout">
+            <style>
+                .page{
+                    font-family: Times New Roman;;
+                }
+                table{
+                    width :100%;
+                    border : 1px solid black;
+                    border-collapse : collapse;
+                    font-size : 13pt;
+                    
+                }
+                th{
+                    border : 1px solid black;
+                    background-color : #a7c4f2;
+                    text-align : center;
+                    padding : 5px;
+                }
+                td{
+                    border : 1px solid black;
+                    text-align : center;
+                    padding : 3px;
+                }
+                .cr_t{
+                    text-align : center;
+                }
+
+            </style>
+            <div class="page" size="A4">
+                <center>
+                    <t t-if="requisition_type == 'exchange'"><h3>Exchange Request Report</h3></t>
+                    <t t-else="">
+                        <h3>Return Request Report</h3>
+                    </t>
+                    <table class="table table-bordered"  style="border: 2px solid black;font-family:Droid Arabic Naskh">
+                        <thead>
+                            <tr>
+                                <th colspan="2" style="border:1px solid black;text-align:center">Duration</th>                        
+                                <t t-if="purpose != 'service'"><th rowspan="2" style="border:1px solid black;text-align:center">Location</th></t>
+                                <th rowspan="2" style="border:1px solid black;text-align:center">Category</th>
+                                <!-- <th rowspan="2" style="border:1px solid black;text-align:center">Product</th> -->
+                            </tr>
+                            <tr>
+                                <th style="border:1px solid black;text-align:center">From</th>
+                                <th style="border:1px solid black;text-align:center">To</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align:center;border:1px solid black;"><t t-esc="date_from"/></td>
+                                <td style="text-align:center;border:1px solid black;"><t t-esc="date_to"/></td>
+                                   
+                                <t t-if="purpose != 'service'"><td style="text-align:center;border:1px solid black;"><t t-esc="location_id"/></td></t>
+                                <td style="text-align:center;border:1px solid black;"><t t-esc="category" /></td>
+                                <!-- <td style="text-align:center;border:1px solid black;"><t t-esc="product_ids"/></td>  -->
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                </center>
+                    <t t-set="count" t-value="1"/>
+                    <t t-foreach="report_groups" t-as="group">
+                        <t t-if="type == 'total'">
+                            <t t-if="group_by == 'department_id'">
+                                <t t-set="filtered_requests" t-value="docs.filtered(lambda request: request.department_id.id == group.id)"/>
+                            </t>
+                            <t t-else="">
+                                <t t-set="filtered_requests" t-value="docs.filtered(lambda request: request.employee_id.id == group.id)"/>
+                            </t>
+                            <t t-if="len(filtered_requests) > 0">
+                                <h3><t t-esc="group.name"/></h3>                 
+                                <table>
+                                    <tr>
+                                        <th>#</th>
+                                        <th >Date</th>
+                                        <th>Ref</th>
+                                        <th >purpose</th>
+                                        <th >category</th>
+                                        <t t-if="group_by == 'department_id'">
+                                            <th>Employee</th>
+                                        </t>
+                                        <t t-if="group_by != 'department_id'">
+                                            <th>Department</th>
+                                        </t>
+                                        <th>State</th>
+                                    </tr>
+                                    <tbody>
+                                        <t t-foreach="filtered_requests" t-as="request">
+                                            <tr>
+                                                <td><t t-esc="count"/></td>
+                                                <td><t t-esc="request.request_date"/></td>
+                                                <td><t t-esc="request.name"/></td>
+                                                <td><t t-esc="request.purpose" /></td>
+                                                <td><t t-esc="request.category_id and  request.category_id.name or '/'" /></td>
+                                                <t t-if="group_by == 'department_id'">
+                                                    <td><t t-esc="request.employee_id.name" /></td>
+                                                </t>
+                                                <t t-if="group_by != 'department_id'">
+                                                    <td><t t-esc="request.department_id.name" /></td>
+                                                </t>
+                                                <td><t t-esc="dict(request._fields['state']._description_selection(request.env)).get(request.state)" /></td>
+                                            </tr>
+                                            <t t-set="count" t-value="count + 1"/>
+                                        </t>
+                                    </tbody>
+                                </table>
+                                 <t t-set="count" t-value="1"/>
+                                <br/>
+                            </t>
+                        </t>
+                        <t t-else="">
+                            <t t-if="group_by == 'department_id'">
+                                <t t-set="filtered_requests" t-value="docs.filtered(lambda request: request.exchange_id.department_id.id == group.id)"/>
+                            </t>
+                            <t t-else="">
+                                <t t-set="filtered_requests" t-value="docs.filtered(lambda request: request.exchange_id.employee_id.id == group.id)"/>
+                            </t>
+                            
+                            <t t-if="len(filtered_requests) > 0">
+                                <h3><t t-esc="group.name"/></h3>                 
+                                <table>
+                                    <tr>
+                                        <th>#</th>
+                                        <th >Date</th>
+                                        <th>Ref</th>
+                                        <th >Product</th>
+                                        <th >Qty</th>
+                                        <th >purpose</th>
+                                        <t t-if="group_by == 'department_id'">
+                                            <th>Employee</th>
+                                        </t>
+                                        <t t-if="group_by != 'department_id'">
+                                            <th>Department</th>
+                                        </t>
+                                        <th>State</th>
+                                    </tr>
+                                    <tbody>
+                                        <t t-foreach="filtered_requests" t-as="request">
+                                            <tr>
+                                                <td><t t-esc="count"/></td>
+                                                <td><t t-esc="request.exchange_id.request_date"/></td>
+                                                <td><t t-esc="request.exchange_id.name"/></td>
+                                                <td><t t-esc="request.product_id.name"/></td>
+                                                <td><t t-esc="request.product_qty"/></td>
+                                                <td><t t-esc="request.exchange_id.purpose" /></td>
+                                                <t t-if="group_by == 'department_id'">
+                                                    <td><t t-esc="request.exchange_id.employee_id.name" /></td>
+                                                </t>
+                                                <t t-if="group_by != 'department_id'">
+                                                    <td><t t-esc="request.exchange_id.department_id.name" /></td>
+                                                </t>
+                                                    <td><t t-esc="dict(request.exchange_id._fields['state']._description_selection(request.exchange_id.env)).get(request.exchange_id.state)" /></td>
+                                            </tr>
+                                            <t t-set="count" t-value="count + 1"/>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            <t t-set="count" t-value="1"/>
+                        <br/>
+                            </t>
+                        </t>
+                        
+                    </t>
+
+            </div>
+            </t>
+        </t>
+    </template>
+    
+    </data>
+    </odoo>

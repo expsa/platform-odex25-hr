@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <t t-inherit="point_of_sale.ProductList" t-inherit-mode="extension">
+        <xpath expr="//t[@t-foreach='props.products']" position="replace">
+            <t t-foreach="props.products" t-as="product" t-key="product.id">
+                <ProductItem product="product" t-on-click="_clickProduct"/>
+            </t>
+        </xpath>
+    </t>
+
+</odoo>

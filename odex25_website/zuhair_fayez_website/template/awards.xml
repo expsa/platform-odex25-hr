@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="awards" name="awards">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="awards-cta-container animation">
+                    <div class="animation-section-overlay"></div>
+                    <div class="awards-overlay"></div>
+                    <div class="awards-cta">
+                        <div class="cta-title-awards">
+                            <hr/>
+                            <p>Awards</p>
+                            <hr/>
+                        </div>
+                        <p class="cta-title-content-awards">We are committed to bringing you the very latest news and
+                            developments on all
+                            of our communities
+                        </p>
+                    </div>
+                    <div class="explore-awards">
+                        <p>scroll to explore</p>
+                        <span class="scroll-explore-container-awards">
+                            <span class="scroll-roller-awards"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="awards-container">
+                    <div class="award-primary">
+                        <a class="award-link" href="news_details.html"></a>
+                        <div class="award-img">
+                            <img src="/zuhair_fayez_website/static/img/award-one.webp" alt=""/>
+                        </div>
+                        <div class="award-info">
+                            <div class="date">
+                                <span class="line"></span>
+                                <p>2.4.2022</p>
+                            </div>
+                            <div class="award-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="award-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="award-secondary">
+                        <a class="award-link" href="news_details.html"></a>
+                        <div class="award-info">
+                            <div class="date">
+                                <p>2.4.2022</p>
+                                <span class="line"></span>
+                            </div>
+                            <div class="award-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="award-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="award-img">
+                            <img src="/zuhair_fayez_website/static/img/about-lrg.webp" alt=""/>
+                        </div>
+                    </div>
+                    <div class="award-primary">
+                        <a class="award-link" href="news_details.html"></a>
+                        <div class="award-img">
+                            <img src="/zuhair_fayez_website/static/img/award-one.webp" alt=""/>
+                        </div>
+                        <div class="award-info">
+                            <div class="date">
+                                <span class="line"></span>
+                                <p>2.4.2022</p>
+                            </div>
+                            <div class="award-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="award-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="award-secondary">
+                        <a class="award-link" href="news_details.html"></a>
+                        <div class="award-info">
+                            <div class="date">
+                                <p>2.4.2022</p>
+                                <span class="line"></span>
+                            </div>
+                            <div class="award-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="award-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="award-img">
+                            <img src="/zuhair_fayez_website/static/img/about-lrg.webp" alt=""/>
+                        </div>
+                    </div>
+                    <div class="award-primary">
+                        <a class="award-link" href="news_details.html"></a>
+                        <div class="award-img">
+                            <img src="/zuhair_fayez_website/static/img/award-one.webp" alt=""/>
+                        </div>
+                        <div class="award-info">
+                            <div class="date">
+                                <span class="line"></span>
+                                <p>2.4.2022</p>
+                            </div>
+                            <div class="award-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="award-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="award-secondary">
+                        <a class="award-link" href="news_details.html"></a>
+                        <div class="award-info">
+                            <div class="date">
+                                <p>2.4.2022</p>
+                                <span class="line"></span>
+                            </div>
+                            <div class="award-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="award-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="award-img">
+                            <img src="/zuhair_fayez_website/static/img/about-lrg.webp" alt=""/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more-container">
+                    <a class="load-more" href="#">Load more
+                        <img src="/zuhair_fayez_website/static/img/arrow-down.png" alt=""/>
+                    </a>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

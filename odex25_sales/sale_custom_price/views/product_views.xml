@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="product_product_template_form_inherit" model="ir.ui.view">
+            <field name="name">product.product.template.form.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_income_id']" position="after">
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <span style="font-size: 20px;">Budgets</span>
+                        </div>
+                    </div>
+                    <field name="analytical_account_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

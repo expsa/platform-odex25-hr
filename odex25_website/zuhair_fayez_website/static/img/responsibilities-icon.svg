@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.204" height="19.755" viewBox="0 0 16.204 19.755">
+    <g id="Icon_feather-file-text" data-name="Icon feather-file-text" transform="translate(-5 -2)">
+        <path id="Path_805" data-name="Path 805"
+              d="M14.878,3h-7.1A1.776,1.776,0,0,0,6,4.776v14.2a1.776,1.776,0,0,0,1.776,1.776H18.429A1.776,1.776,0,0,0,20.2,18.98V8.327Z"
+              transform="translate(0 0)" fill="none" stroke="#c7ac31" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"/>
+        <path id="Path_806" data-name="Path 806" d="M21,3V8.327h5.327" transform="translate(-6.122 0)" fill="none"
+              stroke="#c7ac31" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_807" data-name="Path 807" d="M19.1,19.5H12" transform="translate(-2.449 -6.735)" fill="none"
+              stroke="#c7ac31" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_808" data-name="Path 808" d="M19.1,25.5H12" transform="translate(-2.449 -9.184)" fill="none"
+              stroke="#c7ac31" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_809" data-name="Path 809" d="M13.776,13.5H12" transform="translate(-2.449 -4.286)" fill="none"
+              stroke="#c7ac31" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+</svg>

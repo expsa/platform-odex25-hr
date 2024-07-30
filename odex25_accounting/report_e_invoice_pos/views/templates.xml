@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <template id="assets_backend_index" name="index pos ui" inherit_id="point_of_sale.index">
+            <xpath expr="//head" position="inside">
+                <script type="text/javascript" src="/report_e_invoice_pos/static/src/libs/qrcode.js"/>
+            </xpath>
+        </template>
+
+        <template id="assets" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/report_e_invoice_pos/static/src/js/address.js"></script>
+                <script type="text/javascript" src="/report_e_invoice_pos/static/src/js/models.js"></script>
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

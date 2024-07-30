@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="purchase_order_form_add_length_width" model="ir.ui.view">
+        <field name="name">purchase.order.form.add.length.width</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_qty']" position="before">
+                <field name="product_sold_by_area" invisible="1"/>
+                <field name="length" attrs="{'readonly': [('product_sold_by_area', '=', False)]}"/>
+                <field name="width" attrs="{'readonly': [('product_sold_by_area', '=', False)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_qty']" position="attributes">
+                <attribute name="attrs">{'readonly': [('product_sold_by_area', '=', True)]}</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

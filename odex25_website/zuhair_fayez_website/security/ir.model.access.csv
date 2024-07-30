@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_zuhair1,zuhair1.zuhair_fayez,model_website_project_service,,1,1,1,1
+access_zuhair1_settings,zuhair1.zuhair_fayez_setting,model_website_image,,1,1,1,1
+access_zuhair1_news,zuhair1.zuhair_fayez_newsmenu,model_website_media,,1,1,1,1

@@ -1,0 +1,57 @@
+.container{
+    max-width: 100%;
+}
+#background{
+    height:100%;
+    display: block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-filter: blur(0px);
+	z-index: -1;
+}
+.body_login {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+#mcard {
+    margin-top: 7%;
+    padding: 3%;
+    max-width: 350px;
+	background-color: #FFFFFF !important;
+}
+
+#bcard{
+    padding: 3%;
+    height: 100%;
+	background-color: #FFFFFF !important;
+}
+
+.body_login input,
+.body_login select {
+	background-color: #FFFFFF !important;
+	border-top: 1px solid #137EC6;
+	border-left: 1px solid #137EC6;
+	border-right: 1px solid #137EC6;
+	border-bottom: 1px solid #137EC6;
+	border-radius: 0px;
+	color: black;
+	font-size: 18px;
+	font-weight: 300;
+	text-align: left;
+}
+.bg-100 {
+    background-color: white;
+}
+.card-body {
+    background-color: white;
+}

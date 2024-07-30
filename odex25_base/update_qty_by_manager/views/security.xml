@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--       <record id="access_cose_price_group" model="res.groups">-->
+        <!--            <field name="name">Inventory Manager</field>-->
+        <!--        </record>-->
+        <record id="inventory_manager_group" model="res.groups">
+            <field name="name">Update QTY on hand</field>
+            <field name="category_id" ref="base.module_category_inventory_inventory"/>
+        </record>
+    </data>
+</odoo>

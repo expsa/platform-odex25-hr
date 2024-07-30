@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="payment_acquirer_applepay" model="payment.acquirer">
+            <field name="name">Applepay</field>
+            <field name="image_128" type="base64"
+                   file="payment_applepay/static/src/img/applepay_icon.png"/>
+            <field name="provider">applepay</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="applepay_form"/>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the applepay payment form after clicking on the payment button.</p>]]></field>
+            <field name="applepay_entity_id">dummy</field>
+            <field name="applepay_authorization_bearer">dummy</field>
+            <field name="description" type="html">
+                <p>
+                    applepay is a robust online payment solution, driving the future of cashless payments in the region.
+                </p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-check"/>Online Payment
+                    </li>
+                    <li class="list-inline-item"><i class="fa fa-check"/>eCommerce
+                    </li>
+                    <li class="list-inline-item"><i class="fa fa-check"/>Payment Status Tracking
+                    </li>
+                </ul>
+            </field>
+        </record>
+
+    </data>
+</odoo>

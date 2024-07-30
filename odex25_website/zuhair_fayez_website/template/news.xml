@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="news" name="news">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="news-cta-container animation">
+                    <div class="animation-section-overlay"></div>
+                    <div class="news-overlay"></div>
+                    <div class="news-cta">
+                        <div class="cta-title-news">
+                            <hr/>
+                            <p>News</p>
+                            <hr/>
+                        </div>
+                        <p class="cta-title-content-news">We are committed to bringing you the very latest news and
+                            developments on all
+                            of our communities
+                        </p>
+                    </div>
+                    <div class="explore-news">
+                        <p>scroll to explore</p>
+                        <span class="scroll-explore-container-news">
+                            <span class="scroll-roller-news"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="news-container">
+                    <t t-foreach="news" t-as="new">
+                        <div class="news-card">
+                            <a class="news-link" href="news_details.html"></a>
+                            <div class="news-card-img">
+                                <img src="/zuhair_fayez_website/static/img/news.webp" alt=""/>
+                            </div>
+                            <div class="news-card-info">
+                                <center>
+                                    <span t-esc="new.type"/>
+                                </center>
+                                <p class="date" t-esc="new.name"/>
+                                <p class="title" t-esc="new.summary"/>
+                                <a href="#">Read More
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+
+                    </t>
+                    <!--                    <div class="news-card">-->
+                    <!--                        <a class="news-link" href="news_details.html"></a>-->
+                    <!--                        <div class="news-card-img">-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/about-lrg.webp" alt=""/>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="news-card-info">-->
+                    <!--                            <p class="date">2.4.2022</p>-->
+                    <!--                            <p class="title">We are number one in architect field</p>-->
+                    <!--                            <p class="description">At the end of the day, we are all archit ectureenthusiasts Atthe end-->
+                    <!--                                of the day, we are all-->
+                    <!--                            </p>-->
+                    <!--                            <a href="#">Read More-->
+                    <!--                                <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="news-card">-->
+                    <!--                        <a class="news-link" href="news_details.html"></a>-->
+                    <!--                        <div class="news-card-img">-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/contact.webp" alt=""/>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="news-card-info">-->
+                    <!--                            <p class="date">2.4.2022</p>-->
+                    <!--                            <p class="title">We are number one in architect field</p>-->
+                    <!--                            <p class="description">At the end of the day, we are all archit ectureenthusiasts Atthe end-->
+                    <!--                                of the day, we are all-->
+                    <!--                            </p>-->
+                    <!--                            <a href="#">Read More-->
+                    <!--                                <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="news-card">-->
+                    <!--                        <a class="news-link" href="news_details.html"></a>-->
+                    <!--                        <div class="news-card-img">-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/awards.webp" alt=""/>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="news-card-info">-->
+                    <!--                            <p class="date">2.4.2022</p>-->
+                    <!--                            <p class="title">We are number one in architect field</p>-->
+                    <!--                            <p class="description">At the end of the day, we are all archit ectureenthusiasts Atthe end-->
+                    <!--                                of the day, we are all-->
+                    <!--                            </p>-->
+                    <!--                            <a href="#">Read More-->
+                    <!--                                <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="news-card">-->
+                    <!--                        <a class="news-link" href="news_details.html"></a>-->
+                    <!--                        <div class="news-card-img">-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/news-project-one.webp" alt=""/>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="news-card-info">-->
+                    <!--                            <p class="date">2.4.2022</p>-->
+                    <!--                            <p class="title">We are number one in architect field</p>-->
+                    <!--                            <p class="description">At the end of the day, we are all archit ectureenthusiasts Atthe end-->
+                    <!--                                of the day, we are all-->
+                    <!--                            </p>-->
+                    <!--                            <a href="#">Read More-->
+                    <!--                                <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="news-card">-->
+                    <!--                        <a class="news-link" href="news_details.html"></a>-->
+                    <!--                        <div class="news-card-img">-->
+                    <!--                            <img src="/zuhair_fayez_website/static/img/news-project-example.webp" alt=""/>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="news-card-info">-->
+                    <!--                            <p class="date">2.4.2022</p>-->
+                    <!--                            <p class="title">We are number one in architect field</p>-->
+                    <!--                            <p class="description">At the end of the day, we are all archit ectureenthusiasts Atthe end-->
+                    <!--                                of the day, we are all-->
+                    <!--                            </p>-->
+                    <!--                            <a href="#">Read More-->
+                    <!--                                <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                </div>
+
+                <div class="load-more-container">
+                    <a class="load-more" href="#">Load more
+                        <img src="/zuhair_fayez_website/static/img/arrow-down.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

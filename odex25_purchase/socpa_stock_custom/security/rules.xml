@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="exchange_request.exchange_request_stock_rule" model="ir.rule">
+            <field name="name">Exchange Request Stock User</field>
+            <field name="model_id" ref="exchange_request.model_exchange_request"/>
+            <field name="domain_force">[('location_id.user_ids' , 'in' , user.id)]</field>
+            <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>
+        </record>
+
+        <record model="ir.rule" id="stock_locations_see_own">
+            <field name="name">Stock Location See Own</field>
+            <field name="model_id" ref="stock.model_stock_location"/>
+            <field name="domain_force">['|',('user_ids' , '=' , False),('user_ids' , 'in' , user.id)]</field>
+            <field name="groups" eval="[(4 ,ref('stock.group_stock_multi_locations'))]"/>
+        </record>
+
+        <record model="ir.rule" id="stock_picking_type_see_own">
+            <field name="name">Stock operation See Own</field>
+            <field name="model_id" ref="stock.model_stock_picking_type"/>
+            <field name="domain_force">['|',('user_ids' , '=' , False),('user_ids' , 'in' , user.id)]</field>
+            <field name="groups" eval="[(4 ,ref('stock.group_stock_user'))]"/>
+        </record>
+
+        <record model="ir.rule" id="stock_picking_see_own">
+            <field name="name">Stock Picking See Own</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="domain_force">['|',('picking_type_id.user_ids' , '=' , False),('picking_type_id.user_ids' , 'in' , user.id)]</field>
+        </record>
+
+        <record model="ir.rule" id="supply_request_see_own">
+            <field name="name">Supply request see own</field>
+            <field name="model_id" ref="exchange_request.model_exchange_request"/>
+            <field name="domain_force">['|',('user_id' , '=' , False),('user_id' , '=' , user.id)]</field>
+            <field name="groups" eval="[(4 ,ref('socpa_stock_custom.supply_request'))]"/>
+        </record>
+
+        <record model="ir.rule" id="inventory_adjusment_see_own">
+            <field name="name">Inventory Adjusment See Own</field>
+            <field name="model_id" ref="stock.model_stock_inventory"/>
+            <field name="domain_force">['|',('location_ids.user_ids' , '=' , False),('location_ids.user_ids' , 'in' , user.id)]</field>
+        </record>
+
+        <record model="ir.rule" id="scrap_location_see_own">
+            <field name="name">Scrap Location See Own</field>
+            <field name="model_id" ref="stock.model_stock_scrap"/>
+            <field name="domain_force">['|',('location_id.user_ids' , '=' , False),('location_id.user_ids' , 'in' , user.id)]</field>
+        </record>
+
+
+    <record id="inventory_committee_rule" model="ir.rule">
+        <field name="name">Inventory committee Rule</field>
+        <field name="model_id" ref="socpa_stock_custom.model_stock_inventory"/>
+        <field name="domain_force">[('committee_members' , 'in' , user.id)]</field>
+        <field name="groups" eval="[(4, ref('socpa_stock_custom.inventory_committee_member')),(4, ref('socpa_stock_custom.inventory_committee_head'))]"/>
+        <field name="perm_unlink" eval="0"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_create" eval="0"/>
+    </record>
+
+   
+        
+    </data>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odex25_purchase_saip_odex25_purchase_saip,odex25_purchase_saip.odex25_purchase_saip,model_odex25_purchase_saip_odex25_purchase_saip,base.group_user,1,1,1,1

@@ -1,0 +1,242 @@
+<odoo>
+    <data>
+
+        <record id="unit_form_view" model="ir.ui.view">
+            <field name="name">Unit</field>
+            <field name="model">re.unit</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_available" string="Available" states="draft" type="object"/>
+                        <button name="action_draft" string="Set To Draft" states="available" type="object"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <field name="unlock" invisible="1"/>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="toggle_button"/>
+                                <span class="o_stat_text" attrs="{'invisible': [('active', '=', False)]}">Restore</span>
+                                <span class="o_stat_text" attrs="{'invisible': [('active', '=', True)]}">Archive</span>
+                            </button>
+                            <button class="oe_stat_button" type="object" name="action_toggle_is_locked"
+                                    icon="fa-lock">
+                                <field name="unlock" widget="toggle_button"/>
+                                <span class="o_stat_text" attrs="{'invisible': [('unlock', '=', False)]}">Unlock</span>
+                                <span class="o_stat_text" attrs="{'invisible': [('unlock', '=', True)]}">Lock</span>
+                            </button>
+                        </div>
+
+                        <h4>
+                            <label for="name" class="oe_edit_only"/>
+                            <field name="name" attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"
+                                   required="1"/>
+                            <field name="seq" required="1" attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                        </h4>                        
+                        <group name="general_info" colspan="2" col="4">
+                            <field name="unit_type_id" required="1" attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                            <field name="action_type" required="1" />
+                            <field name="company_id" groups="base.group_multi_company"  attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                            <field name="user_id" attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}" required="1"/>
+                        </group>
+                        <notebook>
+                            <page name="unit_info" string="Unit Info">
+                                <group col="4" colspan="2">
+                                    <field name="space" required="1"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="external_space"/>
+
+                                    <field name="mezzanine"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+
+                                    <field name="mezzan_length"
+                                           attrs="{'required':[('mezzanine','=',True)],'invisible':[('mezzanine','=',False)], 'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="mezzan_width"
+                                           attrs="{'required':[('mezzanine','=',True)],'invisible':[('mezzanine','=',False)], 'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="room_no" required="1"
+                                        attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="bathroom_no" required="1"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="hall_no" required="1"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="kitchen_no" required="1"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                </group>
+                            </page>
+                             <page string="Property Info" name="prop_info">
+                                <group col="4" colspan="2">
+                                    <field name="property_id" required="1"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="management_type" readonly="1"/>
+                                    <field name="market_type" readonly="1"/>
+                                    <field name="other_type" readonly="1" attrs="{'invisible':[('other_type','=',False)]}"/>
+                                    <field name="city_id" readonly="1"/>
+                                    <field name="district_id" readonly="1"/>
+                                </group>
+                            </page>
+                            <page name="unit_electric" string="Electric">
+                                <group>
+                                    <field name="electric_meter"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="electric_serial"
+                                           attrs="{'required':[('electric_meter','=',True)],'invisible':[('electric_meter','=',False)],'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="electric_subscription"
+                                           attrs="{'required':[('electric_meter','=',True)],'invisible':[('electric_meter','=',False)],'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="electric_account"
+                                           attrs="{'required':[('electric_meter','=',True)],'invisible':[('electric_meter','=',False)],'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                </group>
+                            </page>
+                            <page name="unit_price" string="Price Info">
+                                 <group col="4" colspan="2">
+                                    <field name="meter_price" readonly="1"/>
+                                    <field name="rent_price" required="1"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    <field name="limit_meter_price" readonly="1"/>
+                                    <field name="limit_rent" required="1"
+                                           attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                </group>
+                            </page>
+                            <page name="stamping_info" string="Stamping">
+                                <group>
+                                    <group>
+                                        <field name="stamping" required="1" attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                        <field name="stamping_date" required="1" attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                        <field name="stamping_attach" attrs="{'readonly':[('state','!=','draft'),('unlock','=',True)]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="unit_kanban_view" model="ir.ui.view">
+            <field name="name">unit.kanban</field>
+            <field name="model">re.unit</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="state" class="oe_notes oe_kanban_quickcreate_textarea o_kanban_small_column">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="state" colors='{"rented": "success", "reserved": "warning", "draft": "danger"}'/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="#{kanban_color(kanban_getcolor(record.state.value))} oe_kanban_global_click o_has_icon">
+                                <div class="o_project_kanban_main">
+                                    <div class="o_kanban_card_content">
+                                        <div class="o_kanban_primary_left">
+
+
+                                            <strong class="o_kanban_record_title">
+                                                <field name="name"/>
+                                            </strong>
+                                            <span t-if="record.property_id.raw_value" class="o_kanban_record_subtitle">
+                                                <b>Property:</b>
+                                                <field name="property_id"/>
+                                            </span>
+                                            <span t-if="record.unit_type_id.raw_value"
+                                                  class="o_kanban_record_subtitle">
+                                                <b>Unit Type:</b>
+                                                <field name="unit_type_id"/>
+                                            </span>
+                                            <span t-if="record.city_id.raw_value"
+                                                  class="o_kanban_record_subtitle">
+                                                <b>City:</b>
+                                                <field name="city_id"/>
+                                            </span>
+                                            <span t-if="record.district_id.raw_value"
+                                                  class="o_kanban_record_subtitle">
+                                                <b>District:</b>
+                                                <field name="district_id"/>
+                                            </span>
+                                            <span t-if="record.space.raw_value"
+                                                  class="o_kanban_record_subtitle">
+                                                <b>Space:</b>
+                                                <field name="space"/>
+                                            </span>
+                                            <span t-if="record.action_type.raw_value"
+                                                  class="o_kanban_record_subtitle">
+                                                <b>Action Type:</b>
+                                                <field name="action_type"/>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+
+            </field>
+        </record>
+
+        <record id="unit_list_view" model="ir.ui.view">
+            <field name="name">Unit List</field>
+            <field name="model">re.unit</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'draft'"
+                      decoration-info="state == 'available'"
+                      decoration-warning="state == 'reserved'" decoration-success="state == 'rented'">
+                    <field name="name"/>
+                    <field name="property_id"/>
+                    <field name="unit_type_id"/>
+                    <field name="space"/>
+                    <field name="rent_price"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+
+        </record>
+
+        <record id="unit_filter_view" model="ir.ui.view">
+            <field name="name">Unit Filter</field>
+            <field name="model">re.unit</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" string="Unit"/>
+                    <field name="property_id"/>
+                    <field name="seq"/>
+                    <field name="city_id"/>
+                    <field name="space"/>
+                    <field name="district_id"/>
+                    <separator/>
+                    <filter string="My Units" name="my_units" domain="[('user_id', '=', uid)]"/>
+                    <separator/>
+                    <filter domain="[('state', '=', 'draft')]" string="Draft" name="draft" help="Unit in Draft"/>
+                    <filter domain="[('state', '=', 'available')]" string="Available" name="available"
+                            help="Confirmed Unit"/>
+                    <filter domain="[('state', '=', 'reserve')]" string="Reserved" name="Reserved"
+                            help="Reserved Unit"/>
+                    <filter domain="[('state', '=', 'rent')]" string="Rented" name="rent"
+                            help="Rented Unit"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Status" name="state" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="City" name="city_id" domain="[]" context="{'group_by': 'city_id'}"/>
+                        <filter string="Property" name="property_id" domain="[]" context="{'group_by': 'property_id'}"/>
+                        <filter string="District" name="district_id" domain="[]" context="{'group_by': 'district_id'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <record id="unit_action" model="ir.actions.act_window">
+            <field name="name">Unit</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">re.unit</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+
+        <menuitem name="Units" id="unit_info_menu" parent="real_estate_menu"
+                  action="unit_action" sequence="2"/>
+    </data>
+</odoo>

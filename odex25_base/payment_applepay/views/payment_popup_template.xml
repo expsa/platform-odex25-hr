@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="payment_applepay_card" priority="30">
+        <head></head>
+        <body style="background-color:#f6f6f5;">
+            <form t-att-action="return_url" class="paymentWidgets">
+              MADA
+            </form>
+        </body>
+        <script t-att-src="'https://test.oppwa.com/v1/paymentWidgets.js?checkoutId=%s' %(check_out_id)"></script>
+    </template>
+    <template id="payment_applepay_card_live" priority="30">
+        <head></head>
+        <body style="background-color:#f6f6f5;">
+            <form t-att-action="return_url" class="paymentWidgets">
+                MADA
+            </form>
+        </body>
+        <script t-att-src="'https://test.oppwa.com/v1/paymentWidgets.js?checkoutId=%s' %(check_out_id)"></script>
+    </template>
+
+</odoo>

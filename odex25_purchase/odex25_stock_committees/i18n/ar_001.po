@@ -1,0 +1,178 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odex25_stock_committees
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-10 23:03+0000\n"
+"PO-Revision-Date: 2023-09-10 23:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,help:odex25_stock_committees.field_res_members__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
+msgstr "اللغة"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__name
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__name
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__name
+msgid "Committee Name"
+msgstr "اسم اللجنة"
+
+#. module: odex25_stock_committees
+#: model:ir.ui.menu,name:odex25_stock_committees.committees_root_menu
+msgid "Committees"
+msgstr "اللجان"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__members_ids
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__members_ids
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__members_ids
+#: model_terms:ir.ui.view,arch_db:odex25_stock_committees.inventory_committees_view_form
+#: model_terms:ir.ui.view,arch_db:odex25_stock_committees.item_dest_view_form
+#: model_terms:ir.ui.view,arch_db:odex25_stock_committees.item_return_view_form
+msgid "Committees Members"
+msgstr "أعضاء اللجنة"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__create_uid
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__create_uid
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__create_uid
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__create_date
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__create_date
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__create_date
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__display_name
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__display_name
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__display_name
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__id
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__id
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__id
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__id
+msgid "ID"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model:ir.actions.act_window,name:odex25_stock_committees.committees1_action
+#: model:ir.model,name:odex25_stock_committees.model_inventory_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__inventory_committees_id
+#: model:ir.ui.menu,name:odex25_stock_committees.committees_sub_menu1
+msgid "Inventory Committees"
+msgstr "لجان الجرد"
+
+#. module: odex25_stock_committees
+#: model:ir.actions.act_window,name:odex25_stock_committees.committees2_action
+#: model:ir.model,name:odex25_stock_committees.model_item_destrcution_committees
+msgid "Item Destrcution Committees"
+msgstr "لجان إتلاف الاصناف"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__item_destruction_committees_id
+#: model:ir.ui.menu,name:odex25_stock_committees.committees_sub_menu2
+msgid "Item Destruction Committees"
+msgstr "لجان إتلاف الاصناف"
+
+#. module: odex25_stock_committees
+#: model:ir.actions.act_window,name:odex25_stock_committees.committees3_action
+#: model:ir.model,name:odex25_stock_committees.model_item_return_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__item_return_committees_id
+#: model:ir.ui.menu,name:odex25_stock_committees.committees_sub_menu3
+msgid "Item Return Committees"
+msgstr "لجان ارجاع الاصناف"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__lang
+msgid "Language"
+msgstr "اللغة"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees____last_update
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees____last_update
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees____last_update
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__write_uid
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__write_uid
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__write_uid
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__write_date
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__write_date
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__write_date
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__login_date
+msgid "Latest authentication"
+msgstr "اخر مصادقة"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__login
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__member_id
+msgid "Name"
+msgstr "اسم اللجنة"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_inventory_committees__responsiple_id
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_destrcution_committees__responsiple_id
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_item_return_committees__responsiple_id
+msgid "Responsiple Committee"
+msgstr "رئيس اللجنة"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,field_description:odex25_stock_committees.field_res_members__totp_enabled
+msgid "Two-factor authentication"
+msgstr "المصادقة ثنائية العوامل"
+
+#. module: odex25_stock_committees
+#: model:ir.model.fields,help:odex25_stock_committees.field_res_members__login
+msgid "Used to log into the system"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model_terms:ir.ui.view,arch_db:odex25_stock_committees.inventory_committees_view_form
+#: model_terms:ir.ui.view,arch_db:odex25_stock_committees.item_dest_view_form
+#: model_terms:ir.ui.view,arch_db:odex25_stock_committees.item_return_view_form
+msgid "_form"
+msgstr ""
+
+#. module: odex25_stock_committees
+#: model:ir.model,name:odex25_stock_committees.model_res_members
+msgid "res.members"
+msgstr ""

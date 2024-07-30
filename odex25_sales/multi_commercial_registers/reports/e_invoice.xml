@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_e_invoice_without_header_branch_data"
+        inherit_id="report_e_invoice.report_e_invoice_without_header" name="Report E Invoice">
+        <xpath expr="//span[@t-field='o.company_id.partner_id.name']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.name" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.partner_id.name" />
+            </t>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.company_id.partner_id.street']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.street" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.partner_id.street" />
+            </t>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.company_id.partner_id.city']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.city" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.partner_id.city" />
+            </t>
+        </xpath>
+
+        <xpath expr="//t[@t-if='o.company_id.partner_id.state_id']" position="replace">
+            <t t-if="o.print_by_branch">
+                <t t-if="o.branch_id.state_id">
+                    <span t-field="o.branch_id.state_id" /> - </t>
+            </t>
+            <t t-else="">
+                <t t-if="o.company_id.partner_id.state_id">
+                    <span t-field="o.company_id.partner_id.state_id" /> - </t>
+            </t>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.company_id.partner_id.country_id']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.country_id" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.partner_id.country_id" />
+            </t>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.company_id.company_registry']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.branch_registry" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.company_registry" />
+            </t>
+        </xpath>
+
+    </template>
+
+    <template id="report_e_invoice_branch_data"
+        inherit_id="report_e_invoice.report_e_invoice" name="Report E Invoice">
+        <xpath expr="//span[@t-field='o.company_id.partner_id.name']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.name" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.partner_id.name" />
+            </t>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.company_id.partner_id.street']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.street" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.partner_id.street" />
+            </t>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.company_id.partner_id.city']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.city" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.partner_id.city" />
+            </t>
+        </xpath>
+
+        <xpath expr="//t[@t-if='o.company_id.partner_id.state_id']" position="replace">
+            <t t-if="o.print_by_branch">
+                <t t-if="o.branch_id.state_id">
+                    <span t-field="o.branch_id.state_id" /> - </t>
+            </t>
+            <t t-else="">
+                <t t-if="o.company_id.partner_id.state_id">
+                    <span t-field="o.company_id.partner_id.state_id" /> - </t>
+            </t>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.company_id.partner_id.country_id']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.country_id" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.partner_id.country_id" />
+            </t>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.company_id.company_registry']" position="replace">
+            <t t-if="o.print_by_branch">
+                <span t-field="o.branch_id.branch_registry" />
+            </t>
+            <t t-else="">
+                <span t-field="o.company_id.company_registry" />
+            </t>
+        </xpath>
+
+    </template>
+
+    <template id="report_e_invoice_header_branch_data"
+        inherit_id="report_e_invoice.report_e_invoice_header" name="Report E Invoice">
+        <xpath expr="//img[@t-if='o.company_id.logo']" position="replace">
+            <t t-if="o.print_by_branch">
+                <img t-if="o.branch_id.logo"
+                    t-att-src="'data:image/png;base64,%s' % to_text(o.branch_id.logo)"
+                    style="max-height: 120px;" alt="Logo" />
+            </t>
+            <t t-else="">
+                <img t-if="o.company_id.logo"
+                    t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)"
+                    style="max-height: 120px;" alt="Logo" />
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-esc='o.company_id.name']" position="replace">
+            <t t-if="o.print_by_branch">
+                <t t-esc="o.branch_id.name"/>
+            </t>
+            <t t-else="">
+                <t t-esc="o.company_id.name" />
+            </t>
+        </xpath>
+    </template>
+
+
+</odoo>

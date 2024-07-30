@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pos_orders_history/static/src/js/db.js" />
+            <script type="text/javascript" src="/pos_orders_history/static/src/js/models.js" />
+            <script type="text/javascript" src="/pos_orders_history/static/src/js/Screens/OrdersHistoryScreen/OrdersHistoryLines.js"/>
+            <script type="text/javascript" src="/pos_orders_history/static/src/js/Screens/OrdersHistoryScreen/OrdersHistoryScreen.js"/>
+            <script type="text/javascript" src="/pos_orders_history/static/src/js/Screens/ProductScreen/ControlButtons/OrdersHistoryButton.js"/>
+            <script type="text/javascript" src="/pos_orders_history/static/lib/js/JsBarcode.all.js"/>
+            <link rel="stylesheet" href="/pos_orders_history/static/src/css/pos.css" />
+        </xpath>
+    </template>
+</odoo>
