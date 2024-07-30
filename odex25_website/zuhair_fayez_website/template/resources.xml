@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="resources">
+        <xpath expr="." position="inside">
+            <!--Tiro Bangla-->
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&amp;display=swap" rel="stylesheet"/>
+            <!--Tiro Bangla-->
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+                  rel="stylesheet"/>
+            <!--CSS-->
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/services.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/contact.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/news.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/activites.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/awards.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/news_details.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/careers.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/service_sub_projects.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/project_details.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/service.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/job_details.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/index.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/about.css"/>
+            <link rel="stylesheet" href="/zuhair_fayez_website/static/src/css/hdr_ftr.css"/>
+            <!--GSAP-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+            <!--Swiper-->
+            <!--CSS-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+            <!--JS-->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+            <!--Bootstrap-->
+
+            <!--Lottie-->
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <!--JS-->
+            <script src="/zuhair_fayez_website/static/js/services.js"></script>
+            <script src="/zuhair_fayez_website/static/js/contact.js"></script>
+            <script src="/zuhair_fayez_website/static/js/news.js"></script>
+            <script src="/zuhair_fayez_website/static/js/activites.js"></script>
+            <script src="/zuhair_fayez_website/static/js/awards.js"></script>
+            <script src="/zuhair_fayez_website/static/js/news_details.js"></script>
+            <script src="/zuhair_fayez_website/static/js/careers.js"></script>
+            <script src="/zuhair_fayez_website/static/js/job_details.js"></script>
+            <script src="/zuhair_fayez_website/static/js/service_sub_projects.js"></script>
+            <script src="/zuhair_fayez_website/static/js/project_details.js"></script>
+            <script src="/zuhair_fayez_website/static/js/service.js"></script>
+            <script src="/zuhair_fayez_website/static/js/about.js"></script>
+            <script src="/zuhair_fayez_website/static/js/index-final.js"></script>
+            <script src="/zuhair_fayez_website/static/js/hdr_ftr.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

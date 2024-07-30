@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="activites" name="activites">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="activites-cta-container animation">
+                    <div class="animation-section-overlay"></div>
+                    <div class="activites-overlay"></div>
+                    <div class="activites-cta">
+                        <div class="cta-title-activites">
+                            <hr/>
+                            <p>Activites</p>
+                            <hr/>
+                        </div>
+                        <p class="cta-title-content-activites">We are committed to bringing you the very latest news and
+                            developments on all
+                            of our communities
+                        </p>
+                    </div>
+                    <div class="explore-activites">
+                        <p>scroll to explore</p>
+                        <span class="scroll-explore-container-activites">
+                            <span class="scroll-roller-activites"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="activites-container">
+                    <div class="activite-primary">
+                        <a class="activite-link" href="news_details.html"></a>
+                        <div class="activite-img">
+                            <img src="/zuhair_fayez_website/static/img/award-one.webp" alt=""/>
+                        </div>
+                        <div class="activite-info">
+                            <div class="date">
+                                <span class="line"></span>
+                                <p>2.4.2022</p>
+                            </div>
+                            <div class="activite-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="activite-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activite-secondary">
+                        <a class="activite-link" href="news_details.html"></a>
+                        <div class="activite-info">
+                            <div class="date">
+                                <p>2.4.2022</p>
+                                <span class="line"></span>
+                            </div>
+                            <div class="activite-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="activite-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="activite-img">
+                            <img src="/zuhair_fayez_website/static/img/about-lrg.webp" alt=""/>
+                        </div>
+                    </div>
+                    <div class="activite-primary">
+                        <a class="activite-link" href="news_details.html"></a>
+                        <div class="activite-img">
+                            <img src="/zuhair_fayez_website/static/img/award-one.webp" alt=""/>
+                        </div>
+                        <div class="activite-info">
+                            <div class="date">
+                                <span class="line"></span>
+                                <p>2.4.2022</p>
+                            </div>
+                            <div class="activite-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="activite-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activite-secondary">
+                        <a class="activite-link" href="news_details.html"></a>
+                        <div class="activite-info">
+                            <div class="date">
+                                <p>2.4.2022</p>
+                                <span class="line"></span>
+                            </div>
+                            <div class="activite-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="activite-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="activite-img">
+                            <img src="/zuhair_fayez_website/static/img/about-lrg.webp" alt=""/>
+                        </div>
+                    </div>
+                    <div class="activite-primary">
+                        <a class="activite-link" href="news_details.html"></a>
+                        <div class="activite-img">
+                            <img src="/zuhair_fayez_website/static/img/award-one.webp" alt=""/>
+                        </div>
+                        <div class="activite-info">
+                            <div class="date">
+                                <span class="line"></span>
+                                <p>2.4.2022</p>
+                            </div>
+                            <div class="activite-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="activite-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activite-secondary">
+                        <a class="activite-link" href="news_details.html"></a>
+                        <div class="activite-info">
+                            <div class="date">
+                                <p>2.4.2022</p>
+                                <span class="line"></span>
+                            </div>
+                            <div class="activite-title">
+                                <p>Yabroudi Villa</p>
+                            </div>
+                            <div class="activite-description">
+                                <p>The project’s architecture expresses complementary features of a villa,
+                                    made up of calm, quiet areas desi gned for family life, as well as reception areas,
+                                    which are
+                                    open
+                                    and welcoming.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="activite-img">
+                            <img src="/zuhair_fayez_website/static/img/about-lrg.webp" alt=""/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more-container">
+                    <a class="load-more" href="#">Load more
+                        <img src="/zuhair_fayez_website/static/img/arrow-down.png" alt=""/>
+                    </a>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

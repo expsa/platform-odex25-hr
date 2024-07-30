@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="project_details" name="project_details">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="page-details-container">
+                    <p class="project-name">HOUSING COMPOUND FOR KING FAISAL</p>
+                    <div class="project-details-container">
+                        <div class="project-gallery">
+                            <div class="swiper gallery-main">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/zuhair_fayez_website/static/img/housing-compound-1.webp" alt=""/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/zuhair_fayez_website/static/img/housing-compound-2.webp" alt=""/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/zuhair_fayez_website/static/img/housing-compound-3.webp" alt=""/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/zuhair_fayez_website/static/img/housing-compound-4.webp" alt=""/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/zuhair_fayez_website/static/img/housing-compound-1.webp" alt=""/>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/zuhair_fayez_website/static/img/housing-compound-2.webp" alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper gallery-thumbs-small">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/housing-compound-1.webp" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/housing-compound-2.webp" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/housing-compound-3.webp" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/housing-compound-4.webp" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/housing-compound-1.webp" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/housing-compound-2.webp" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-features">
+                            <div class="project-feature">
+                                <p>Year</p>
+                                <p>2016</p>
+                            </div>
+                            <hr/>
+                            <div class="project-feature">
+                                <p>Location</p>
+                                <p>Jeddah</p>
+                            </div>
+                            <hr/>
+                            <div class="project-feature">
+                                <p>ZFP Role</p>
+                                <p>Architecture</p>
+                            </div>
+                            <hr/>
+                            <div class="project-feature">
+                                <p>Category</p>
+                                <p>Medical</p>
+                            </div>
+                        </div>
+                        <p class="project-sub-title">Alto Furniture</p>
+                        <p class="project-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                            nonumy
+                            eirmod
+                            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam et
+                            justo
+                            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                            dolor sit
+                            ameorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut
+                            labore
+                            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                            dolores et ea
+                            rebum.
+                            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametrem ipsum
+                            dolor sit
+                            amet,
+                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                            magna aliquyam
+                            erat,
+                            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                            gubergren,
+                            no
+                            sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipum dolor sit amet, consetetur
+                            sadipscing
+                            elitr,
+                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.
+                        </p>
+                        <div class="related-projects-container">
+                            <p class="related-projects-title">related projects</p>
+                            <div class="related-projects">
+                                <div class="related-project">
+                                    <a class="related-project-link" href="project_details.html"></a>
+                                    <img src="/zuhair_fayez_website/static/img/MOI-RESIDENTIAL.webp" alt=""/>
+                                    <p class="related-project-name">MOI RESIDENTIAL COMPLEX</p>
+                                </div>
+                                <div class="related-project">
+                                    <a class="related-project-link" href="project_details.html"></a>
+                                    <img src="/zuhair_fayez_website/static/img/basateen-residential.webp" alt=""/>
+                                    <p class="related-project-name">AL-BASATEEN RESIDENTIAL</p>
+                                </div>
+                                <div class="related-project">
+                                    <a class="related-project-link" href="project_details.html"></a>
+                                    <img src="/zuhair_fayez_website/static/img/UMM-AL-QURA-UNIVERSITY.webp" alt=""/>
+                                    <p class="related-project-name">UMM AL QURA UNIVERSITY</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="service_sub_projects.html">
+                            <img src="/zuhair_fayez_website/static/img/left-yellow-arrow.png" alt=""/>
+                            Go Back
+                        </a>
+                    </div>
+                    <div class="swiper gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/housing-compound-1.webp" alt=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/housing-compound-2.webp" alt=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/housing-compound-3.webp" alt=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/housing-compound-4.webp" alt=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/housing-compound-1.webp" alt=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/housing-compound-2.webp" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+        <report
+            menu="False"
+            string="Incoming/Outgoing Products Report"
+            id="action_incoming_outgoing_report"
+            model="stock.move.line"
+            report_type="qweb-pdf"
+            name="stock_custom_reports.incoming_outgoing_temp"
+            file="stock_custom_reports.incoming_outgoing_template"
+        />
+        <report
+            menu="False"
+            string="Incoming/Outgoing Products Report With Prices"
+            id="action_incoming_outgoing_detailed_report"
+            model="stock.move.line"
+            report_type="qweb-pdf"
+            name="stock_custom_reports.incoming_outgoing_detailed_report"
+            file="stock_custom_reports.incoming_outgoing_detailed_report"
+        />
+
+        <report
+            menu="False"
+            string="Exchange Request Report"
+            id="action_exchange_request_report"
+            model="stock.move.line"
+            report_type="qweb-pdf"
+            name="stock_custom_reports.exchange_request_report"
+            file="stock_custom_reports.exchange_request_report"
+        />
+
+        <report
+            menu="False"
+            string="Scrap Report"
+            id="action_scrap_report"
+            model="stock.scrap"
+            report_type="qweb-pdf"
+            name="stock_custom_reports.scrap_report"
+            file="stock_custom_reports.scrap_report"
+        />
+
+
+
+        <report
+            menu="False"
+            string="Inventory Adjustment Report"
+            id="action_inventory_adjustment_report"
+            model="stock.scrap"
+            report_type="qweb-pdf"
+            name="stock_custom_reports.inventory_adjustment_report"
+            file="stock_custom_reports.inventory_adjustment_report"
+        />
+
+
+        <report
+            menu="False"
+            string="Internal Transfer Report"
+            id="action_internal_transfer_report"
+            model="stock.picking"
+            report_type="qweb-pdf"
+            name="stock_custom_reports.internal_transfer_report"
+            file="stock_custom_reports.internal_transfer_report"
+        />
+    </data>
+</odoo>

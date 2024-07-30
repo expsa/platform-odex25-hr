@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="services" name="services">
+        <t t-call="website.layout">
+            <!-- -->
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="services-page-container">
+                    <p class="our-services-title">Our Services</p>
+                    <t t-foreach="services" t-as="service">
+                        <a class="service-box" t-attf-href="/service?id=#{service.id}" style="color:white;text-decoration:none;">
+                            <div class="service-overlay"></div>
+                            <img t-if="service.image"
+                                 t-att-src="'data:image/png;base64,%s' %to_text(service.image)"/>
+                            <p t-esc="service.name" class="service-title"/>
+                        </a>
+                    </t>
+                </div>
+            </div>
+            <!--            -->
+        </t>
+    </template>
+</odoo>

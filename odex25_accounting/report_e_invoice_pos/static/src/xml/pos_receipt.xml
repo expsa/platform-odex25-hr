@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="CustomOrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+
+        <xpath expr="//div[hasclass('pos-receipt')]" position='replace'>
+            <div class="pos-receipt">
+
+                <div id="header_div">
+                    <div style="text-align: center;font-weight: bold;font-size: 15px;" dir="rtl">
+                        <span>فاتورة ضريبية مبسطة - Tax Invoice</span>
+                    </div>
+                    <div style="text-align: center;font-size: 13px;" dir="rtl">
+                        <span style="font-weight: bold">تاريخ الإصدار:</span>
+                        <span><t t-esc="receipt.date.localestring"/></span>
+                    </div>
+                    <br/>
+                    <t t-if="receipt.header">
+                        <div style='text-align:center'>
+                            <t t-esc="receipt.header"/>
+                        </div>
+                    </t>
+                </div>
+
+                <br/>
+
+                <div id="logo_div" style="max-width: 150px;min-width: 100px;margin-left: auto;margin-right: auto;">
+                    <center>
+                        <img class="pos-receipt-logo" t-att-src="receipt.company.logo" alt="Logo"
+                                style="width:100%"/>
+                    </center>
+                </div>
+
+                <div id="div_credit_note" style="width:100%;text-align:center;font-weight: bold;"
+                     t-if="receipt.return_ref">
+                        <span>إشعار دائن - Credit Note</span>
+                    <br/>
+                    </div>
+
+                <div id="div_info_table">
+                        <div id="" dir="rtl"
+                             style="text-align: center;font-size: 15px;border-bottom: 2px solid #0d0b0b4f;margin-bottom: 5px;height: 20px;">
+                        </div>
+                    <div id="div_company_name" dir="rtl"
+                         style="text-align: center;font-weight: bold;font-size: 20px;border-bottom: 2px solid #0d0b0b4f;margin-bottom: 5px;height: 30px;">
+                            <span><t t-esc="receipt.company.name"/></span>
+                        </div>
+                    <div id="div_company_address" dir="rtl"
+                         style="text-align: center;font-size: 13px;margin-bottom: 5px;height: 20px;">
+                            <span style="font-weight: bold">العنوان: </span>
+                        <span>
+                            <t t-if="receipt.company.street">
+                                <div id="company_street" style="display: inline;">
+                                    <t t-esc="receipt.company.street"/>,
+                                </div>
+                            </t>
+                            <t t-if="receipt.company.city">
+                                    <div id="company_city" style="display: inline;">
+                                        <t t-esc="receipt.company.city"/>,
+                                    </div>
+                                </t>
+                            <t t-if="receipt.company.zip">
+                                    <div id="company_zip" style="display: inline;">
+                                        <t t-esc="receipt.company.zip"/>
+                                    </div>
+                                </t>
+
+                            </span>
+                        </div>
+
+                    </div>
+                <br/>
+
+                <div id="div_vat_details" style="font-weight: bold;">
+                        <table width="100%" class="e-order.info-table" dir="rtl">
+                            <tr id="order_details" style="border-bottom: 1px solid;height: 25px;">
+
+                                <td style="text-align: right" dir="rtl">
+                                    الأمر
+                                </td>
+                                <td style="text-align: center;white-space: nowrap;" dir="rtl">
+                                    <t t-esc="receipt.name"/>
+                                </td>
+                                <td style="text-align: left" dir="rtl">
+                                    Order
+                                </td>
+
+                            </tr>
+                            <tr id="vat_details" style="border-bottom: 1px solid;height: 25px;">
+
+                                <td style="text-align: right" dir="rtl">
+                                    الرقم الضريبي
+                                </td>
+                                <td style="text-align: center;white-space: nowrap;" dir="rtl">
+                                    <t t-esc="receipt.company.vat || ''"/>
+                                </td>
+                                <td style="text-align: left" dir="rtl">
+                                    VAT
+                                </td>
+
+                            </tr>
+                            <tr id="cashier_details" style="border-bottom: 1px solid;height: 25px;">
+
+                                <td style="text-align: right" dir="rtl">
+                                    الكاشير
+                                </td>
+                                <td style="text-align: center;" dir="rtl">
+                                    <t t-esc="receipt.cashier"/>
+                                </td>
+                                <td style="text-align: left" dir="rtl">
+                                    Cashier
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+
+                <br/>
+
+                <table id="table_orderlines" class="table table-bordered" style="" dir="rtl">
+
+                        <tr style="border: 1px solid rgb(0, 0, 0);">
+                            <th id="th_description" colspan="2"
+                                style="font-size: 12px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                                <span>
+                                    الوصف
+                                    <br/>
+                                    :Description
+                                </span>
+                            </th>
+                            <th id="th_price_unit"
+                                style="font-size: 12px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                                <span>
+                                    السعر
+                                    <br/>
+                                    :Price
+                                </span>
+                            </th>
+                            <th id="th_quantity"
+                                style="font-size: 12px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                                <span>
+                                    الكمية
+                                    <br/>
+                                    :Qty
+                                </span>
+                            </th>
+                            <th id="th_price_net"
+                                style="font-size: 12px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                                <span>
+                                    الإجمالي
+                                    <br/>
+                                    :Net
+                                </span>
+                            </th>
+                        </tr>
+
+                    <t t-foreach="receipt.orderlines" t-as="orderline" t-key="orderline.id">
+
+                            <tr style="border: 1px solid rgb(0, 0, 0);">
+                                <td id="td_description" colspan="2"
+                                    style="font-size: 10px;border: 1px solid rgb(0, 0, 0);text-align:right;padding: 5px;">
+                                    <t t-esc="orderline.product_name_wrapped[0]"/>
+
+
+                                    <t t-if="orderline.discount > 0">
+                                        <div>
+                                                        With a <t t-esc="orderline.discount"/>
+                                            % discount
+                                        </div>
+                                    </t>
+                                </td>
+                                <td id="td_price_unit"
+                                    style="font-size: 10px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                                    <t t-esc="env.pos.format_currency_no_symbol(orderline.price_display_one)"/>
+                                </td>
+                                <td id="td_quantity"
+                                    style="font-size: 10px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                                    <t t-esc="orderline.quantity"/>
+                                </td>
+                                <td id="td_price_net"
+                                    style="font-size: 10px;border: 1px solid rgb(0, 0, 0);text-align:center">
+                                    <t t-esc="env.pos.format_currency_no_symbol(orderline.price_display)"/>
+
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+
+                <br/>
+
+                <div style="display: table;width: 100%;table-layout: fixed;margin-bottom: 10px;">
+                        <div style="display: table-cell;width: 60%;">
+                            <table id="table_recap" class="table table-bordered" dir="rtl">
+                                <tr id="tr_total" style="border: 1px solid rgb(0, 0, 0);">
+                                    <td style="white-space: nowrap;font-size: 12px;padding: 5px;text-align:right;border: 1px solid rgb(0, 0, 0);">
+                                        الإجمالي
+                                    </td>
+                                    <td colspan="2" style="white-space: nowrap;font-size: 12px;text-align:center">
+                                        <t t-esc="env.pos.format_currency(receipt.subtotal)"/>
+
+                                    </td>
+                                    <td style="white-space: nowrap;font-size: 12px;padding: 5px;text-align:left;border: 1px solid rgb(0, 0, 0);">
+                                        Total
+                                    </td>
+                                </tr>
+
+                                <tr id="tr_tax" style="border: 1px solid rgb(0, 0, 0);">
+                                    <t t-set="total_taxs" t-value="0"/>
+                                    <t t-foreach="receipt.tax_details" t-as="tax" t-key="tax.name">
+                                        <t t-set="total_taxs" t-value="total_taxs + tax.amount"/>
+                                    </t>
+                                    <td style="white-space: nowrap;font-size: 12px;padding: 5px;text-align:right;border: 1px solid rgb(0, 0, 0);">
+                                        الضريبة
+                                    </td>
+                                    <td colspan="2" style="white-space: nowrap;font-size: 12px;text-align:center">
+                                        <t t-esc="env.pos.format_currency_no_symbol(total_taxs)"/>
+                                    </td>
+                                    <td style="white-space: nowrap;font-size: 12px;padding: 5px;text-align:left;border: 1px solid rgb(0, 0, 0);">
+                                        Tax
+                                    </td>
+                                </tr>
+
+
+                                <tr id="tr_net" style="border: 1px solid rgb(0, 0, 0);">
+                                    <td style="white-space: nowrap;font-size: 12px;padding: 5px;text-align:right;border: 1px solid rgb(0, 0, 0);">
+                                        الصافي
+                                    </td>
+                                    <td colspan="2" style="white-space: nowrap;font-size: 12px;text-align:center">
+                                        <t t-esc="env.pos.format_currency(receipt.total_with_tax)"/>
+                                    </td>
+                                    <td style="white-space: nowrap;font-size: 12px;padding: 5px;text-align:left;border: 1px solid rgb(0, 0, 0);">
+                                        Net
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    QR Code
+                    <div class="receipt-qrcode"
+                         style="display: table-cell;width: 40%;vertical-align: top;text-align: center;position: relative;">
+                            <div t-attf-id="qrcode_container"
+                                 style="position: absolute;top: 50%;left: 40%;margin-top: -50px;margin-left: -50px;">
+                                <div id="qrcode"></div>
+                                <script id="script" type="text/javascript">
+
+                                    function compute_sa_qr_code(name, vat, date_isostring, amount_total, amount_tax) {
+
+                                        const seller_name_enc = _compute_qr_code_field(1, name);
+                                        const company_vat_enc = _compute_qr_code_field(2, vat);
+                                        const timestamp_enc = _compute_qr_code_field(3, date_isostring);
+                                        const invoice_total_enc = _compute_qr_code_field(4, amount_total.toString());
+                                        const total_vat_enc = _compute_qr_code_field(5, amount_tax.toString());
+
+                                        const str_to_encode = seller_name_enc.concat(company_vat_enc, timestamp_enc, invoice_total_enc, total_vat_enc);
+
+                                        let binary = '';
+                                        for (let i = 0; i &lt; str_to_encode.length; i++) {
+                                            binary += String.fromCharCode(str_to_encode[i]);
+                                        }
+                                        return btoa(binary);
+                                    }
+
+                                    function _compute_qr_code_field(tag, field) {
+                                        const textEncoder = new TextEncoder();
+                                        const name_byte_array = Array.from(textEncoder.encode(field));
+                                        const name_tag_encoding = [tag];
+                                        const name_length_encoding = [name_byte_array.length];
+                                        return name_tag_encoding.concat(name_length_encoding, name_byte_array);
+                                    }
+
+                                    var seller = "<t id="barcode_seller" t-esc='receipt.company.name'/>";
+                                    var invoice_no = "<t t-esc='receipt.name'/>";
+                                    var order_date ="<t t-esc='receipt.date.isostring'/>";
+                                    var total_vat= "<t t-esc='receipt.total_tax'/>";
+                                    var total_amount = "<t t-esc='receipt.total_with_tax'/>";
+                                    var vat_no ="<t t-esc='receipt.company.vat'/>";
+
+                                    var qr_data = compute_sa_qr_code(seller, vat_no,order_date,total_amount,total_vat);
+
+                                    var qrcode = new QRCode('qrcode' , {
+                                    text: qr_data,
+                                    width: 100,
+                                    height: 100,
+                                    colorDark : "#000000",
+                                    colorLight : "#ffffff",
+                                    correctLevel : QRCode.CorrectLevel.H
+                                    });
+                                    qrcode.makeCode(qr_data);
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                <br/>
+
+                <table id="table_payment" class="table table-bordered" style="width:100%" dir="rtl">
+                        <t t-foreach="receipt.paymentlines" t-as="line" t-key="line.cid">
+                            <tr style="border: 1px solid rgb(0, 0, 0);">
+
+                                <td style="font-size: 12px;width:50%;padding: 5px;text-align:right;border: 1px solid rgb(0, 0, 0);">
+                                    <t t-esc="line.name"/>
+                                </td>
+                                <td colspan="4" style="font-size: 12px;width:50%;text-align:center">
+                                    <span t-esc="env.pos.format_currency_no_symbol(line.amount)"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                <table id="table_rest" class="table table-bordered" style="width:100%" dir="rtl">
+
+                        <tr style="border: 1px solid rgb(0, 0, 0);">
+
+                            <td style="font-size: 12px;width:40%;padding: 5px;text-align:right;border: 1px solid rgb(0, 0, 0);">
+                                الباقي
+                            </td>
+                            <td colspan="4" style="font-size: 12px;width:60%;text-align:center">
+                                <span t-esc="env.pos.format_currency(receipt.change)"/>
+
+                            </td>
+                            <td style="font-size: 12px;width:40%;padding: 5px;text-align:left;border: 1px solid rgb(0, 0, 0);">
+                                Rest
+                            </td>
+                        </tr>
+                    </table>
+
+                <t t-if="receipt.footer">
+                        <br/>
+                    <div style='text-align:center'>
+                            <t t-esc="receipt.footer"/>
+                        </div>
+                    </t>
+
+            </div>
+        </xpath>
+        </t>
+
+</templates>

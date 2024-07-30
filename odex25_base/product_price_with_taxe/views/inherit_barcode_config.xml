@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="dynamic_barcode_labels_form_inherit" model="ir.ui.view">
+        <field name="name">dynamic.barcode.label.form.inherit</field>
+        <field name="model">barcode.configuration</field>
+        <field name="inherit_id" ref="dynamic_barcode_labels.barcode_config_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price_display']" position="after">
+                <field name="price_ht_display"/>
+            </xpath>
+            <xpath expr="//field[@name='price_display']" position="attributes">
+                <attribute name="string">Price With Tax</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="pos_delayed_create_picking" model="queue.job.channel">
+        <field name="name">pos_pickings</field>
+        <field name="parent_id" ref="queue_job.channel_root" />
+    </record>
+    
+    <record id="pos_delayed_create_invoice" model="queue.job.channel">
+        <field name="name">pos_invoices</field>
+        <field name="parent_id" ref="queue_job.channel_root" />
+    </record>
+    
+    <record id="pos_delayed_close_session" model="queue.job.channel">
+        <field name="name">pos_session</field>
+        <field name="parent_id" ref="queue_job.channel_root" />
+    </record>
+
+
+</odoo>

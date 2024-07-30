@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="show_website_info" inherit_id="website.website_info" customize_show="True" name="Home Page">
+        <!--        <t t-call="website.layout">-->
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="video animation">
+                    <video id="entrance-video" muted="muted" loop="loop" controls="controls" t-attf-src="link" alt=""/>
+                    <div class="animation-section-overlay"></div>
+                    <div class="video-overlay"></div>
+                    <div class="cta">
+                        <p>
+                            <span class="zu">zuhair fayez partnership</span>
+                            <span t-esc="years" style="color:yellow"/>
+
+                        </p>
+                        <p class="company-intro">At the end of the day, we are all architecture enthusiasts At the end
+                            of the day,
+                            we are all architecture
+                        </p>
+                    </div>
+                    <div class="explore">
+                        <p>scroll to explore</p>
+                        <span class="scroll-explore-container">
+                            <span class="scroll-roller"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="services-container">
+                    <div class="service service1">
+                        <div class="service-overlay"></div>
+                        <!-- <div class="white-overlay1"></div> -->
+                        <img class="img-1" src="/zuhair_fayez_website/static/img/1.webp" alt=""/>
+                        <div class="service-content">
+                            <p>architectural and engineering
+                                <br/>
+                                design
+                            </p>
+                        </div>
+                        <div class="content-expand">
+                            <div class="project-name-container">
+                                <p class="project-name-1">architectural and engineering design</p>
+                                <span class="underline"></span>
+                            </div>
+                            <div class="project-link">
+                                <a class="project-link-1" href="service.html">View Projects
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Swiper-->
+                        <!-- Slider main container -->
+                        <div class="swiper Cards">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/11.webp" alt=""/>
+                                    <div class="slide-overlay"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/22.webp" alt=""/>
+                                    <div class="slide-overlay"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/zuhair_fayez_website/static/img/44.webp" alt=""/>
+                                    <div class="slide-overlay"></div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <!-- <div class="swiper-pagination"></div> -->
+
+                            <!-- If we need navigation buttons -->
+                            <!-- <div class="swiper-button-prev"></div> -->
+                            <!-- <div class="swiper-button-next"></div> -->
+
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                    </div>
+                    <div class="service service2">
+                        <div class="service-overlay"></div>
+                        <img class="img-2" src="/zuhair_fayez_website/static/img/4.webp" alt=""/>
+                        <div class="service-content">
+                            <p>construction management &amp;
+                                <br/>
+                                project management
+                            </p>
+                        </div>
+                        <div class="content-expand">
+                            <div class="project-name-container">
+                                <p class="project-name-2">construction management &amp; project management</p>
+                                <span class="underline"></span>
+                            </div>
+                            <div class="project-link">
+                                <a class="project-link-2" href="service.html">View Projects
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service service3">
+                        <div class="service-overlay"></div>
+                        <img class="img-3" src="/zuhair_fayez_website/static/img/2.webp" alt=""/>
+                        <div class="service-content">
+                            <p>construction supervision</p>
+                        </div>
+                        <div class="content-expand">
+                            <div class="project-name-container">
+                                <p class="project-name-3">construction supervision</p>
+                                <span class="underline"></span>
+                            </div>
+                            <div class="project-link">
+                                <a class="project-link-3" href="service.html">View Projects
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service service4">
+                        <div class="service-overlay"></div>
+                        <img class="img-4" src="/zuhair_fayez_website/static/img/5.webp" alt=""/>
+                        <div class="service-content">
+                            <p>technical services and manpower
+                                <br/>
+                                supply
+                            </p>
+                        </div>
+                        <div class="content-expand">
+                            <div class="project-name-container">
+                                <p class="project-name-4">technical services and manpower supply</p>
+                                <span class="underline"></span>
+                            </div>
+                            <div class="project-link">
+                                <a class="project-link-4" href="service.html">View Projects
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="services-section-title">
+                        Our Services
+                    </p>
+                </div>
+
+                <div class="our-projects">
+                    <video id="our-project-video" muted="muted" loop="loop"
+                           src="/zuhair_fayez_website/static/videos/our-projects-new-2.m4v" alt=""/>
+                    <div class="our-projects-titles">
+                        <p class="our-project-title proj">Our Projects</p>
+                        <hr class="proj"/>
+                        <p class="our-project-description proj">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt
+                        </p>
+                    </div>
+                    <div class="swiper our-projects-slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/najran-airport.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Najran Airport</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/DHAHRAN.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Dhahran Mosque</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Airports.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">King Khaled Airport</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Banks-Projects.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Bank Project</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Educational-Projects.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Educational Project</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Hotels-Projects.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Hotels Project</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/project-mediacal2.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Medical project</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Residential-Housing.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Residential Housing</p>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev our-project-slider">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path d="m5.414 24 6.293-6.293-1.414-1.414L1.586 25l8.707 8.707 1.414-1.414L5.414 26H49v-2z"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next our-project-slider">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path d="M1 26h43.586l-6.293 6.293 1.414 1.414L48.414 25l-8.707-8.707-1.414 1.414L44.586 24H1z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="our-projects-thumb-container">
+                    <img id="thumb-close" src="/zuhair_fayez_website/static/img/thumb-close.png" alt=""/>
+                    <div thumbsSlider="" class="swiper our-projects-slider-thumb">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/najran-airport.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Najran Airport</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/DHAHRAN.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Dhahran Mosque</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Airports.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">King Khaled Airport</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Banks-Projects.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Bank Project</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Educational-Projects.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Educational Project</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Hotels-Projects.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Hotels Project</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/project-mediacal2.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Medical project</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/zuhair_fayez_website/static/img/Residential-Housing.webp" alt=""/>
+                                <div class="slide-overlay"></div>
+                                <p class="project-name">Residential Housing</p>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev thumb">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path d="m5.414 24 6.293-6.293-1.414-1.414L1.586 25l8.707 8.707 1.414-1.414L5.414 26H49v-2z"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next thumb">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path d="M1 26h43.586l-6.293 6.293 1.414 1.414L48.414 25l-8.707-8.707-1.414 1.414L44.586 24H1z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="latest-news-primary-container">
+                    <div class="latest-news-titles-container">
+                        <div class="latest-news-title">
+                            <p class="our-project-title">Latest News</p>
+                            <hr/>
+                        </div>
+                        <div class="latest-news-more">
+                            <a href="news.html">View All
+                                <img src="/zuhair_fayez_website/static/img/right-arrow-yellow.svg" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Swiper-->
+                    <div class="swiper slider-news-primary">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide news">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/news.webp" alt=""/>
+                                <p class="company">Zuhair Fayez Partnership</p>
+                                <p class="news-description">At the end of the day, we are all archit</p>
+                                <a class="view-detail" href="news.html">view detail
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                         height="15" viewBox="0 0 16 15">
+                                        <path id="Vector"
+                                              d="M6.8,1,7.6.242a.878.878,0,0,1,1.211,0l6.942,6.674a.8.8,0,0,1,0,1.164L8.806,14.758a.878.878,0,0,1-1.211,0L6.8,14a.8.8,0,0,1,.014-1.178l4.3-3.943H.857A.839.839,0,0,1,0,8.05V6.95a.839.839,0,0,1,.857-.824H11.12l-4.3-3.943A.8.8,0,0,1,6.8,1Z"
+                                              fill="#031224"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/award-one.webp" alt=""/>
+                                <p class="company">Zuhair Fayez Partnership</p>
+                                <p class="news-description">At the end of the day, we are all archit</p>
+                                <a class="view-detail" href="news.html">view detail
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                         height="15" viewBox="0 0 16 15">
+                                        <path id="Vector"
+                                              d="M6.8,1,7.6.242a.878.878,0,0,1,1.211,0l6.942,6.674a.8.8,0,0,1,0,1.164L8.806,14.758a.878.878,0,0,1-1.211,0L6.8,14a.8.8,0,0,1,.014-1.178l4.3-3.943H.857A.839.839,0,0,1,0,8.05V6.95a.839.839,0,0,1,.857-.824H11.12l-4.3-3.943A.8.8,0,0,1,6.8,1Z"
+                                              fill="#031224"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/3.webp" alt=""/>
+                                <p class="company">Zuhair Fayez Partnership</p>
+                                <p class="news-description">At the end of the day, we are all archit</p>
+                                <a class="view-detail" href="news.html">view detail
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                         height="15" viewBox="0 0 16 15">
+                                        <path id="Vector"
+                                              d="M6.8,1,7.6.242a.878.878,0,0,1,1.211,0l6.942,6.674a.8.8,0,0,1,0,1.164L8.806,14.758a.878.878,0,0,1-1.211,0L6.8,14a.8.8,0,0,1,.014-1.178l4.3-3.943H.857A.839.839,0,0,1,0,8.05V6.95a.839.839,0,0,1,.857-.824H11.12l-4.3-3.943A.8.8,0,0,1,6.8,1Z"
+                                              fill="#031224"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/MOI-RESIDENTIAL.webp"
+                                     alt=""/>
+                                <p class="company">Zuhair Fayez Partnership</p>
+                                <p class="news-description">At the end of the day, we are all archit</p>
+                                <a class="view-detail" href="news.html">view detail
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                         height="15" viewBox="0 0 16 15">
+                                        <path id="Vector"
+                                              d="M6.8,1,7.6.242a.878.878,0,0,1,1.211,0l6.942,6.674a.8.8,0,0,1,0,1.164L8.806,14.758a.878.878,0,0,1-1.211,0L6.8,14a.8.8,0,0,1,.014-1.178l4.3-3.943H.857A.839.839,0,0,1,0,8.05V6.95a.839.839,0,0,1,.857-.824H11.12l-4.3-3.943A.8.8,0,0,1,6.8,1Z"
+                                              fill="#031224"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/6.webp" alt=""/>
+                                <p class="company">Zuhair Fayez Partnership</p>
+                                <p class="news-description">At the end of the day, we are all archit</p>
+                                <a class="view-detail" href="news.html">view detail
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                         height="15" viewBox="0 0 16 15">
+                                        <path id="Vector"
+                                              d="M6.8,1,7.6.242a.878.878,0,0,1,1.211,0l6.942,6.674a.8.8,0,0,1,0,1.164L8.806,14.758a.878.878,0,0,1-1.211,0L6.8,14a.8.8,0,0,1,.014-1.178l4.3-3.943H.857A.839.839,0,0,1,0,8.05V6.95a.839.839,0,0,1,.857-.824H11.12l-4.3-3.943A.8.8,0,0,1,6.8,1Z"
+                                              fill="#031224"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide news">
+                                <img class="news-img" src="/zuhair_fayez_website/static/img/33.webp" alt=""/>
+                                <p class="company">Zuhair Fayez Partnership</p>
+                                <p class="news-description">At the end of the day, we are all archit</p>
+                                <a class="view-detail" href="news.html">view detail
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                         height="15" viewBox="0 0 16 15">
+                                        <path id="Vector"
+                                              d="M6.8,1,7.6.242a.878.878,0,0,1,1.211,0l6.942,6.674a.8.8,0,0,1,0,1.164L8.806,14.758a.878.878,0,0,1-1.211,0L6.8,14a.8.8,0,0,1,.014-1.178l4.3-3.943H.857A.839.839,0,0,1,0,8.05V6.95a.839.839,0,0,1,.857-.824H11.12l-4.3-3.943A.8.8,0,0,1,6.8,1Z"
+                                              fill="#031224"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev latest-news"></div>
+                    <div class="swiper-button-next latest-news"></div>
+                </div>
+
+                <div class="counters-container">
+                    <div class="counter-box-container">
+                        <div class="counter-box">
+                            <p class="counter" data-number="48">0</p>
+                        </div>
+                        <div class="counter-description">
+                            <p class="counter-description-inner">Years Experience</p>
+                        </div>
+                    </div>
+                    <span class="counter-divider"></span>
+                    <div class="counter-box-container">
+                        <div class="counter-box">
+                            <p class="counter" data-number="500">0</p>
+                        </div>
+                        <div class="counter-description">
+                            <p class="counter-description-inner">Team Members</p>
+                        </div>
+                    </div>
+                    <span class="counter-divider"></span>
+                    <div class="counter-box-container">
+                        <div class="counter-box">
+                            <p class="counter" data-number="2">0</p>
+                            <span class="k">K</span>
+                        </div>
+                        <div class="counter-description">
+                            <p class="counter-description-inner">Years Experience</p>
+                        </div>
+                    </div>
+                    <span class="counter-divider"></span>
+                    <div class="counter-box-container">
+                        <div class="counter-box">
+                            <p class="counter" data-number="500">0</p>
+                        </div>
+                        <div class="counter-description">
+                            <p class="counter-description-inner">Clients</p>
+                        </div>
+                    </div>
+                    <span class="counter-divider"></span>
+                    <div class="counter-box-container">
+                        <div class="counter-box">
+                            <p class="counter" data-number="2.5">0</p>
+                            <span class="k">K</span>
+                        </div>
+                        <div class="counter-description">
+                            <p class="counter-description-inner">Hours Consume</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </xpath>
+
+        <!--        </t>-->
+    </template>
+</odoo>

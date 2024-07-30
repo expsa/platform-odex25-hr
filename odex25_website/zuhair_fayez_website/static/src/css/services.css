@@ -1,0 +1,1480 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Montserrat", sans-serif !important;
+  overflow-x: hidden;
+}
+
+p, span, hr {
+  margin: 0;
+  padding: 0;
+}
+
+/*Media Query*/
+@media screen and (max-width: 319px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: auto;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 150px 20px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    padding: 0px 5px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: auto;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 160px 20px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 421px) and (max-width: 767px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 50px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 210px 30px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 50px;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 210px 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 896px) and (max-width: 1024px) and (max-device-height: 768px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 50px;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 210px 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 950px) and (max-device-height: 550px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: auto;
+    padding: 8px 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 140px 60px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    padding: 0px 5px;
+  }
+}
+@media screen and (max-width: 699px) and (max-device-height: 550px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: auto;
+    padding: 8px 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 130px 60px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    padding: 0px 5px;
+  }
+}
+@media screen and (max-width: 699px) and (max-device-height: 319px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: auto;
+    padding: 8px 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 130px 60px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    padding: 0px 5px;
+  }
+}
+@media screen and (min-width: 896px) and (max-width: 1024px) and (min-device-height: 1250px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 50px;
+    padding: 0px 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 250px 90px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 55px;
+    padding: 0px 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 210px 70px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 2px solid #DDC03B;
+    transition: outline 0.2s ease-in-out;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1599px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 55px;
+    padding: 0px 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 240px 70px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 60px;
+    padding: 0px 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 240px 150px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 60px;
+    padding: 0px 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 280px 150px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 34px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 4px solid #DDC03B;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 2560px) and (max-width: 3839px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 80px;
+    padding: 0px 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 350px 200px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 6px solid #DDC03B;
+    transition: outline 0.2s ease-in-out;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 34px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+@media screen and (min-width: 3840px) {
+  .services .nav-container {
+    background: linear-gradient(241deg, rgba(54, 75, 97, 0.8) 0%, rgb(88, 114, 142) 21%, rgb(120, 143, 160) 60%, rgb(188, 191, 201) 100%) !important;
+  }
+  .services .nav-container .breadcrumb {
+    width: 100%;
+    height: 120px;
+    padding: 0px 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .services .nav-container .breadcrumb p {
+    font-size: 34px;
+    font-weight: 500;
+    color: white;
+  }
+  .services .nav-container .breadcrumb p a {
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 20px;
+            margin-inline-end: 20px;
+  }
+  .services .nav-container .breadcrumb p span {
+    font-size: 34px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+    -webkit-margin-end: 20px;
+            margin-inline-end: 20px;
+  }
+  .services .nav-container .breadcrumb p span:first-of-type {
+    color: white;
+  }
+  .services .services-page-container {
+    width: 100%;
+    height: auto;
+    padding: 550px 400px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .services .services-page-container .our-services-title {
+    font-size: 64px;
+    font-weight: 600;
+    color: #031224;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    font-family: "Tiro Bangla", serif;
+    width: 100%;
+  }
+  .services .services-page-container .service-box {
+    width: calc(50% - 15px);
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .services .services-page-container .service-box:hover {
+    outline: 8px solid #DDC03B;
+    transition: outline 0.2s ease-in-out;
+  }
+  .services .services-page-container .service-box:hover .service-title {
+    color: #DDC03B;
+  }
+  .services .services-page-container .service-box .service-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 212, 255, 0) 50%);
+  }
+  .services .services-page-container .service-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .services .services-page-container .service-box .service-title {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
+}/*# sourceMappingURL=services.css.map */

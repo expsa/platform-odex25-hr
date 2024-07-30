@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.5" height="20.395" viewBox="0 0 15.5 20.395">
+    <g id="Icon_ionic-ios-document" data-name="Icon ionic-ios-document" transform="translate(-7.313 -3.938)">
+        <path id="Path_803" data-name="Path 803"
+              d="M21.57,8.987h4.64a.252.252,0,0,0,.255-.255h0a1.509,1.509,0,0,0-.546-1.168l-3.89-3.243a1.638,1.638,0,0,0-1.05-.377h0a.376.376,0,0,0-.377.377v3.7A.968.968,0,0,0,21.57,8.987Z"
+              transform="translate(-3.653 -0.002)" fill="#c7ac31"/>
+        <path id="Path_804" data-name="Path 804"
+              d="M15.623,8.016V3.938H8.944A1.636,1.636,0,0,0,7.313,5.569V22.7a1.636,1.636,0,0,0,1.632,1.632H21.181A1.636,1.636,0,0,0,22.812,22.7V10.311H17.918A2.3,2.3,0,0,1,15.623,8.016Z"
+              transform="translate(0 0)" fill="#c7ac31"/>
+    </g>
+</svg>

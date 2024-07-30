@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="careers" name="careers">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="careers-cta-container animation">
+                    <div class="animation-section-overlay"></div>
+                    <div class="careers-overlay"></div>
+                    <div class="careers-cta">
+                        <div class="cta-title-careers">
+                            <hr/>
+                            <p>Careers</p>
+                            <hr/>
+                        </div>
+                        <p class="cta-title-content-careers">By becoming part of our team at ZFP you will join other top
+                            talents in their
+                            fields from all over the world.
+                        </p>
+                        <a href="#">join us now</a>
+                    </div>
+                    <div class="explore-careers">
+                        <p>scroll to explore</p>
+                        <span class="scroll-explore-container-careers">
+                            <span class="scroll-roller-careers"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="why-join">
+                    <p>Why join Zuhair Fayez?</p>
+                    <p>We are Zuhair Fayez, designers, thinkers and builders.We are passionate about architecture,
+                        landscape,
+                        urbanismand sustainability; and having a positive impact on society.
+                    </p>
+                    <img src="/zuhair_fayez_website/static/img/why-join-us.png" alt=""/>
+                </div>
+
+                <div class="vacancies-container">
+                    <div class="title-search">
+                        <div class="title">
+                            <p>Current job openings</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+                        </div>
+                        <div class="search">
+                            <form action="">
+                                <input type="search" name="" id="" placeholder="search about job..."/>
+                                <img src="/zuhair_fayez_website/static/img/search.png" alt=""/>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="vacancies">
+                        <div class="vacancie">
+                            <a href="job_details.html" class="vacancie-link"></a>
+                            <p class="vacancie-title">SOFTWARE ENGINEER</p>
+                            <p class="vacancie-location">Saudi Arabia</p>
+                            <p class="vacancie-type">Fulltime</p>
+                            <div class="more">
+                                <p class="vacancie-date">4 monthes ago</p>
+                                <a href="#">View details
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="vacancie">
+                            <a href="job_details.html" class="vacancie-link"></a>
+                            <p class="vacancie-title">SOFTWARE ENGINEER</p>
+                            <p class="vacancie-location">Saudi Arabia</p>
+                            <p class="vacancie-type">Fulltime</p>
+                            <div class="more">
+                                <p class="vacancie-date">4 monthes ago</p>
+                                <a href="#">View details
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="vacancie">
+                            <a href="job_details.html" class="vacancie-link"></a>
+                            <p class="vacancie-title">SOFTWARE ENGINEER</p>
+                            <p class="vacancie-location">Saudi Arabia</p>
+                            <p class="vacancie-type">Fulltime</p>
+                            <div class="more">
+                                <p class="vacancie-date">4 monthes ago</p>
+                                <a href="#">View details
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="vacancie">
+                            <a href="job_details.html" class="vacancie-link"></a>
+                            <p class="vacancie-title">SOFTWARE ENGINEER</p>
+                            <p class="vacancie-location">Saudi Arabia</p>
+                            <p class="vacancie-type">Fulltime</p>
+                            <div class="more">
+                                <p class="vacancie-date">4 monthes ago</p>
+                                <a href="#">View details
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="vacancie">
+                            <a href="job_details.html" class="vacancie-link"></a>
+                            <p class="vacancie-title">SOFTWARE ENGINEER</p>
+                            <p class="vacancie-location">Saudi Arabia</p>
+                            <p class="vacancie-type">Fulltime</p>
+                            <div class="more">
+                                <p class="vacancie-date">4 monthes ago</p>
+                                <a href="#">View details
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="vacancie">
+                            <a href="job_details.html" class="vacancie-link"></a>
+                            <p class="vacancie-title">SOFTWARE ENGINEER</p>
+                            <p class="vacancie-location">Saudi Arabia</p>
+                            <p class="vacancie-type">Fulltime</p>
+                            <div class="more">
+                                <p class="vacancie-date">4 monthes ago</p>
+                                <a href="#">View details
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-more-container">
+                        <a class="load-more" href="#">Load more
+                            <img src="/zuhair_fayez_website/static/img/arrow-down.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

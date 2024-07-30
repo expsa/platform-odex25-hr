@@ -1,0 +1,123 @@
+<odoo>
+        <!-- stock.inventory inherit form view -->
+        <record id="stock_inventory_custom_form" model="ir.ui.view">
+            <field name="name">Stock Inventory</field>
+            <field name="model">stock.inventory</field>
+            <field name="inherit_id" ref="stock.view_inventory_form"/>
+            <field name="arch" type="xml">
+                <!--                <xpath expr="//button[@name='action_cancel_draft']" position="replace">-->
+                <!--                    &lt;!&ndash; <button name="action_cancel_draft" states="confirm" string="Cancel Inventory" groups="stock.group_stock_manager" type="object"/>           &ndash;&gt;-->
+                <!--                </xpath>-->
+                <!--                <xpath expr="//button[@name='action_cancel_draft']" position="replace">-->
+                <!--                    &lt;!&ndash; <button name="action_cancel_draft" states="confirm" string="Cancel Inventory" groups="stock.group_stock_manager" type="object"/>           &ndash;&gt;-->
+                <!--                </xpath>-->
+                <!--                <xpath expr="//button[@name='action_start']" position="replace">-->
+                <!--                    <button name="action_confirm" states="confirm" string="Confirm" type="object" class="oe_highlight"-->
+                <!--                            groups="stock.group_stock_manager"/>-->
+                <!--                    <button name="action_done" states="to_approve" string="Approve" type="object" class="oe_highlight"-->
+                <!--                            groups="socpa_stock_custom.inventory_committee_head"/>-->
+                <!--                    <button name="action_reject" states="to_approve" string="Reject" type="object" class="oe_highlight"-->
+                <!--                            groups="socpa_stock_custom.inventory_committee_head"/>-->
+                <!--                    <button name="action_cancel_draft" states="confirm,close" string="Draft"-->
+                <!--                            groups="stock.group_stock_manager" type="object"/>-->
+                <!--                    <button name="action_confirm_quant" states="to_approve" string="Confirm Quantity"-->
+                <!--                            groups="socpa_stock_custom.inventory_committee_member" type="object" class="oe_highlight"/>-->
+                <!--                </xpath>-->
+                <!--        -->
+                <!--        <xpath expr="//button[@name='action_reset_product_qty']" position="attributes">-->
+                <!--          <attribute name="invisible">True</attribute>-->
+                <!--        </xpath>-->
+                <!--        <xpath expr="//field[@name='filter']" position="after">-->
+                <!--          <field name="committe_head" attrs="{'readonly' : [('state' , 'not in' , ['draft','confirm'])]}"/>-->
+
+                <!--        </xpath>-->
+                <!--        <xpath expr="//sheet" position="after">-->
+                <!--          <div class="oe_chatter">-->
+                <!--              <field name="message_follower_ids" widget="mail_followers"/>-->
+                <!--              <field name="activity_ids" widget="mail_activity"/>-->
+                <!--              <field name="message_ids" widget="mail_thread"/>-->
+                <!--          </div>-->
+                <!--        </xpath>-->
+                <!--        <xpath expr="//field[@name='theoretical_qty']" position="attributes">-->
+                <!--           <attribute name="attrs">{'column_invisible' : [('parent.state' , '!=' , 'to_approve')]}</attribute>-->
+                <!--          &lt;!&ndash; <attribute name="groups">socpa_stock_custom.inventory_committee_member</attribute><attribute name="groups">socpa_stock_custom.inventory_committee_head</attribute> &ndash;&gt;-->
+                <!--        </xpath>-->
+                <!--        <xpath expr="//field[@name='product_qty']" position="attributes">-->
+                <!--          &lt;!&ndash; <attribute name="groups">socpa_stock_custom.inventory_committee_member</attribute>  &ndash;&gt;-->
+                <!--          <attribute name="attrs">{'readonly' : [('parent.state' , 'not in' , ['confirm' , 'to_approve' ])]}</attribute>-->
+                <!--        </xpath>-->
+                <xpath expr="//header" position="replace">
+                    <header>
+                        <button name="action_approve_to_start" states="draft" string="Approve To Start" type="object"
+                                groups="stock.group_stock_user" class="oe_highlight"/>
+                        <button name="action_start" states="pending" string="Start Inventory" type="object"
+                                class="oe_highlight" groups="stock.group_stock_user"/>
+                        <button name="action_open_inventory_lines" states="confirm" string="Continue Inventory"
+                                type="object" class="oe_highlight" groups="stock.group_stock_user"/>
+                        <button name="action_first_validate" states="confirm" string="Approve" type="object"
+                            class="oe_highlight"/>
+                        <button name="action_second_validate" states="first_validate" string="Approve" type="object"
+                            class="oe_highlight"/>
+                        <button name="action_validate" string="Validate Inventory" type="object"
+                                attrs="{'invisible': ['|', ('state', '!=', 'second_validate'), ('line_ids', '!=', [])]}"
+                                groups="stock.group_stock_manager"/>
+                        <button name="action_validate" string="Validate Inventory" type="object"
+                                attrs="{'invisible': ['|', ('state', '!=', 'second_validate'), ('line_ids', '=', [])]}"
+                                confirm="By pressing 'OK' the system will validate the adjustment"
+                                class="oe_highlight" groups="stock.group_stock_manager"/>
+                        <button name="action_print" string="Print Count Sheet" type="object"
+                                attrs="{'invisible': [('state', '=', 'draft')]}" groups="stock.group_stock_user"/>
+                        <button name="action_cancel_draft" states="cancel" string="Set to Draft" type="object"/>
+                        <button name="action_cancel_draft" states="confirm" string="Cancel Inventory" type="object"
+                            confirm="If you cancel this inventory adjustment, all its inventory adjustment lines will be
+                             lost. Are you sure you want to discard it ?"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,pending,confirm,first_approve,second_approve,done"/>
+            </header>
+                </xpath>
+                <field name="accounting_date" position="before">
+                    <field name="sequence" attrs="{'readonly':[('state','not in', ('draft', 'pending'))]}"/>
+                    <field name="date" attrs="{'readonly':[('state','not in', ('draft', 'pending'))]}"/>
+                </field>
+
+                <xpath expr="//sheet" position="inside">
+                    <notebook>
+                        <page string="lines">
+                            <field name="line_ids" editable="bottom">
+                                <tree>
+                                    <field name="is_editable" invisible="1"/>
+                                    <field name="product_default_code"/>
+                                    <field name="product_id" width="1.6"
+                                           context="{'default_type': 'product', 'display_default_code': False}"
+                                           readonly="context.get('default_product_id', False)"
+                                           attrs="{'readonly': ['|', ('is_editable', '=', False),
+                                           ('state', '!=', 'confirm')]}"/>
+                                    <field name="product_uom_id" groups="uom.group_uom" width="0.3" force_save="1"/>
+                                    <field name="location_id"/>
+                                    <field name="package_id" groups="stock.group_tracking_lot" width="0.8"
+                                           optional="show"
+                                           attrs="{'readonly':
+                                            ['|', ('is_editable', '=', False),('state', '!=', 'confirm')]}" />
+                                    <field name="theoretical_qty" string="On Hand" width="0.5" force_save="1"
+                                           readonly="1" optional="show"/>
+                                    <field name="product_qty" width="0.5" string="Counted"/>
+                                    <field name="increase"/>
+                                    <field name="decrease"/>
+                                    <field name="note"/>
+                                    <field name="state" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Committee Members">
+                            <field name="committee_members">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+
+                </xpath>
+            </field>
+        </record>
+</odoo>

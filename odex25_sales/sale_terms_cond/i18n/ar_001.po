@@ -1,0 +1,119 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_terms_cond
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20220407\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-18 06:17+0000\n"
+"PO-Revision-Date: 2024-04-18 06:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_terms_cond
+#: model_terms:ir.actions.act_window,help:sale_terms_cond.sale_terms_conditionsaction
+msgid "Click to add a new Terms&amp;Conditions"
+msgstr "انقر لإضافة شروط وأحكام جديدة"
+
+#. module: sale_terms_cond
+#: model:ir.model,name:sale_terms_cond.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التكوين"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__create_uid
+msgid "Created by"
+msgstr "تم الإنشاء بواسطة"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__create_date
+msgid "Created on"
+msgstr "تم الإنشاء في"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_res_config_settings__terms_id
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__default_term
+msgid "Default Term"
+msgstr "الشروط الافتراضية"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__desc
+msgid "Description"
+msgstr "الوصف"
+
+#. module: sale_terms_cond
+#: model_terms:ir.ui.view,arch_db:sale_terms_cond.sale_terms_conditionsform_view
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_terms_conditions__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_order__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: sale_terms_cond
+#: model:ir.model,name:sale_terms_cond.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: sale_terms_cond
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_order__terms_desc
+msgid "Terms Desc"
+msgstr "وصف الشروط"
+
+#. module: sale_terms_cond
+#: model:ir.actions.act_window,name:sale_terms_cond.sale_terms_conditionsaction
+#: model:ir.model.fields,field_description:sale_terms_cond.field_sale_order__terms_id
+#: model:ir.ui.menu,name:sale_terms_cond.sale_terms_conditionsaction_menu
+#: model_terms:ir.ui.view,arch_db:sale_terms_cond.sale_terms_conditionsfilter_view
+#: model_terms:ir.ui.view,arch_db:sale_terms_cond.sale_terms_conditionsform_view
+#: model_terms:ir.ui.view,arch_db:sale_terms_cond.sale_terms_conditionstree_view
+#: model_terms:ir.ui.view,arch_db:sale_terms_cond.view_sale_order_job_card_from_view
+msgid "Terms&Conditions"
+msgstr "الشروط والأحكام"
+
+#. module: sale_terms_cond
+#: model:ir.model,name:sale_terms_cond.model_sale_terms_conditions
+msgid "sale.terms.conditions"
+msgstr ""

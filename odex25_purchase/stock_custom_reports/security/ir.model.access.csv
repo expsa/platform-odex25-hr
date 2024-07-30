@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_exchange_wizard,exchange.request.report,model_exchange_request_report,group_stock_additional_reports,1,1,1,1
+access_exchange_outgoing,exchange.request.outgoing,model_incoming_outgoing_report,group_stock_additional_reports,1,1,1,1
+access_exchange_transfer,exchange.request.transfer,model_internal_transfer_report,group_stock_additional_reports,1,1,1,1
+access_exchange_adjustment,exchange.request.adjustment,model_inventory_adjustment_report,group_stock_additional_reports,1,1,1,1
+access_exchange_scrap_report,exchange.request.scrap,model_scrap_report_wizard,group_stock_additional_reports,1,1,1,1

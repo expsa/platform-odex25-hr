@@ -1,0 +1,22 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+exchange_request_exchange_request_line_stock_user,exchange request line,exchange_request.model_exchange_request_line,stock.group_stock_user,True,True,True,True
+exchange_request_exchange_request_stock_user,exchange request,exchange_request.model_exchange_request,stock.group_stock_user,True,True,True,False
+exchange_request_exchange_request_line_stock_manager,exchange request line,exchange_request.model_exchange_request_line,stock.group_stock_manager,True,True,True,True
+exchange_request_exchange_request_stock_manager,exchange request,exchange_request.model_exchange_request,stock.group_stock_manager,True,True,True,False
+exchange_request_exchange_request_purchases_wizard,exchange purchases wizard,model_purchase_wizard,stock.group_stock_manager,1,1,1,1
+exchange_request_exchange_request_exchange_wizard_line,exchange exchange wizard,model_exchange_wizard_line,stock.group_stock_manager,1,1,1,1
+,,,,,,,
+,,,,,,,
+exchange_request_stock_quant_stock_manager,exchange request,stock.model_stock_quant,stock.group_stock_manager,True,True,True,False
+exchange_request_stock_quant_stock_user,exchange request,stock.model_stock_quant,stock.group_stock_user,True,True,True,False
+exchange_request_exchange_request_line_employee,exchange request line,exchange_request.model_exchange_request_line,base.group_user,True,True,True,True
+exchange_request_exchange_request_employee,exchange request,exchange_request.model_exchange_request,base.group_user,True,True,True,False
+stock_journal,stock_journal,exchange_request.model_stock_journal,stock.group_stock_user,True,True,True,False
+product_employee,product_employee,stock.model_product_product,base.group_user,True,True,FALSE,FALSE
+product_template_employee,product_template_employee,stock.model_product_template,base.group_user,True,True,FALSE,FALSE
+stock_move_employee,stock_move_employee,stock.model_stock_move,base.group_user,True,True,FALSE,FALSE
+stock_picking_employee,stock_picking_employee,stock.model_stock_picking,base.group_user,True,True,FALSE,FALSE

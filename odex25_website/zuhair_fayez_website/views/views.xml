@@ -1,0 +1,65 @@
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.zuhair</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="50"></field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"></field>
+        <field name="arch" type="xml">
+            <!--      add no of experinese years +viedo link -->
+            <!--            <xpath expr="//div[@id='website_settings']/div[2]/div[1]" position="after">-->
+            <!--                <div class="app_settings_block" data-string="My zuhair website" string="My Module"-->
+            <!--                     data-key="zuhair_fayez_website">-->
+            <!--                    <h2>Zuhair Website Settings</h2>-->
+            <!--                    <div class="row mt16 o_settings_container">-->
+            <!--                        <div class="col-12 col-lg-6 o_setting_box">-->
+            <!--                            <div class="o_setting_left_pane"/>-->
+            <!--                            <div class="o_setting_right_pane">-->
+            <!--                                <label string="Experiense years" for="experiense_years"/>-->
+            <!--                                <div class="text-muted">These no of years are used for  home page</div>-->
+            <!--                                <field name="experiense_years" widget="text"/>-->
+            <!--                                <label string="Video" for="video"/>-->
+            <!--                                <div class="text-muted">These video are used for home page</div>-->
+            <!--                                <field name="video" widget="url"/>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </xpath>-->
+            <!--      end -->
+            <xpath expr="//div[@id='website_settings']" position="after">
+                <h2>Zuhair Website Settings</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label string="Experiense years" for="experiense_years"/>
+                            <div class="text-muted">These no of experiense years</div>
+                            <field name="experiense_years" widget="text"/>
+                            <br/>
+                            <label string="Video" for="video_bg"/>
+                            <div class="text-muted">These video for home page</div>
+                            <field name="video_bg" widget="url"/>
+                        </div>
+                    </div>
+
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <!--    inherit website form -->
+    <!-- Inherit Form View to Modify it -->
+    <record id="website_extend_form" model="ir.ui.view">
+        <field name="name">website.extend</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="no_of_years" widget="text"/>
+                <field name="video_bg" widget="url"/>
+            </xpath>
+
+        </field>
+    </record>
+    <!--    end -->
+</odoo>

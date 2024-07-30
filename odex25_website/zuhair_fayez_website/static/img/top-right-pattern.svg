@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="216.212" height="214.707" viewBox="0 0 216.212 214.707">
+    <g id="Group_1182" data-name="Group 1182" transform="translate(-1038.81 -116.242)" opacity="0.2">
+        <g id="Group_1019" data-name="Group 1019" transform="translate(1040.003 117.001)">
+            <path id="Polygon_1" data-name="Polygon 1" d="M37.272,0,74.544,52.751H0Z"
+                  transform="matrix(-1, -0.011, 0.009, -1, 211.875, 213.191)" fill="none" stroke="#ddc03b"
+                  stroke-linejoin="round" stroke-width="1.5"/>
+            <path id="Polygon_2" data-name="Polygon 2" d="M39.914,0,79.828,49.259H0Z"
+                  transform="translate(166.182 12.685) rotate(90.43)" fill="none" stroke="#ddc03b"
+                  stroke-linejoin="round" stroke-width="1.5"/>
+            <path id="Polygon_3" data-name="Polygon 3" d="M37.27,0,74.54,52.753H0Z"
+                  transform="translate(211.981 135.549) rotate(-178.529)" fill="none" stroke="#ddc03b"
+                  stroke-width="1.5"/>
+            <path id="Polygon_2-2" data-name="Polygon 2" d="M37.272,0,74.544,52.75H0Z"
+                  transform="matrix(1, 0.013, -0.011, 1, 137.562, 127.248)" fill="none" stroke="#ddc03b"
+                  stroke-width="1.5"/>
+            <path id="Polygon_3-2" data-name="Polygon 3" d="M39.912,0,79.824,49.261H0Z"
+                  transform="translate(0.059 91.441) rotate(-90.043)" fill="none" stroke="#ddc03b" stroke-width="1.5"/>
+            <path id="Polygon_2-3" data-name="Polygon 2" d="M37.272,0,74.544,52.75H0Z"
+                  transform="matrix(1, -0.018, 0.02, 1, 137.97, 46.849)" fill="none" stroke="#ddc03b"
+                  stroke-width="1.5"/>
+            <path id="Polygon_3-3" data-name="Polygon 3" d="M37.274,0,74.548,52.748H0Z"
+                  transform="translate(212.395 52.747) rotate(179.668)" fill="none" stroke="#ddc03b"
+                  stroke-width="1.5"/>
+            <path id="Polygon_2-4" data-name="Polygon 2" d="M39.915,0,79.83,49.258H0Z"
+                  transform="matrix(-0.005, 1, -1, -0.005, 83.983, 12.121)" fill="none" stroke="#ddc03b"
+                  stroke-width="1.5"/>
+            <path id="Polygon_3-4" data-name="Polygon 3" d="M39.912,0,79.823,49.262H0Z"
+                  transform="matrix(0.019, -1, 1, 0.019, 82.554, 91.871)" fill="none" stroke="#ddc03b"
+                  stroke-width="1.5"/>
+        </g>
+    </g>
+</svg>

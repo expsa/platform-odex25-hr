@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'mail'), ('name', '=', 'mail_notification_light')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'mail'), ('name', '=', 'message_notification_email')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'mail'), ('name', '=', 'mail_notification_paynow')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'mail'), ('name', '=', 'message_user_assigned')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'mail'), ('name', '=', 'message_activity_assigned')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+        <function name="write" model="ir.model.data">
+            <function name="search" model="ir.model.data">
+                <value eval="[('module', '=', 'digest'), ('name', '=', 'digest_mail_main')]"/>
+            </function>
+            <value eval="{'noupdate': False}"/>
+        </function>
+
+
+        <template id="mail_notification_light_custom" inherit_id="mail.mail_notification_light">
+            <xpath expr="//a[@href='https://www.odoo.com?utm_source=db&amp;utm_medium=email']" position="replace">
+                <a target="_blank" href="https://odex.sa/"
+                   style="color: #137EC6;">Odex
+                </a>
+            </xpath>
+        </template>
+
+
+        <template id="message_notification_email_custom" inherit_id="mail.message_notification_email">
+            <xpath expr='//a[@t-if="has_button_access"]' position="replace">
+                <a t-if="has_button_access"
+                   t-att-href="button_access['url']"
+                   style="padding: 8px 12px; font-size: 12px; color: #FFFFFF; text-decoration: none !important; font-weight: 400; background-color: #137EC6; border: 0px solid #137EC6; border-radius:3px">
+                    <t t-esc="button_access['title']"/>
+                </a>
+            </xpath>
+
+            <xpath expr='//t[@t-if="actions"]/t/a' position="replace">
+                <a t-att-href="action['url']" style="color: #137EC6; text-decoration:none !important;">
+                    <t t-esc="action['title']"/>
+                </a>
+            </xpath>
+
+            <xpath expr='//a[@t-if="website_url"]' position="replace">
+                <a t-if="website_url" t-att-href="website_url" style="text-decoration:none; color: #137EC6;">
+                    <span t-esc="company.name"/>
+                </a>
+            </xpath>
+
+            <xpath expr="//a[@href='https://www.odoo.com?utm_source=db&amp;utm_medium=email']" position="replace">
+                <a target="_blank" href="https://odex.sa/" style="text-decoration:none; color: #137EC6;">Odex</a>
+            </xpath>
+
+            <xpath expr="//p[@t-if='subtype.internal']" position="attributes">
+                <attribute name="style">background-color: #BFD7ED; padding: 5px; margin-bottom: 16px;</attribute>
+            </xpath>
+
+
+        </template>
+
+        <template id="mail_notification_paynow_custom" inherit_id="mail.mail_notification_paynow">
+            <xpath expr="//a[@href='https://www.odoo.com?utm_source=db&amp;utm_medium=email']" position="replace">
+                <!--                <td align="center" style="min-width: 590px; padding: 8px; font-size:11px;">-->
+                <!--                    Powered by-->
+                <a target="_blank" href="https://odex.sa/"
+                   style="color: #137EC6;">Odex
+                </a>
+                <!--                </td>-->
+            </xpath>
+
+            <xpath expr='//a[@t-att-href="access_url"]' position="replace">
+                <a t-att-href="access_url"
+                   style="background-color: #137EC6; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+                    <t t-esc="access_name"/>
+                </a>
+            </xpath>
+        </template>
+
+        <template id="mail_notification_borders_custom" inherit_id="mail.mail_notification_borders">
+            <xpath expr="//a[@href='https://www.odoo.com?utm_source=db&amp;utm_medium=email']" position="replace">
+                 <a target="_blank" href="https://odex.sa/">Odex</a>
+            </xpath>
+        </template>
+
+        <template id="message_user_assigned_custom" inherit_id="mail.message_user_assigned">
+            <xpath expr='//a[@t-att-href="access_link"]' position="replace">
+                <a t-att-href="access_link" t-att-data-oe-model="object._name" t-att-data-oe-id="object.id"
+                   style="background-color:#137EC6; padding: 10px; text-decoration: none; color: #fff; border-radius: 5px;">
+                    View
+                    <t t-esc="model_description or 'document'"/>
+                </a>
+            </xpath>
+        </template>
+
+        <template id="message_activity_assigned_custom" inherit_id="mail.message_activity_assigned">
+            <xpath expr='//a[@t-att-href="access_link"]' position="replace">
+                <a t-att-href="access_link" t-att-data-oe-model="activity.res_model" t-att-data-oe-id="activity.res_id"
+                   style="background-color:#137EC6; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px;">
+                    View
+                    <t t-esc="model_description or 'document'"/>
+                </a>
+            </xpath>
+        </template>
+
+        <template id="digest_mail_main_custom" inherit_id="digest.digest_mail_main">
+            <xpath expr="//div[@id='footer']/p[2]" position="replace">
+                <p class="by_odoo" id="powered">
+                    Powered by
+                    <a href="https://odex.sa/" target="_blank" class="odoo_link">
+                        <span class="odoo_link_text" style="color: #137EC6;">Odex</span>
+                    </a>
+                </p>
+
+            </xpath>
+            <xpath expr="//span[@id='button_connect']" position="attributes">
+                <attribute name="style">background-color: #137EC6;</attribute>
+            </xpath>
+            <xpath expr="//span[@id='button_open_report']" position="attributes">
+                <attribute name="style">background-color: #137EC6;</attribute>
+            </xpath>
+            <xpath expr="//div[@id='header_background']" position="attributes">
+                <attribute name="style">background-color: #137EC6;</attribute>
+            </xpath>
+        </template>
+
+        <template id="brand_promotion_message_custom" inherit_id="web.brand_promotion_message">
+            <xpath expr="//t[@t-set='odoo_logo']" position="replace">
+                <t t-set="odoo_logo">
+                    <a target="_blank" t-attf-href="https://odex.sa/"
+                       class="badge badge-light">
+                        <img alt="Odex" src="/web/static/src/img/odoo_logo_tiny.png"
+                             style="height: 1em; vertical-align: baseline;"/>
+                    </a>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

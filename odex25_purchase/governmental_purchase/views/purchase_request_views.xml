@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+        <record id="purchase_request_form" model="ir.ui.view">
+                <field name="name">purchase.request.view.form</field>
+                <field name="model">purchase.request</field>
+                <field name="inherit_id" ref="purchase_requisition_custom.purchase_request_form"/>
+                <field name="arch" type="xml">
+                        <xpath expr="//header" position="replace">
+                                <header>
+                                        <button name="action_confirm" groups="purchase_custom_vro.dm_btn_approve" type="object" string="Submit" states="dm" class="oe_highlight"/>
+                                        <button name="action_dm_confirm" type="object" string="Send" states="draft" class="oe_highlight"/>
+                                        <!--                    <button name="action_evb_confirm" groups="purchase_requisition_custom.create_purchase_request"-->
+                                        <!-- type="object" string="Approve" states="budget_approve" class="oe_highlight"/>-->
+                                        <button name="action_pc_confirm" groups="purchase_custom_vro.CEO_OF_Purchasing" type="object" string="Approve" states="budget_approve" class="oe_highlight"/>
+                                        <!--                        <button name="action_approve" groups="purchase_requisition_custom.group_department_approve" type="object" string=" Department Approve" states="department manager" class="oe_highlight"/>-->
+                                        <button name="approve_department" type="object" string="Approve" groups="purchase_requisition_custom.group_direct_manger" states="direct_manager" class="oe_highlight"/>
+                                        <!--                   oveerride cancel button to show cancel button in  state -->
+                                        <button name="%(purchase_requisition_custom.purchase_request_cancel_wizard_action)d" string="Refuse" attrs="{'invisible' : [('state','in' , ['waiting'])]}" type="action"/>
+                                        <!--                        end -->
+                                        <button name="action_draft" type="object" string="Reset To Draft" class="oe_highlight" attrs="{'invisible' : [('state','not in' , ['refuse'])]}"/>
+                                        <!--                    <button name="action_refuse" type="object" string="Refuse"-->
+                                        <!-- groups="purchase_requisition_custom.group_direct_manger"-->
+                                        <!-- attrs="{'invisible':[('state', 'not in', ['direct_manager','it manager'])]}"/>-->
+                                        <!--                        <button name="action_refuse_department" type="object" string="Refuse" groups="purchase_requisition_custom.group_department_approve" attrs="{'invisible':[('state', 'in', ['waiting', 'refuse','done','cancel','draft','it manager','direct_manager','send_budget'])]}"/>-->
+
+                                        <button type="object" name="action_budget" string="First Budget Check" class="oe_highlight" states="send_budget"/>
+
+                                        <button name="create_requisition" groups="purchase.group_purchase_user,purchase.group_purchase_manager" type="object" string="Create Requisition" class="oe_highlight" attrs="{'invisible' : ['|',('purchase_create' , '=' , True),
+                                                ('state' , 'not in' , ['waiting'])]}"/>
+                                        <button name="create_purchase_order2" groups="purchase.group_purchase_user,purchase.group_purchase_manager" type="object" string="Create Purchase Order" class="oe_highlight" attrs="{'invisible' : ['|',('purchase_create' , '=' , True),
+                                                                    ('state' , 'not in' , ['waiting'])]}"/>
+
+                                        <button type="object" name="action_cs_approve" class="oe_highlight" groups="purchase_custom_vro.group_po_legal_counsel" string="Approve" attrs="{'invisible':[('state', '!=', 'ceo_purchase')]}"/>
+`
+                                                                                                                        <!--                    <button type="object" name="action_ceo_purchase_approve" class="oe_highlight"-->
+                                        <!-- groups="purchase_custom_vro.group_po_general_supervisor_approve" string="CEO Approve"-->
+                                        <!-- attrs="{'invisible':[('state', '!=', 'cs_approve')]}"/>-->
+
+                                        <button type="object" name="action_general_supervisor_approve" class="oe_highlight" groups="purchase_custom_vro.group_po_general_supervisor_approve" string="Approve" attrs="{'invisible':[('state', '!=', 'general_supervisor')]}"/>
+
+                                        <button name="action_cancel" type="object" string="Cancel" states="draft" class="oe_stat_button" groups="purchase.group_purchase_manager"/>
+                                        <button name="action_done" type="object" string="Done" class="oe_stat_button" groups="purchase.group_purchase_manager" states="waiting"/>
+                                        <field name="state" widget="statusbar" statusbar_visible="draft,direct_manager,send_budget,
+                    wait_budget,budget_approve,cs_approve,general_supervisor,waiting,done,cancel,refuse"/>
+                                </header>
+                        </xpath>
+                        <xpath expr="//div[@class='oe_button_box']" position="inside">
+                                <button class="oe_stat_button" name="open_confirmation" type="object" string="Budget Confirmation" icon="fa-list-ol"></button>
+                        </xpath>
+                        <field name="type" position="after">
+                                <!--                 <field name="is_analytic"/> -->
+                                <field name="company_id" invisible="1"/>
+                                <!--                <field name="custom_three_validation_steps" readonly="1"/>-->
+                        </field>
+                        <field name="line_ids" position="attributes">
+                                <attribute name="attrs">{'readonly':[('state', 'not in', ['draft','dm'])]}</attribute>
+                        </field>
+                        <xpath expr="//field[@name='line_ids']/tree" position="replace">
+                                <tree editable="bottom">
+                                        <field name="name_text"/>
+                                        <field name="product_id" domain="[('purchase_ok', '=', True),('categ_id','child_of',parent.product_category_ids)]" options="{'no_create' : True , 'no_edit' : True ,'no_open' : True}" attrs="{'required':[('parent.state','=','send_budget')]}"/>
+                                        <field name="uom_id" attrs="{'required':[('parent.state','=','send_budget')]}"/>
+                                        <field name="qty" required="1"/>
+                                        <field name="price_unit"/>
+                                        <field name="name"/>
+                                        <field name="sum_total" force_save="1" sum="Total amount"/>
+                                        <field name="account_id"/>
+                                        <field name="name_text1"/>
+                                </tree>
+                        </xpath>
+                        <xpath expr="//notebook" position="inside">
+                                <!--                <page string="Use of Circuits" name="">-->
+                                <!--                    <group>-->
+                                <!--                        <group string="Requesting ِAdministration"-->
+                                <!-- groups="purchase_requisition_custom.group_requesting_ِadministration">-->
+                                <!--                            <field name="planned_for" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>-->
+                                <!--                            <field name="emergency" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>-->
+                                <!--                        </group>-->
+                                <!--                        <group string="Use Purchases"-->
+                                <!-- attrs="{'invisible':[('state' , 'not in' , ('budget_approve', 'waiting', 'done'))]}">-->
+                                <!--                            <field name="type_id" options="{'no_create': True}"/>-->
+                                <!--&lt;!&ndash;                           2mp;', ('state' , '=' , 'waiting'),('custom_three_validation_steps','=', True)]}"&ndash;&gt;-->
+                                <!--                        </group>-->
+                                <!--                    </group>-->
+                                <!--                    <group string="For technical management use"-->
+                                <!-- groups="purchase_requisition_custom.group_For_technical_management_use">-->
+                                <!--                        <group>-->
+                                <!--                            <field name="available"-->
+                                <!-- attrs="{'readonly':[('state' , '!=' , 'direct_manager')]}"/>-->
+                                <!--                            <field name="unavailable"-->
+                                <!-- attrs="{'readonly':[('state' , '!=' , 'direct_manager')]}"/>-->
+                                <!--                            <field name="specifications_conform"-->
+                                <!-- attrs="{'readonly':[('state' , '!=' , 'direct_manager')]}"/>-->
+                                <!--                            <field name="specifications_not_conform"-->
+                                <!-- attrs="{'readonly':[('state' , '!=' , 'direct_manager')]}"/>-->
+                                <!--                        </group>-->
+                                <!--                    </group>-->
+                                <!--                </page>-->
+                                <!--                resone page-->
+                                <page string="Refuse Reason" attrs="{'invisible': [('state','!=','refuse')]}" readonly="1">
+                                        <field name="user_id" readonly="1"/>
+                                        <field name="cancel_reason" readonly="1"/>
+                                </page>
+                                <!--                end-->
+                        </xpath>
+                </field>
+        </record>
+</odoo>

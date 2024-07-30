@@ -1,0 +1,41 @@
+// Has Form Sheet view
+.o_web_client {
+    .o_content {
+        &.o_drop_mode {
+            overflow: hidden;
+            .o_view_manager_content {
+                overflow: hidden;
+            }
+        }
+        .o_form_view {
+            &.adjust_sheet {
+                visibility: hidden;
+                position: initial;
+                overflow: hidden;
+                &:before {
+                    content: "Drop your files here";
+                    visibility: visible;
+                    background-color: @odoo-brand-secondary;
+                    position: absolute;
+                    right: 15px;
+                    left: 15px;
+                    top: 15px;
+                    bottom: 15px;
+                    color: #bebebe;
+                    font-size: xx-large;
+                    font-style: italic;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    -webkit-box-pack: center;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    border: 4px dashed @btn-default-border;
+                }
+            }
+        }
+    }
+}

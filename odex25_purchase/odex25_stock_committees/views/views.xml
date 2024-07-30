@@ -1,0 +1,117 @@
+<odoo>
+  <data>
+      <record id="inventory_committees_view_form" model="ir.ui.view">
+          <field name="name">inventory_committees_view_form</field>
+          <field name="model">inventory.committees</field>
+          <field name="arch" type="xml">
+              <form string="_form">
+                  <sheet>
+                      <group>
+                          <group> <field name="name"/>
+                          </group>
+                          <group>
+                              <field name="responsiple_id"/>
+                          </group>
+                      </group>
+                      <notebook>
+                          <page name="Committees Members" string="Committees Members">
+                                  <field name="members_ids">
+                                      <tree editable="bottom">
+                                          <field name="member_id"/>
+<!--                                           <field name="login"/> -->
+<!--                                           <field name="lang"/> -->
+<!--                                           <field name="login_date"/> -->
+<!--                                           <field name="totp_enabled"/> -->
+                                      </tree>
+                                  </field>
+                          </page>
+                      </notebook>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+      <record id="item_dest_view_form" model="ir.ui.view">
+          <field name="name">item_dest_view_form</field>
+          <field name="model">item.destrcution.committees</field>
+          <field name="arch" type="xml">
+              <form string="_form">
+                  <sheet>
+                      <group>
+                          <group> <field name="name"/>
+                          </group>
+                          <group>
+                              <field name="responsiple_id"/>
+                          </group>
+                      </group>
+                      <notebook>
+                          <page name="Committees Members" string="Committees Members">
+                                  <field name="members_ids">
+                                      <tree editable="bottom">
+                                          <field name="member_id"/>
+<!--                                           <field name="login"/>
+                                          <field name="lang"/>
+                                          <field name="login_date"/>
+                                          <field name="totp_enabled"/> -->
+                                      </tree>
+                                  </field>
+                          </page>
+                      </notebook>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+      <record id="item_return_view_form" model="ir.ui.view">
+          <field name="name">item_return_view_form</field>
+          <field name="model">item.return.committees</field>
+          <field name="arch" type="xml">
+              <form string="_form">
+                  <sheet>
+                      <group>
+                          <group> <field name="name"/>
+                          </group>
+                          <group>
+                              <field name="responsiple_id"/>
+                          </group>
+                      </group>
+
+                      <notebook>
+                          <page name="Committees Members" string="Committees Members">
+                                  <field name="members_ids">
+                                      <tree editable="bottom">
+                                          <field name="member_id"/>
+<!--                                           <field name="login"/>
+                                          <field name="lang"/>
+                                          <field name="login_date"/>
+                                          <field name="totp_enabled"/> -->
+                                      </tree>
+                                  </field>
+                          </page>
+                      </notebook>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+<!--      action for menu -->
+      <record id="committees1_action" model="ir.actions.act_window">
+          <field name="name">Inventory Committees</field>
+          <field name="res_model">inventory.committees</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+      <record id="committees2_action" model="ir.actions.act_window">
+          <field name="name">Item Destrcution Committees</field>
+          <field name="res_model">item.destrcution.committees</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+      <record id="committees3_action" model="ir.actions.act_window">
+          <field name="name">Item Return Committees</field>
+          <field name="res_model">item.return.committees</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+   <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+   <menuitem id="committees_root_menu" name="Committees" sequence="7" parent="stock.menu_stock_config_settings"/>
+   <menuitem id="committees_sub_menu1" name="Inventory Committees" sequence="1" action="committees1_action" parent="committees_root_menu"/>
+   <menuitem id="committees_sub_menu2" name="Item Destruction Committees" action='committees2_action' parent="committees_root_menu" sequence="2"/>
+   <menuitem id="committees_sub_menu3" name="Item Return Committees"  action = 'committees3_action' parent="committees_root_menu" sequence="3"/>
+
+  </data>
+</odoo>

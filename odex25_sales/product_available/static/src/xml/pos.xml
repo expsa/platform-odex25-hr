@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ProductItemWithQuantity" t-inherit="point_of_sale.ProductItem" t-inherit-mode="primary" owl="1">
+        <xpath expr="//div[hasclass('product-img')]" position="inside">
+            <t t-if="env.pos.config.show_qty_available &amp;&amp; props.product.type == 'product'">
+                <span t-attf-class="qty-tag {{state.qty_available lte 0 ? 'not-available':''}}">
+                    <t t-esc="state.qty_available"/>
+                </span>
+            </t>
+        </xpath>
+        <xpath expr="//article" position="attributes">
+            <attribute name="t-attf-style">{{!["return", "return_without_receipt"].includes(env.pos.get_order().get_mode()) &amp;&amp; env.pos.config.hide_out_of_stock_products &amp;&amp; state.qty_available lte 0 ? 'pointer-events: none; opacity: 0.4;':''}}</attribute>
+        </xpath>
+    </t>
+</templates>

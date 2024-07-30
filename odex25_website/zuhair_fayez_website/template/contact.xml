@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="contact" name="contact">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="contact-cta-container animation">
+                    <div class="animation-section-overlay"></div>
+                    <div class="contact-overlay"></div>
+                    <div class="contact-cta">
+                        <div class="cta-title-contact">
+                            <hr/>
+                            <p><img src="/zuhair_fayez_website/static/img/love-letters-svgrepo-com.png" alt=""/>Contact
+                                Us
+                            </p>
+                            <hr/>
+                        </div>
+                        <p class="cta-title-content-contact">Feel free to contact us any time we will get back to you as
+                            soon as we can
+                        </p>
+                    </div>
+                    <div class="explore-contact">
+                        <p>scroll to explore</p>
+                        <span class="scroll-explore-container-contact">
+                            <span class="scroll-roller-contact"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="branches-container">
+                    <div class="branches-title">
+                        <p>Our Branches</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                    </div>
+                    <div class="branches">
+                        <div class="branch">
+                            <div class="branch-title">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35.782" height="33.771"
+                                         viewBox="0 0 35.782 33.771">
+                                        <g id="buildings-svgrepo-com" transform="translate(0 -1.694)">
+                                            <path id="Path_758" data-name="Path 758"
+                                                  d="M31.577,1.863l7.4,4.832V35.533h-7.4Z"
+                                                  transform="translate(-12.831 -0.069)" fill="#fff"/>
+                                            <path id="Path_759" data-name="Path 759"
+                                                  d="M45.015,36.875V49.609h9.058v-9.84Zm3.824,9.965-2.768-.806V43.646l2.768,1Zm0-4.178-2.768-.806V39.469l2.768,1.006Zm3.472,5.183-2.769-.8v-2.39l2.769,1.006Zm0-4.177-2.768-.805V40.474l2.769,1v2.189h0Z"
+                                                  transform="translate(-18.291 -14.295)" fill="#fff"/>
+                                            <path id="Path_760" data-name="Path 760"
+                                                  d="M8.757,7.532V26.652l-1.308.854V21.121l-.83.343v-6.37L.578,17.76v6.206L0,24.206V35.465H17.9V1.694ZM1.132,18.976l2.039-.943v2.453l-2.039.906V18.976Zm.151,3.976,2.038-.945v2.455l-2.038.9V22.951Zm2.1,8.812-2.038.907V30.254l2.038-.943Zm0-3.738-2.038.908V26.517l2.038-.943Zm.29-10.233,2.039-.943V19.3l-2.039.905Zm.151,3.975,2.038-.943v2.454l-2.038.907V21.768ZM6.1,30.595,4.063,31.5V29.086L6.1,28.141Zm0-3.737-2.039.905V25.349L6.1,24.4Zm6.53.425L9.812,29.048V26.431l2.819-1.824Zm0-4.422L9.812,24.625V22.007l2.819-1.824Zm0-4.423L9.812,20.2V17.585l2.819-1.825Zm0-4.422L9.812,15.779V13.162l2.819-1.825Zm0-4.423L9.812,11.357V8.74l2.819-1.824Zm4.177,15.077-3.271,2.047v-2.7L16.808,21.9Zm0-4.423-3.271,2.048V19.6l3.271-2.118Zm0-4.423-3.271,2.048v-2.7l3.271-2.119Zm0-4.423-3.271,2.048v-2.7l3.271-2.118Zm0-4.423L13.537,9.025v-2.7L16.808,4.21Z"
+                                                  fill="#fff"/>
+                                        </g>
+                                    </svg>
+
+                                    Jeddah
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <div class="location">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/location.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>6283 King Abdul Aziz Rd, Ar Rabi Riyadh 13316 2771, Saudi Arabia</p>
+                                    </div>
+                                </div>
+                                <div class="email">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/email.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>zfpr@zfp.com</p>
+                                    </div>
+                                </div>
+                                <div class="phone">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/phone-call.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>+966 11 4048484</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="branch">
+                            <div class="branch-title">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35.782" height="33.771"
+                                         viewBox="0 0 35.782 33.771">
+                                        <g id="buildings-svgrepo-com" transform="translate(0 -1.694)">
+                                            <path id="Path_758" data-name="Path 758"
+                                                  d="M31.577,1.863l7.4,4.832V35.533h-7.4Z"
+                                                  transform="translate(-12.831 -0.069)" fill="#fff"/>
+                                            <path id="Path_759" data-name="Path 759"
+                                                  d="M45.015,36.875V49.609h9.058v-9.84Zm3.824,9.965-2.768-.806V43.646l2.768,1Zm0-4.178-2.768-.806V39.469l2.768,1.006Zm3.472,5.183-2.769-.8v-2.39l2.769,1.006Zm0-4.177-2.768-.805V40.474l2.769,1v2.189h0Z"
+                                                  transform="translate(-18.291 -14.295)" fill="#fff"/>
+                                            <path id="Path_760" data-name="Path 760"
+                                                  d="M8.757,7.532V26.652l-1.308.854V21.121l-.83.343v-6.37L.578,17.76v6.206L0,24.206V35.465H17.9V1.694ZM1.132,18.976l2.039-.943v2.453l-2.039.906V18.976Zm.151,3.976,2.038-.945v2.455l-2.038.9V22.951Zm2.1,8.812-2.038.907V30.254l2.038-.943Zm0-3.738-2.038.908V26.517l2.038-.943Zm.29-10.233,2.039-.943V19.3l-2.039.905Zm.151,3.975,2.038-.943v2.454l-2.038.907V21.768ZM6.1,30.595,4.063,31.5V29.086L6.1,28.141Zm0-3.737-2.039.905V25.349L6.1,24.4Zm6.53.425L9.812,29.048V26.431l2.819-1.824Zm0-4.422L9.812,24.625V22.007l2.819-1.824Zm0-4.423L9.812,20.2V17.585l2.819-1.825Zm0-4.422L9.812,15.779V13.162l2.819-1.825Zm0-4.423L9.812,11.357V8.74l2.819-1.824Zm4.177,15.077-3.271,2.047v-2.7L16.808,21.9Zm0-4.423-3.271,2.048V19.6l3.271-2.118Zm0-4.423-3.271,2.048v-2.7l3.271-2.119Zm0-4.423-3.271,2.048v-2.7l3.271-2.118Zm0-4.423L13.537,9.025v-2.7L16.808,4.21Z"
+                                                  fill="#fff"/>
+                                        </g>
+                                    </svg>
+                                    Riyadh
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <div class="location">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/location.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>6283 King Abdul Aziz Rd, Ar Rabi Riyadh 13316 2771, Saudi Arabia</p>
+                                    </div>
+                                </div>
+                                <div class="email">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/email.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>zfpr@zfp.com</p>
+                                    </div>
+                                </div>
+                                <div class="phone">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/phone-call.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>+966 11 4048484</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="branch">
+                            <div class="branch-title">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35.782" height="33.771"
+                                         viewBox="0 0 35.782 33.771">
+                                        <g id="buildings-svgrepo-com" transform="translate(0 -1.694)">
+                                            <path id="Path_758" data-name="Path 758"
+                                                  d="M31.577,1.863l7.4,4.832V35.533h-7.4Z"
+                                                  transform="translate(-12.831 -0.069)" fill="#fff"/>
+                                            <path id="Path_759" data-name="Path 759"
+                                                  d="M45.015,36.875V49.609h9.058v-9.84Zm3.824,9.965-2.768-.806V43.646l2.768,1Zm0-4.178-2.768-.806V39.469l2.768,1.006Zm3.472,5.183-2.769-.8v-2.39l2.769,1.006Zm0-4.177-2.768-.805V40.474l2.769,1v2.189h0Z"
+                                                  transform="translate(-18.291 -14.295)" fill="#fff"/>
+                                            <path id="Path_760" data-name="Path 760"
+                                                  d="M8.757,7.532V26.652l-1.308.854V21.121l-.83.343v-6.37L.578,17.76v6.206L0,24.206V35.465H17.9V1.694ZM1.132,18.976l2.039-.943v2.453l-2.039.906V18.976Zm.151,3.976,2.038-.945v2.455l-2.038.9V22.951Zm2.1,8.812-2.038.907V30.254l2.038-.943Zm0-3.738-2.038.908V26.517l2.038-.943Zm.29-10.233,2.039-.943V19.3l-2.039.905Zm.151,3.975,2.038-.943v2.454l-2.038.907V21.768ZM6.1,30.595,4.063,31.5V29.086L6.1,28.141Zm0-3.737-2.039.905V25.349L6.1,24.4Zm6.53.425L9.812,29.048V26.431l2.819-1.824Zm0-4.422L9.812,24.625V22.007l2.819-1.824Zm0-4.423L9.812,20.2V17.585l2.819-1.825Zm0-4.422L9.812,15.779V13.162l2.819-1.825Zm0-4.423L9.812,11.357V8.74l2.819-1.824Zm4.177,15.077-3.271,2.047v-2.7L16.808,21.9Zm0-4.423-3.271,2.048V19.6l3.271-2.118Zm0-4.423-3.271,2.048v-2.7l3.271-2.119Zm0-4.423-3.271,2.048v-2.7l3.271-2.118Zm0-4.423L13.537,9.025v-2.7L16.808,4.21Z"
+                                                  fill="#fff"/>
+                                        </g>
+                                    </svg>
+                                    Egypt
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <div class="location">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/location.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>6283 King Abdul Aziz Rd, Ar Rabi Riyadh 13316 2771, Saudi Arabia</p>
+                                    </div>
+                                </div>
+                                <div class="email">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/email.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>zfpr@zfp.com</p>
+                                    </div>
+                                </div>
+                                <div class="phone">
+                                    <div class="icon">
+                                        <img src="/zuhair_fayez_website/static/img/phone-call.png" alt=""/>
+                                    </div>
+                                    <div class="details">
+                                        <p>+966 11 4048484</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reach">
+                    <div class="form">
+                        <p>Get In Touch With Us</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                        <form action="">
+                            <div class="name">
+                                <input type="text" name="" id="" placeholder="Name*"/>
+                            </div>
+                            <div class="phone">
+                                <input type="number" name="" id="" placeholder="Phone"/>
+                            </div>
+                            <div class="email">
+                                <input type="email" name="" id="" placeholder="Email*"/>
+                            </div>
+                            <div class="selection">
+                                <div class="option option1">
+                                    <input type="radio" id="option1" name="email-reason" value="offer"/>
+                                    <label class="shipping-option" for="option1">Offer Price</label>
+                                </div>
+                                <div class="option option2">
+                                    <input type="radio" id="option2" name="email-reason" value="complaint"/>
+                                    <label class="shipping-option" for="option2">Complaint</label>
+                                </div>
+                                <div class="option option3">
+                                    <input type="radio" id="option3" name="email-reason" value="suggestion"/>
+                                    <label class="shipping-option" for="option3">Suggestion</label>
+                                </div>
+                            </div>
+                            <textarea name="" id="" cols="" rows="" placeholder="Message*"/>
+                            <p class="required">*Required fields</p>
+                            <div class="send">
+                                <a href="#">Submit
+                                    <img src="/zuhair_fayez_website/static/img/right-arrow-submit.svg" alt=""/>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="map">
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe width="550" height="600" id="gmap_canvas"
+                                        src="https://maps.google.com/maps?q=Riyadh%20&amp;t=&amp;z=5&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

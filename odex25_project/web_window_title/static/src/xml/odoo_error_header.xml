@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+<!--        <t t-extend="Dialog">-->
+<!--            <t t-jquery=".modal-title" t-operation="replace">-->
+<!--                <h4 class="modal-title">-->
+<!--                    Odex Error-->
+<!--                    <span class="o_subtitle text-muted small" t-esc="subtitle"/>-->
+<!--                </h4>-->
+<!--            </t>-->
+<!--        </t>-->
+</templates>

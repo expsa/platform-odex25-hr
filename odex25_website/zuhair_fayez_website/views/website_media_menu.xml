@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='website_news_menu_action' model='ir.actions.act_window'>
+        <field name="name">Website media</field>
+        <field name="res_model">website.media</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Media" id="website_news_menu"
+              parent="website.menu_website_global_configuration" action="website_news_menu_action" sequence="3"/>
+
+    <!-- Form View -->
+    <record id="website_news_view_form" model="ir.ui.view">
+        <field name="name">Website news Form</field>
+        <field name="model">website.media</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="type" widget="radio"/>
+                    <div class="oe_left">
+                        <group>
+                            <field name="name"/>
+                            <field name="summary" widget="text"/>
+                        </group>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

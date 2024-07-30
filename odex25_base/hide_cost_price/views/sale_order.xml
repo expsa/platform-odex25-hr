@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="sale_margin_sale_order_line_to_add_group" model="ir.ui.view">
+            <field name="name">sale.order.add.group.to.cost.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_margin.sale_margin_sale_order_line"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='order_line']/form//field[@name='purchase_price']" position="attributes">
+                    <attribute name="groups">hide_cost_price.access_cose_price_group</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="sale_margin_sale_order_line_form_to_add_group" model="ir.ui.view">
+            <field name="name">sale.order.add.group.to.cost.tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_margin.sale_margin_sale_order_line_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='order_line']/tree//field[@name='purchase_price']" position="attributes">
+                    <attribute name="groups">hide_cost_price.access_cose_price_group</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

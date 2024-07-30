@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Incoming Outgoing With Prices Report template -->
+        <template id="scrap_report">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <style>
+                        .page{
+                        font-family: Times New Roman;;
+                        }
+                        table{
+                        width :100%;
+                        border : 1px solid black;
+                        border-collapse : collapse;
+                        font-size : 13pt;
+
+                        }
+                        th{
+                        border : 1px solid black;
+                        background-color : #a7c4f2;
+                        text-align : center;
+                        padding : 5px;
+                        }
+                        td{
+                        border : 1px solid black;
+                        text-align : center;
+                        padding : 3px;
+                        }
+                        .cr_t{
+                        text-align : center;
+                        }
+
+                    </style>
+                    <div class="page" size="A4">
+                        <center>
+                            <h3>Scrap Report</h3>
+                            <table class="table table-bordered"
+                                   style="border: 2px solid black;font-family:Droid Arabic Naskh">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style="border:1px solid black;text-align:center">Duration</th>
+                                        <t t-if="purpose != 'service'">
+                                            <th rowspan="2" style="border:1px solid black;text-align:center">Location
+                                            </th>
+                                        </t>
+                                        <th rowspan="2" style="border:1px solid black;text-align:center">Category</th>
+                                        <!-- <th rowspan="2" style="border:1px solid black;text-align:center">Product</th> -->
+                                    </tr>
+                                    <tr>
+                                        <th style="border:1px solid black;text-align:center">From</th>
+                                        <th style="border:1px solid black;text-align:center">To</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:center;border:1px solid black;">
+                                            <t t-esc="date_from"/>
+                                        </td>
+                                        <td style="text-align:center;border:1px solid black;">
+                                            <t t-esc="date_to"/>
+                                        </td>
+
+                                        <t t-if="purpose != 'service'">
+                                            <td style="text-align:center;border:1px solid black;">
+                                                <t t-esc="location_id"/>
+                                            </td>
+                                        </t>
+                                        <td style="text-align:center;border:1px solid black;">
+                                            <t t-esc="category"/>
+                                        </td>
+                                        <!-- <td style="text-align:center;border:1px solid black;"><t t-esc="product_ids"/></td>  -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                        </center>
+                        <t t-set="count" t-value="1"/>
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Ref</th>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                            </tr>
+                            <tbody>
+                                <t t-foreach="docs" t-as="o">
+                                    <tr>
+                                        <td>
+                                            <t t-esc="count"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.date_expected"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.product_id.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.scrap_qty"/>
+                                        </td>
+                                    </tr>
+                                    <t t-set="count" t-value="count + 1"/>
+                                </t>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

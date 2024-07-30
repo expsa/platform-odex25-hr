@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="payment_hyperpay_mada_card">
+        <t t-call="website.layout">
+            <link rel="stylesheet" href="/payment_hyperpay_mada/static/src/css/style.css"/>
+            <link rel="stylesheet" href="https://oppwa.com/v1/static/cbd6342aa7a4d22c4180cba7b4b3ddd9/css/card.min.css"/>
+
+            <form t-att-action="return_url" class="paymentWidgets">
+                MADA
+            </form>
+            <script t-att-src="'https://oppwa.com/v1/paymentWidgets.js?checkoutId=%s' %(check_out_id)"/>
+
+            <script src="/payment_hyperpay_mada/static/js/script.js"></script>
+        </t>
+    </template>
+
+   
+
+
+    <template id="payment_hyperpay_mada_card_live">
+        <t t-call="website.layout">
+            <link rel="stylesheet" href="/payment_hyperpay_mada/static/src/css/style.css"/>
+            <link rel="stylesheet" href="https://oppwa.com/v1/static/cbd6342aa7a4d22c4180cba7b4b3ddd9/css/card.min.css"/>
+            
+            <form t-att-action="return_url" class="paymentWidgets">
+                MADA 
+            </form>
+            <script t-att-src="'https://oppwa.com/v1/paymentWidgets.js?checkoutId=%s' %(check_out_id)"/>
+            <script src="/payment_hyperpay_mada/static/js/script.js"></script>
+        </t>
+    </template>
+
+
+
+</odoo>

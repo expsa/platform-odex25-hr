@@ -1,0 +1,277 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tax_report_detailed
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20220407\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-18 12:57+0000\n"
+"PO-Revision-Date: 2024-01-18 12:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__amount_exclude
+msgid "Amount Without Tax"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.tax_report_wiz_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__create_uid
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__create_date
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__date
+msgid "Date"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__date_period_type
+msgid "Date Period Type"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__desc
+msgid "Description"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_account_tax__display_name
+#: model:ir.model.fields,field_description:tax_report_detailed.field_report_tax_report_detailed_report_tax_details_xlsx__display_name
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__display_name
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__fiscalyear_id
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__tax_report_wiz__date_period_type__fiscalyear
+msgid "Fiscal Year"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__tax_report_wiz__date_period_type__fiscalyear_period
+msgid "Fiscal Year Period"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__account_tax__government_type__gov
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__tax_report_wiz__government_type__gov
+msgid "Governmental"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_account_tax__government_type
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__government_type
+msgid "Governmental Type"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.view_tax_report_details_search
+msgid "Group By"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_account_tax__id
+#: model:ir.model.fields,field_description:tax_report_detailed.field_report_tax_report_detailed_report_tax_details_xlsx__id
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__id
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__id
+msgid "ID"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__tax_report_details__record_type__in_refund
+msgid "In Refund"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__num
+msgid "Invoice No"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_account_tax____last_update
+#: model:ir.model.fields,field_description:tax_report_detailed.field_report_tax_report_detailed_report_tax_details_xlsx____last_update
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details____last_update
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__write_uid
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__write_date
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__account_tax__government_type__not_gov
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__tax_report_wiz__government_type__not_gov
+msgid "Non-Governmental"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__tax_report_details__record_type__out_refund
+msgid "Out Refund"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__partner_name
+msgid "Partner Name"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_wiz__period_id
+msgid "Period"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.tax_report_wiz_view_form
+msgid "Preview It!"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.tax_report_wiz_view_form
+msgid "Print it!"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__tax_report_details__record_type__purchase
+msgid "Purchase"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields.selection,name:tax_report_detailed.selection__tax_report_details__record_type__sale
+msgid "Sales"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model,name:tax_report_detailed.model_account_tax
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.view_tax_report_details_search
+msgid "Tax"
+msgstr ""
+
+#. module: tax_report_detailed
+#: code:addons/tax_report_detailed/wizard/tax_report_wiz.py:0
+#: model:ir.actions.act_window,name:tax_report_detailed.act_tax_report_details_view
+#, python-format
+msgid "Tax Details"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.actions.act_window,name:tax_report_detailed.action_tax_report_wiz_view
+#: model:ir.ui.menu,name:tax_report_detailed.menu_action_tax_report_wiz_view
+msgid "Tax Details Report"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model,name:tax_report_detailed.model_report_tax_report_detailed_report_tax_details_xlsx
+msgid "Tax Details xlsx"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__vat
+msgid "Tax ID"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__tax_id
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__tax_name
+msgid "Tax Name"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.tax_report_details_view_tree
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.tax_report_wiz_view_form
+msgid "Tax Report"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model,name:tax_report_detailed.model_tax_report_details
+msgid "Tax Report Details"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model,name:tax_report_detailed.model_tax_report_wiz
+msgid "Tax Report Wiz"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__amount_tax
+msgid "Tax amount"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.actions.report,name:tax_report_detailed.report_tax_details_xlsx
+msgid "Tax report"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,help:tax_report_detailed.field_tax_report_details__vat
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to "
+"government taxes. Used in some legal statements."
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,help:tax_report_detailed.field_tax_report_wiz__period_id
+msgid "The fiscalyear period used for this report."
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,help:tax_report_detailed.field_tax_report_wiz__fiscalyear_id
+msgid "The fiscalyear used for this report."
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__total_amount
+msgid "Total Amount"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model:ir.model.fields,field_description:tax_report_detailed.field_tax_report_details__record_type
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.view_tax_report_details_search
+msgid "Type"
+msgstr ""
+
+#. module: tax_report_detailed
+#: model_terms:ir.ui.view,arch_db:tax_report_detailed.tax_report_wiz_view_form
+msgid "or"
+msgstr ""

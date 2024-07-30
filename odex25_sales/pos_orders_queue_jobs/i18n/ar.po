@@ -1,0 +1,47 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_orders_queue_jobs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-22 06:06+0000\n"
+"PO-Revision-Date: 2023-09-22 06:06+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_orders_queue_jobs
+#: code:addons/pos_orders_queue_jobs/models/pos_order.py:39
+#, python-format
+msgid "Customer Invoice"
+msgstr "فاتورة العميل"
+
+#. module: pos_orders_queue_jobs
+#: code:addons/pos_orders_queue_jobs/models/pos_order.py:19
+#, python-format
+msgid "Order is not paid."
+msgstr "لم يتم سداد قيمة الأمر."
+
+#. module: pos_orders_queue_jobs
+#: model:ir.model,name:pos_orders_queue_jobs.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "طلبات نقطة البيع"
+
+#. module: pos_orders_queue_jobs
+#: code:addons/pos_orders_queue_jobs/models/pos_session.py:17
+#, python-format
+msgid "You can't close this session at this time.\n"
+"There are still some pickings and Invoices that haven't been created yet."
+msgstr "ﻻ يمكنك إقفال هذه الجلسة.\n"
+"ﻻ يزال هناك إلتقاطات وفواتير لم يتم إنشاؤها بعد."
+
+#. module: pos_orders_queue_jobs
+#: model:ir.model,name:pos_orders_queue_jobs.model_pos_session
+msgid "pos.session"
+msgstr ""
+

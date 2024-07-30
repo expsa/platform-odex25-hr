@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="job_details" name="job_details">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="entrance-container">
+                    <div class="job-title">
+                        <p>SOFTWARE ENGINEER</p>
+                        <a id="apply-now" href="#">Apply Now
+                            <img src="/zuhair_fayez_website/static/img/right-arrrow-yellow.svg" alt=""/>
+                        </a>
+                    </div>
+                    <img class="top-right" src="/zuhair_fayez_website/static/img/top-right-pattern.svg" alt=""/>
+                    <img class="bottom-left" src="/zuhair_fayez_website/static/img/bottom-left-pattern.svg" alt=""/>
+                </div>
+
+                <div class="job-info">
+                    <div class="qualifications">
+                        <p><img src="/zuhair_fayez_website/static/img/qualifications-icon.svg" alt=""/>Qualifications
+                        </p>
+                        <ul>
+                            <li>Bachelor's and/or Master's degree in civil engineering/structures or mechanics</li>
+                            <li>Member of a Board of Professional Engineers P.E. or P.Eng. (or be able to become one)
+                                meaning
+                                education
+                            </li>
+                            <li>Know how to evaluate design loads (SAP 2000, RISA</li>
+                            <li>evaluate stresses in materials (FEA) and sizing structures using</li>
+                            <li>states design or LRFD (CSA, AASHTO, etc.)</li>
+                            <li>Strong design experience understanding/controlling stress/tension/</li>
+                            <li>compression/bending/shearing as well as experiences with manual calculations</li>
+                            <li>At least 5 year's experience in the design of structural projects (analysis and
+                                sizing)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resp-assets">
+                        <div class="responsibilities">
+                            <p><img src="/zuhair_fayez_website/static/img/responsibilities-icon.svg" alt=""/>
+                                Responsibilities
+                            </p>
+                            <ul>
+                                <li>Design of structural elements (mainly lattices)</li>
+                                <li>Design and calculate aluminum structures at limit states</li>
+                                <li>Prepare and review detailed design drawings</li>
+                                <li>Coordinate with engineers from other disciplines</li>
+                                <li>Tasks related to the project and team administration</li>
+                                <li>Work on defined tasks under the supervision of President</li>
+                                <li>Participate in the bidding and bid analysis process</li>
+                            </ul>
+                        </div>
+                        <div class="assets">
+                            <p><img src="/zuhair_fayez_website/static/img/assets-icon.svg" alt=""/>Assets
+                            </p>
+                            <ul>
+                                <li>Knowledge of standards and best practices for design</li>
+                                <li>Countries such as Canada, the United States or others</li>
+                                <li>design of structures to the highest quality standards</li>
+                                <li>Coordinate with engineers from other disciplines</li>
+                                <li>Knowledge of aluminum mechanical properties</li>
+                                <li>Experience with CAD such as AutoCad and SolidWorks</li>
+                                <li>Familiarity with metal manufacturing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="what-we-offer">
+                        <div class="title">
+                            <hr/>
+                            <p>What we offer</p>
+                            <hr/>
+                        </div>
+                        <ul class="description">
+                            <li>Working hours on 5 days Schedule, 40 hours a week (Monday – Friday: 8:30 a.m. to
+                                5:00p.m.)
+                            </li>
+                            <li>Financial compensation for the purchase of protective equipment (boots, glasses)</li>
+                            <li>Training and development program</li>
+                            <li>Employee Referral Bonuses ($500 if the employee is retained after 3 months)</li>
+                            <li>Competitive compensation (productivity bonus)</li>
+                            <li>Employee Referral Bonuses ($500 if the employee is retained after 3 months)</li>
+                        </ul>
+                    </div>
+                    <a href="careers.html">
+                        <img src="/zuhair_fayez_website/static/img/right-arrow-submit.svg" alt=""/>
+                        Go Back
+                    </a>
+                </div>
+
+                <div class="form-popup-container">
+                    <div class="form-popup-overlay"></div>
+                    <div class="form-popup-section">
+                        <div class="form-popup-section-container">
+                            <img class="applyNowSequence" id="apply-now-close"
+                                 src="/zuhair_fayez_website/static/img/popup-close-gray.png" alt=""/>
+                            <div class="form">
+                                <p id="job-title-popup">SOFTWARE ENGINEER</p>
+                                <form action="">
+                                    <div class="name applyNowSequence">
+                                        <input type="text" name="" id="" placeholder="Name*"/>
+                                    </div>
+                                    <div class="phone applyNowSequence">
+                                        <input type="number" name="" id="" placeholder="Phone"/>
+                                    </div>
+                                    <div class="email applyNowSequence">
+                                        <input type="email" name="" id="" placeholder="Email*"/>
+                                    </div>
+                                    <textarea class="applyNowSequence" name="" id="" cols="" rows=""
+                                              placeholder="Message*"/>
+                                    <div class="file applyNowSequence">
+                                        <label for="file-upload">
+                                            <img src="/zuhair_fayez_website/static/img/upload.png" alt=""/>
+                                            Drop You Files Here!
+                                        </label>
+                                        <input type="file" name="" id="file-upload"/>
+                                    </div>
+                                    <p class="required applyNowSequence">*Required fields</p>
+                                    <div class="send applyNowSequence">
+                                        <a href="#">Submit</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

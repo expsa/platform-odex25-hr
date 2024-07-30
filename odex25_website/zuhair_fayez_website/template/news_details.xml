@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="news_details" name="news_details">
+        <t t-call="website.layout">
+
+            <div class="oe_structure"/>
+            <div id="wrap">
+
+                <!--Page Code-->
+                <div class="news-main">
+                    <div class="news-main-info">
+                        <p class="news-date">2.4.2022</p>
+                        <p class="news-title">At the end of the day, we are all archit</p>
+                        <p class="news-description">At the end of the day, we are all archit ectureenthusiasts Atthe end
+                            of the
+                            day,we are all At the end of the day, we are all archit ectureenthusiasts Atthe end of the
+                            day,we
+                            are all.
+                            At the end of the day, we are all archit ectureenthusiasts Atthe end of the day,we are all
+                            At the
+                            end of the day, we are all archit ectureenthusiasts Atthe end of the day,we are all
+                        </p>
+                    </div>
+                    <div class="news-main-img">
+                        <img src="/zuhair_fayez_website/static/img/award-one.webp" alt=""/>
+                    </div>
+                </div>
+
+                <div class="news-secondary">
+                    <p class="news-secondary-title">We are number one in architect field</p>
+                    <p class="news-secondary-description">For their 150 year anniversary, Fritz Hansen will participate
+                        in this
+                        year's 3daysofdesign in Copenhagen and have joined forces with Henning Larsen to design a
+                        pavilion.
+                        Designed with a Nordic appr around daylight and honest materials,the pavilion is designed to be
+                        taken
+                        down and repurposed forces with Henning Larsen to design a pavilion. Designed with a Nordic appr
+                        around
+                        daylight and honest materials, thepavilion is designed to be taken down and repurposed. For
+                        their 150
+                        year anniversary, Fritz Hansen will participate in this year's 3daysofdesign in Copenhagen and
+                        have
+                        joined forces with Henning Larsen to design a pavilion. Designed with a Nordic appr around
+                        daylight and
+                        honest materials,the pavilion is designed to be taken down and repurposed forces with Henning
+                        Larsen to
+                        design a pavilion. Designed with a Nordic appr around daylight and honest materials, thepavilion
+                        is
+                        designed to be taken down and repurposed.
+                    </p>
+                </div>
+
+                <div class="other-news-container">
+                    <p class="other-news">Other News</p>
+                    <div class="other-news-card">
+                        <a class="other-news-link" href="news_details.html"></a>
+                        <div class="other-news-card-img">
+                            <img src="/zuhair_fayez_website/static/img/news.webp" alt=""/>
+                        </div>
+                        <div class="other-news-card-info">
+                            <p class="date">2.4.2022</p>
+                            <p class="title">We are number one in architect field</p>
+                            <p class="description">At the end of the day, we are all archit ectureenthusiasts Atthe end
+                                of the
+                                day, we are allAt the end of the day, we are all archit ectureenthusiasts Atthe end of
+                                the day,
+                                we are all
+                            </p>
+                            <a href="#">Read More
+                                <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="other-news-card">
+                        <a class="other-news-link" href="news_details.html"></a>
+                        <div class="other-news-card-img">
+                            <img src="/zuhair_fayez_website/static/img/news-project-one.webp" alt=""/>
+                        </div>
+                        <div class="other-news-card-info">
+                            <p class="date">2.4.2022</p>
+                            <p class="title">We are number one in architect field</p>
+                            <p class="description">At the end of the day, we are all archit ectureenthusiasts Atthe end
+                                of the
+                                day, we are allAt the end of the day, we are all archit ectureenthusiasts Atthe end of
+                                the day,
+                                we are all
+                            </p>
+                            <a href="#">Read More
+                                <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="other-news-card">
+                        <a class="other-news-link" href="news_details.html"></a>
+                        <div class="other-news-card-img">
+                            <img src="/zuhair_fayez_website/static/img/contact.webp" alt=""/>
+                        </div>
+                        <div class="other-news-card-info">
+                            <p class="date">2.4.2022</p>
+                            <p class="title">We are number one in architect field</p>
+                            <p class="description">At the end of the day, we are all archit ectureenthusiasts Atthe end
+                                of the
+                                day, we are allAt the end of the day, we are all archit ectureenthusiasts Atthe end of
+                                the day,
+                                we are all
+                            </p>
+                            <a href="#">Read More
+                                <img src="/zuhair_fayez_website/static/img/right-arrow-simple.png" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+</odoo>

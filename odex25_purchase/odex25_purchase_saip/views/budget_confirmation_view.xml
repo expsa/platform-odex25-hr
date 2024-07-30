@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inherit_view_budget_confirmation_form" model="ir.ui.view">
+        <field name="name">budget.confirmation.form</field>
+        <field name="model">budget.confirmation</field>
+        <field name="inherit_id" ref="account_budget_custom.view_budget_confirmation_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//field[@name='lines_ids']" position="replace">
+                <field name="lines_ids" options="{'no_create': True, 'no_open': True}">
+                    <tree editable="top" options="{'no_create': True, 'no_open': True}">
+                        <field name="account_id" readonly="1"/>
+                        <field name="analytic_account_id"/>
+                        <field name="description" />
+                        <field name="remain" force_save="1" readonly="1"/>
+                        <!-- <field name="initial_amount" readonly="1"/> -->
+                        <field name="amount" readonly="1"/>
+                    </tree>
+                </field>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="set_draft" states="cancel" string="Rest To Draft" type="object" class="oe_highlight" />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="budget_management" string="Budget Management">
+                    <group name="budget_management">
+                        <group>
+                            <field name="budget_scope" widget="radio" options="{'horizontal': true}" attrs="{'required':[('state','=','bdgt_dep_mngr')],'readonly':[('state' , '!=' , 'bdgt_dep_mngr')]}"/>
+                            <field name="permission" widget="radio" options="{'horizontal': true}" attrs="{'required':[('state','=','bdgt_dep_mngr')],'readonly':[('state' , '!=' , 'bdgt_dep_mngr')]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="request_id" readonly="1" attrs="{'invisible':[('request_id' , '=' , False)]}"/>
+                        </group>
+                        <group>
+                            <field name="purchase_request_type" readonly="1" attrs="{'invisible':[('request_id' , '=' , False)]}"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

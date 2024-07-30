@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="odex_seq_payment_transaction" model="ir.sequence">
+            <field name="name">Payment Transaction</field>
+            <field name="code">payment.transaction</field>
+            <field name="prefix">PT</field>
+            <field name="padding">5</field>
+        </record>
+        <record id="acquirer_form_telr" model="ir.ui.view">
+            <field name="name">acquirer.form.telr</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment.acquirer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[@name="acquirer"]' position='after'>
+                    <group attrs="{'invisible': [('provider', '!=', 'telr')]}">
+                        <field name="telr_merchant_id"/>
+                        <field name="telr_api_key"/>
+                        <field name="web_url"/>
+                    </group>
+                </xpath>
+                <xpath expr='//notebook' position='before'>
+                    <group>
+                        <div class="alert alert-warning" role="alert">You should modify the invoicing policy of your
+                            product: Open the product, go to the "Sales tab" and modify invoicing policy from
+                            "delivered quantities" to "ordered quantities".
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        <record id="payment_transaction_telr" model="ir.ui.view">
+            <field name="name">payment.transaction.form.telr</field>
+            <field name="model">payment.transaction</field>
+            <field name="inherit_id" ref="payment.transaction_form"/>
+            <field name="arch" type="xml">
+                <!--                <field name="date_validate" position="after">-->
+                <field name="date" position="after">
+                    <field name="telr_order_id" style="word-break: break-all;"
+                           attrs="{'invisible': [('provider', '!=', 'telr')]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

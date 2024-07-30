@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+  <t t-name="ChangeUomButton" owl="1">
+        <div class="control-button" t-if="env.pos.config.allow_multi_uom" t-on-click="onClick">
+          <i class="fa fa-list-alt"/>
+            Change UOM
+      </div>
+  </t>
+</templates>

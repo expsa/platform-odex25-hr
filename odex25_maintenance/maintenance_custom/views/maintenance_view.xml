@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="assets_backend" name="maintenance assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/maintenance_custom/static/src/summary.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/maintenance_custom/static/src/js/Chart.css"/>
+            <script type="text/javascript" src="/maintenance_custom/static/src/js/Chart.js"></script>
+            <script type="text/javascript" src="/maintenance_custom/static/src/js/maintenance_charts.js"></script>
+        </xpath>
+    </template>
+
+    <record id="product_template_only_form_view_inhrit" model="ir.ui.view">
+        <field name="name">product.template</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+                <field name="is_spare" />
+                <field name="is_tool" />
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_job_view_form" model="ir.ui.view">
+        <field name="name">maintenance.equipment.job</field>
+        <field name="model">maintenance.equipment.job</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_title">
+                    <label for="name" class="oe_edit_only" string="Title" readonly="True"/>
+                    <h1>
+                        <field name="name" placeholder="Maintenance Request" required="1"/>
+                    </h1>
+                </div>
+                <group>
+                    <group>
+                        <field name="user_id" required="1"/>
+                        <field name="period" required="1"/>
+                        <field name="start_date" required="1" />
+                        <field name="attachment" required="0" />
+                    </group>
+                    <group>
+                        <field name="period_type" required="1"/>
+                        <field name="maintenance_time" widget="float_time"/>
+                        <field name="next_action_date" readonly="1"/>
+                    </group>
+                </group>
+                <group string="Related Tasks">
+                    <field name="task_ids" nolabel="1">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name" />
+                        </tree>
+                    </field>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_form_inherit" model="ir.ui.view">
+        <field name="name">maintenance.equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[1]" position="after">
+                <button name="create_maintenance_job" type="object" class="oe_stat_button" icon="fa-wrench" string="Create Jobs">
+                </button>
+            </xpath>
+            <xpath expr="//page[3]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[3]" position="after">
+                <page string="Maintenance">
+                    <field name="job_ids">
+                        <tree>
+                            <field name="name" />
+                            <field name="user_id" />
+                            <field name="next_action_date" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_stage_view_tree_inherit" model="ir.ui.view">
+        <field name="name">maintenance.stage.tree</field>
+        <field name="model">maintenance.stage</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_stage_view_tree" />
+        <field name="arch" type="xml">
+            <field name="done" position="after">
+                <field name="stage_type" />
+                <field name="next_stage_ids" widget="many2many_tags"/>
+                <field name="pre_stage_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_maintenance.maintenance_request_view_form_inherit_hr" model="ir.ui.view">
+        <field name="name">maintenance.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form" />
+        <field name="arch" type="xml">
+        <!-- <xpath expr="//div[@class='oe_title']" position="attributes">
+                <attribute name="readonly">[('stage_type','!=','draft')]</attribute>
+            </xpath> -->
+              <field name="name" position="replace">
+              <field name="name" placeholder="Maintenance Request" attrs="{'readonly':[('stage_type','=','confirm')]}"/>
+              </field>
+            <!-- <field name="machine_status" position="attributes">
+                <attribute name="readonly">[('stage_type','=','confirm')]</attribute>
+            </field> -->
+
+            <field name="description" position="replace" />
+            <xpath expr="//group[1]" position="replace">
+                <notebook>
+                    <page string="Request">
+                        <group>
+                            <group>
+                                <field name="code" readonly="True"/>
+                                <field name="employee_id" string="Requester" options="{'no_create_edit': True, 'no_open': True}" attrs="{'readonly':[('stage_type','=','confirm')]}"/>
+                                <field name="equipment_id" string="Machine" options="{'no_create': True}" context="{'default_company_id':company_id, 'default_category_id':category_id}" attrs="{'readonly':[('stage_type','=','confirm')]}"/>
+                                <field name="category_id" options="{'no_create': True}" groups="maintenance.group_equipment_manager" context="{'default_company_id':company_id}" invisible="1"/>
+                                <field name="done" invisible="1"/>
+                                <field name="close_date" invisible="1" attrs="{'invisible': [('done', '!=', True)]}" readonly="True"/>
+                                <field name="archive" invisible="1"/>
+                                <field name="maintenance_type" widget="radio" invisible="1"/>
+                                <field name="done_time" attrs="{'invisible':[('stage_type','not in', ['request_done' , 'repair_done'])], 'required' : [('stage_type','in', ['request_done' , 'repair_done'])],'readonly':[('stage_type','=','confirm')]}"/>
+                                <field name="down_time" widget="float_time" attrs="{'invisible':['|','|' ,('machine_status','!=','out_service'),('stage_type','not in', ['request_done' , 'repair_done']),('maintenance_type','!=', 'corrective')],'readonly':[('stage_type','=','confirm')]}" class="oe_inline"/>
+                                <field name="product_loss" attrs="{'invisible':['|','|' ,('machine_status','!=','part'),('stage_type','not in', ['request_done' , 'repair_done']),('maintenance_type','!=', 'corrective')],'readonly':[('stage_type','=','confirm')]}" class="oe_inline"/>
+                                <field name="dis_priority" widget="radio"/>
+                            </group>
+                            <group>
+                                <field name="request_date" readonly="True" />
+                                <field name="department_id" attrs="{'readonly':[('stage_type','=','confirm')]}" options="{'no_create': True}" />
+                                <field name="maintenance_team_id" />
+                                <field name="machine_status" invisible="0" attrs="{'readonly':[('stage_type','=','confirm')]}"/>
+                                <field name="failure_id" attrs="{'readonly':['|',('stage_type','=','confirm'),('stage_type', '=' , 'order')],'invisible':[('stage_type','not in',['for_order', 'request_done' , 'repair_done'])],'required':[('stage_type','in',['for_order' , 'request_done' , 'repair_done'])]}"/>
+                                <field name="user_id" options="{'no_create': True}" string="Supervisor" attrs="{'invisible':[('stage_type','not in',['for_order', 'request_done' , 'repair_done'])],'required':[('stage_type','in',['for_order' , 'request_done' , 'repair_done'])],'readonly':[('stage_type','=','confirm')]}"/>
+                                <field name="schedule_date" attrs="{'invisible':[('stage_type','not in',['for_order','repair_done','request_done'])],'readonly':[('stage_type','=','confirm')]}"/>
+                                <field name="stage_type" invisible="1"/>
+                                <label for="duration" attrs="{'invisible':[('stage_type','not in',['for_order','repair_done','request_done'])],'readonly':[('stage_type','=','confirm')]}"/>
+                                <div attrs="{'invisible':[('stage_type','not in',['for_order','repair_done','request_done'])],'readonly':[('stage_type','=','confirm')]}">
+                                    <field name="duration" widget="float_time" class="oe_inline"/>
+                                    <span class="ml8">hours</span>
+                                </div>
+
+                                <field name="email_cc" string="Email cc" groups="base.group_no_one" invisible="1"/>
+                                <field name="company_id" attrs="{'readonly':['|',('stage_type','=','confirm')]}" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <group string="Description">
+                            <field name="description" attrs="{'readonly':[('stage_type','=','confirm')]}" nolabel="1" />
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_equipment_order_view_form" model="ir.ui.view">
+        <field name="name">equipment.order.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="arch" type="xml">
+            <form string="Maintenance Order">
+                <header>
+                    <button string="Cancel" name="archive_equipment_request" type="object" attrs="{'invisible': [('archive', '=', True)]}"/>
+                    <button string="Reopen Request" name="reset_equipment_request" type="object" attrs="{'invisible': [('archive', '=', False)]}"/>
+                    <field name="stage_id" widget="statusbar" options="{'clickable': '1'}" attrs="{'invisible': [('archive', '=', True)]}"/>
+                </header>
+                <sheet>
+                    <div attrs="{'invisible': [('archive', '=', False)]}">
+                        <span class="badge badge-warning float-right">Canceled</span>
+                    </div>
+                    <div class="oe_right">
+                        <field name="kanban_state" class="oe_inline" widget="state_selection"/>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Title" readonly="True"/>
+                        <h1>
+                            <field name="name" attrs="{'readonly':[('stage_type','=','confirm')]}" placeholder="Maintenance Request"/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="Request Details">
+                            <group>
+                                <group>
+                                    <field name="code" readonly="True"/>
+                                    <field name="employee_id" string="Requester" options="{'no_create_edit': True, 'no_open': True}" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}"/>
+                                    <field name="equipment_id" string="Machine" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" context="{'default_company_id':company_id, 'default_category_id':category_id}"/>
+                                    <field name="category_id" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" groups="maintenance.group_equipment_manager" context="{'default_company_id':company_id}" invisible="1"/>
+                                    <field name="done" invisible="1"/>
+                                    <field name="close_date" invisible="1" attrs="{'invisible': [('done', '!=', True)]}" readonly="True"/>
+                                    <field name="archive" invisible="1"/>
+                                    <field name="entry_source" invisible="1"/>
+                                    <field name="done_time" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')],'invisible':[('stage_type','not in', ['request_done' , 'repair_done'])]}" />
+                                    <field name="down_time" widget="float_time" attrs="{
+                                     'readonly' : ['|',('stage_type','=','confirm'),('entry_source' , '!=' , 'order')],
+                                     'invisible':['|','|' ,('machine_status','!=','out_service'),('stage_type','not in', ['request_done' , 'repair_done']),('maintenance_type','!=', 'corrective')]}" class="oe_inline"/>
+                                    <field name="product_loss" attrs="{
+                                     'readonly' : ['|',('stage_type','=','confirm'),('entry_source' , '!=' , 'order')],
+                                     'invisible':['|','|' ,('machine_status','!=','part'),('stage_type','not in', ['request_done' , 'repair_done']),('maintenance_type','!=', 'corrective')]}" class="oe_inline"/>
+                                    <field name="dis_priority" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" widget="radio"/>
+                                </group>
+                                <group>
+                                    <field name="request_date" readonly="1" />
+                                    <field name="department_id" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}"/>
+                                    <field name="machine_status" invisible="0" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}"/>
+                                    <field name="maintenance_type" widget="radio" invisible="0" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}"/>
+                                    <field name="maintenance_category" attrs="{'invisible':[('entry_source','!=', 'order')], 'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" />
+                                    <field name="failure_id" attrs="{'invisible':[('maintenance_type','!=', 'corrective')]}" />
+                                    <field name="user_id" string="Supervisor" options="{'no_create': True}" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" />
+                                    <field name="employee_ids" invisible="1" options="{'no_create': True}" widget="many2many_tags" />
+                                    <field name="schedule_date" invisible="0" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}"/>
+                                    <field name="stage_type" invisible="1"/>
+                                    <label for="duration" invisible="0"/>
+                                    <div invisible="0">
+                                        <field name="duration" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" widget="float_time" class="oe_inline"/>
+                                        <span class="ml8">hours</span>
+                                    </div>
+
+                                    <field name="email_cc" string="Email cc" groups="base.group_no_one" invisible="1"/>
+                                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" readonly="True"/>
+                                </group>
+                            </group>
+                            <group string="Description">
+                                <field name="description" nolabel="1" attrs="{'readonly':[('entry_source', '!=' , 'order')]}"/>
+                            </group>
+                        </page>
+                        <page string="Supervisor">
+                            <group>
+                                <group>
+                                    <field name="user_id" string="Supervisor" options="{'no_create': True}" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" />
+                                    <field name="maintenance_team_id" attrs="{'invisible':[('maintenance_type','!=', 'corrective')],'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" options="{'no_create': True}" invisible="1" />
+                                    <field name="team_type" attrs="{'invisible':[('maintenance_type','!=', 'corrective')],'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" />
+                                    <field name="start_time" attrs="{'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" />
+                                </group>
+                                <group>
+                                    <field name="failure_id" attrs="{'invisible':[('maintenance_type','!=', 'corrective')],'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}" />
+                                    <field name="out_entity_id" options="{'no_create': True}" attrs="{'invisible' : [('team_type' , '!=' , 'out')],'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}"/>
+                                    <field name="dis_employee_ids" options="{'no_create': True}" widget="many2many_tags" attrs="{'invisible' : [('team_type' , '!=' , 'in')],'readonly':['|',('stage_type','=','confirm'),('entry_source', '!=' , 'order')]}"/>
+                                    <field name="employee_ids" invisible="1" options="{'no_create': True}" widget="many2many_tags" />
+                                </group>
+                            </group>
+                            <group string="Failure Description" attrs="{'invisible':[('maintenance_type','!=', 'corrective')]}">
+                                <field name="failure_desc" nolabel="1" />
+                            </group>
+                            <group string="Failure root cause" attrs="{'invisible':[('maintenance_type','!=', 'corrective')]}">
+                                <field name="failure_cause_id" nolabel="1" />
+                            </group>
+                            <group string="Maintenance Work" attrs="{'invisible':[('maintenance_type','!=', 'corrective')]}">
+                                <field name="maintenance_work" nolabel="1" />
+                            </group>
+                            <group attrs="{'invisible':[('maintenance_type','!=', 'preventive')]}">
+                                <field name="attachment" required="0" readonly="1" />
+                            </group>
+                            <group string="Tasks" attrs="{'invisible':[('maintenance_type','!=', 'preventive')]}">
+                                <field name="task_ids" nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="name" />
+                                        <field name="employee_id" required="1" />
+                                        <field name="time" widget="float_time" />
+                                        <field name="duration" widget="float_time" />
+                                        <field name="is_done" />
+                                    </tree>
+                                </field>
+                            </group>
+                            <group string="Tools">
+                                <field name="tool_ids" nolabel="1" widget="many2many_tags"/>
+                            </group>
+                            <group string="Spares">
+                                <field name="spare_ids" nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="spare_id" />
+                                        <field name="quantity" />
+                                        <field name="cost" />
+                                        <field name="total" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="maintenance_failure_view_form" model="ir.ui.view">
+        <field name="name">maintenance.failure.form</field>
+        <field name="model">maintenance.failure</field>
+        <field name="arch" type="xml">
+            <form string="Fiulre Types">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                    <group string='Related Engineers'>
+                        <field name="user_ids" nolabel="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="maintenance_summary_kanban" model="ir.ui.view">
+        <field name="name">Maintenance Summary</field>
+        <field name="model">maintenance.summary</field>
+        <field name="arch" type="xml">
+            <kanban class="oe_background_grey o_kanban_dashboard o_maintenance_summary" create="0">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="panel med">
+                            <field name="order_chart" widget="pichart" keys="total_open;total_repair;total_close" labels="Open;Repaired;Closed" backgroundColors="rgba(255, 99, 132, 0.2);rgba(54, 162, 235, 0.2);rgba(255, 206, 86, 0.2)" borderColors="rgba(255, 99, 132, 1);rgba(54, 162, 235, 1);rgba(255, 206, 86, 1)" />
+                        </div>
+                        <div class="panel med">
+                            <field name="priority_chart" widget="pichart" keys="total_low;total_normal;total_high" labels="Low;Normal;High" backgroundColors="#80ff00;#e0ff33;red" borderColors="#80ff00;#e0ff33;red" />
+                        </div>
+                        <div class="panel med">
+                            <field name="planned_chart" widget="pichart" keys="total_planned;total_unplanned" labels="Planned;Un Planned" backgroundColors="#87CEFA;#F0F8FF" borderColors="#F0F8FF;#F0F8FF" cutoutPercentage="85" />
+                        </div>
+                        <div class="panel med">
+                            <div class="boxes">
+                                <div class="box zooba">
+                                    <div class="box-title">Partially effect </div>
+                                    <div class="box-content">
+                                        <field name="total_partially_effect" />
+                                    </div>
+                                </div>
+                                <div class="box zooba">
+                                    <div class="box-title">losses of production</div>
+                                    <div class="box-content">
+                                        <field name="total_loss" />
+ units</div>
+                                </div>
+                            </div>
+                            <div class="boxes">
+                                <div class="box zooba">
+                                    <div class="box-title">Out of Service </div>
+                                    <div class="box-content">
+                                        <field name="total_outservice" />
+                                    </div>
+                                </div>
+                                <div class="box zooba">
+                                    <div class="box-title">Downtime</div>
+                                    <div class="box-content">
+                                        <field name="total_downtime" />
+ Hour(s) </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="maintenance_failure_view_tree" model="ir.ui.view">
+        <field name="name">maintenance.failure.tree</field>
+        <field name="model">maintenance.failure</field>
+        <field name="arch" type="xml">
+            <tree string="Fiulre Types">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="maintenance_failure_action" model="ir.actions.act_window">
+        <field name="name">Failure Types</field>
+        <field name="res_model">maintenance.failure</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="hr_equipment_order_action" model="ir.actions.act_window">
+        <field name="name">Maintenance Orders</field>
+        <field name="res_model">maintenance.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_user_id': uid, 'default_entry_source' : 'order'}</field>
+        <field name="domain">['|',('stage_id.stage_type','=','for_order'),('entry_source','=','order')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new maintenance request
+            </p>
+            <p>
+                Follow the process of the request and communicate with the collaborator.
+            </p>
+        </field>
+    </record>
+
+    <record id="maintenance.hr_equipment_request_action" model="ir.actions.act_window">
+        <field name="domain">[('maintenance_type','=','corrective'),('entry_source','=', 'request')]</field>
+        <field name="context">{'default_user_id': uid , 'default_maintenance_category':'unplanned'}</field>
+    </record>
+
+    <record id="action_order_tree" model="ir.actions.act_window.view">
+        <field eval="1" name="sequence"/>
+        <field name="view_mode">tree</field>
+        <field name="act_window_id" ref="hr_equipment_order_action"/>
+    </record>
+
+    <record id="action_request_tree" model="ir.actions.act_window.view">
+        <field eval="1" name="sequence"/>
+        <field name="view_mode">tree</field>
+        <field name="act_window_id" ref="maintenance.hr_equipment_request_action"/>
+    </record>
+
+
+    <record id="action_order_form" model="ir.actions.act_window.view">
+        <field eval="2" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="hr_equipment_order_view_form"/>
+        <field name="act_window_id" ref="hr_equipment_order_action"/>
+    </record>
+
+    <record id="action_request_form" model="ir.actions.act_window.view">
+        <field eval="2" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="act_window_id" ref="maintenance.hr_equipment_request_action"/>
+    </record>
+
+    <record id="maintenance_summary_dashboard_action" model="ir.actions.act_window">
+        <field name="name">Maintenance Summary</field>
+        <field name="res_model">maintenance.summary</field>
+        <field name="view_id" ref="maintenance_summary_kanban"/>
+        <field name="view_mode">kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Add a new record in the Equipment Category
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_m_request_form" name="Maintenance Orders" parent="maintenance.menu_m_request" action="hr_equipment_order_action" groups="maintenance.group_equipment_manager,base.group_user" sequence="1"/>
+
+    <menuitem action="sale.product_template_action" id="menu_product_template_action" parent="maintenance.menu_maintenance_configuration" sequence="1" />
+
+    <menuitem action="maintenance_failure_action" id="menu_failure_types" name="Failure Types" parent="maintenance.menu_maintenance_configuration" sequence="1" />
+
+    <menuitem id="maintenance_summary_dashboard_menu" name="Maintenance Summary" parent="maintenance.maintenance_reporting" groups="maintenance.group_equipment_manager,base.group_user" action="maintenance_summary_dashboard_action" />
+
+
+</odoo>

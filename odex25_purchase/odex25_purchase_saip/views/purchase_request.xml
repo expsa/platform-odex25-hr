@@ -1,0 +1,328 @@
+<odoo>
+  <data>
+    <record id="inherit_purchase_request_form" model="ir.ui.view">
+      <field name="name">purchase.request.view.form</field>
+      <field name="model">purchase.request</field>
+      <field name="inherit_id" ref="purchase_requisition_custom.purchase_request_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//header" position="inside">
+          <button string="Approve" groups="odex25_purchase_saip.purchase_request_ppmm_group" states="ppmm" name="action_CSO" type="object" class="oe_highlight"/>
+          <button string="Approve" groups="odex25_purchase_saip.purchase_request_procurement_group" states="procurement" name="action_chairman_vision_office" type="object" class="oe_highlight"/>
+          <button string="Approve" groups="purchase_custom_vro.group_po_legal_counsel" states="ceo_purchase" name="action_ceo_purchase" type="object" class="oe_highlight"/>
+          <button string="Approve" groups="purchase_custom_vro.CEO_OF_Purchasing" states="budget_approve" name="action_budget_approve" type="object" class="oe_highlight"/>
+          <button string="Approve" groups="odex25_purchase_saip.purchase_request_cso_group" states="CSO" name="action_CSO_send" type="object" class="oe_highlight"/>
+        </xpath>
+        <xpath expr="//header//button[@name='action_cs_approve']" position="replace">
+          <button groups="odex25_purchase_saip.purchase_request_chairman_vision_office_group" string="Approve" states="chairman_vision_office" name="action_cs_approve" type="object" class="oe_highlight"/>
+        </xpath>
+        <xpath expr="//header//button[@name='action_pc_confirm']" position="replace" />
+        <xpath expr="//field[@name='by_purchase']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='is_analytic']" position="attributes">
+          <attribute name="invisible">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='state']" position="replace">
+          <field name="state" widget="statusbar" statusbar_visible="draft,dm,CSO,direct_manager,send_budget,wait_budget,budget_approve,ceo_purchase,general_supervisor,waiting"/>
+        </xpath>
+        <xpath expr="//notebook//page[@name='purchase_request_info']" position="replace">
+          <page string="Items" name="purchase_request_info">
+            <field name="line_ids" attrs="{'readonly':[('state' , '!=' , 'draft')]}">
+              <tree editable="bottom">
+                <field name="name_text"/>
+                <field name="product_id" domain="[('purchase_ok', '=', True),('categ_id','child_of',parent.product_category_ids)]" options="{'no_create' : True , 'no_edit' : True ,'no_open' : True}" attrs="{'column_required':[('parent.state' , '!=' , 'draft')]}"/>
+                <field name="name_text1"/>
+                <field name="uom_id" attrs="{'column_required':[('parent.state' , '!=' , 'draft')]}"/>
+                <field name="qty" attrs="{'column_required':[('parent.state' , '!=' , 'draft')]}"/>
+                <field name="price_unit" width="250px" attrs="{'column_required':[('parent.state' , '!=', 'draft')]}"/>
+                <field name="name" invisible="1"/>
+                <field name="sum_total" width="150px" force_save="1" sum="Total amount"/>
+                <field name="max_price" force_save="1" invisible="1"/>
+                <field name="min_price" force_save="1" invisible="1"/>
+                <field name="account_id" attrs="{'column_invisible':[('parent.state','not in',['send_budget'])]}"/>
+              </tree>
+            </field>
+          </page>
+        </xpath>
+        <xpath expr="//page[@name='dep_use']" position="after">
+          <page string="For technical management use" name="technical_use">
+            <group string="For technical management use" name="technical_use" groups="purchase_requisition_custom.group_For_technical_management_use">
+              <group>
+                <field name="available" attrs="{'readonly':[('state' , '!=' , 'direct_manager')]}"/>
+                <field name="unavailable" attrs="{'readonly':[('state' , '!=' , 'direct_manager')]}"/>
+                <field name="specifications_conform" attrs="{'readonly':[('state' , '!=' , 'direct_manager')]}"/>
+                <field name="specifications_not_conform" attrs="{'readonly':[('state' , '!=' , 'direct_manager')]}"/>
+              </group>
+
+            </group>
+
+          </page>
+          <page name="strategy_management" string="Strategy Management Use" attrs="{'invisible':[('state' , 'in' , ['draft','ppmm','ppmo','dm'])]}">
+            <group name="strategy_management" string="Aligned with the scope of the draft national strategy ">
+              <group name="strategy_management_1">
+                <field name="cso_agreed" widget="radio" options="{'horizontal': true}" attrs="{'required':[('state','=','CSO')],'readonly':[('state' , '!=' , 'CSO')]}"/>
+                <field name="cso_compatible" widget="radio" options="{'horizontal': true}" attrs="{'required':[('state','=','CSO')],'readonly':[('state' , '!=' , 'CSO')]}"/>
+                <field name="is_direct_manager" attrs="{'required':[('state','=','CSO')],'readonly':[('state' , '!=' , 'CSO')]}"/>
+              </group>
+            </group>
+          </page>
+
+        </xpath>
+        <xpath expr="//notebook//page[@name='dep_use']" position="replace">
+          <page string="Deparments Use" name="dep_use">
+            <group>
+              <group string="Requesting ِAdministration" groups="purchase_requisition_custom.group_requesting_ِadministration">
+                <field name="planned_for" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="emergency" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+              </group>
+              <group  name="attachment_booklet_uploade">
+                <div class="row mb4">
+                  <div class="col-12">
+                    <button string="download Booklet" name="download_url" type="object" class="oe_highlight"/>
+                  </div>
+                </div>
+                <div class="row mb4">
+                  <div class="col-12">
+                    <label for="attachment_booklet_uploade"/>
+                    <field name="attachment_booklet_uploade" widget="binary" />
+                  </div>
+                </div>
+              </group>
+            </group>
+          </page>
+        </xpath>
+        <xpath expr="//field[@name='purchase_purpose']" position="after">
+          <field name="type_id" attrs="{'required':[('state' , '=' , 'procurement')],'readonly':[('state' , '!=' , 'procurement')]}" options="{'no_create': True}"/>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="initiative_purchase_request_inherit" model="ir.ui.view">
+      <field name="name">purchase.request.view.form</field>
+      <field name="model">purchase.request</field>
+      <field name="mode">primary</field>
+      <field name="inherit_id" ref="purchase_requisition_custom.purchase_request_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='state']" position="replace">
+          <field name="state" widget="statusbar" statusbar_visible="draft,dm,ppmo,ppmm,CSO,direct_manager,send_budget,procurement,chairman_vision_office,ceo_purchase,wait_budget,budget_approve,general_supervisor,waiting"/>
+        </xpath>
+        <xpath expr="//header" position="inside">
+          <button string="Approve" states="ppmo" groups="odex25_purchase_saip.purchase_request_ppmo_group" name="action_ppmm" type="object" class="oe_highlight"/>
+          <!-- <button string="Approve" states="ppmm" groups="odex25_purchase_saip.purchase_request_ppmm_group" name="action_CSO" type="object" class="oe_highlight"/> -->
+          <button string="Approve" groups="purchase_requisition_custom.group_direct_manger" states="direct_manager" name="action_direct_manager" type="object" class="oe_highlight"/>
+          <!-- <button string="Approve" states="procurement" name="action_chairman_vision_office" type="object" class="oe_highlight"/>
+          <button string="Approve" states="ceo_purchase" name="action_ceo_purchase" type="object" class="oe_highlight"/>
+          <button string="Approve" states="budget_approve" name="action_budget_approve" type="object" class="oe_highlight"/> -->
+        </xpath>
+
+        <xpath expr="//header//button[@name='approve_department']" position="replace" />
+
+        <xpath expr="//page[@name='dep_use']//field[@name='emergency']" position="after">
+          <field name="project_name" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+          <field name="project_duration" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+          <field name="strategic_objective" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+          <field name="other_strategic_objective" attrs="{'invisible':[('strategic_objective','!=','other')],'required':[('strategic_objective','=','other')],'readonly':[('state' , '!=' , 'draft')]}"/>
+        </xpath>
+        <xpath expr="//page[@name='dep_use']" position="after">
+          <page name="performance_planing" string="Performance and planing Management Use" attrs="{'invisible':[('state' , 'in' , ['draft','dm'])]}">
+            <group name="performance_planing" string="Performance and planing Management Use">
+              <field name="vision_program_name" attrs="{'required':[('state','=','ppmo')],'readonly':[('state' , '!=' , 'ppmo')]}"/>
+              <field name="initiative_name" attrs="{'required':[('state','=','ppmo')],'readonly':[('state' , '!=' , 'ppmo')]}"/>
+              <field name="initiative_end_date" attrs="{'required':[('state','=','ppmo')],'readonly':[('state' , '!=' , 'ppmo')]}"/>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="action_initiative_purchase_request1" model="ir.actions.act_window">
+      <field name="name">Initiative Purchase Request</field>
+      <field name="res_model">purchase.request</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_ids" eval="[(5, 0, 0),
+      (0, 0, {'view_mode': 'tree'}),
+      (0, 0, {'view_mode': 'form', 'view_id': ref('initiative_purchase_request_inherit')})]"/>
+      <field name="domain">[('purchase_request_type','=','initiative')]</field>
+      <field name="context">{'default_purchase_request_type':'initiative'}</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <h1>Initiative Purchase Request</h1>
+        </p>
+      </field>
+    </record>
+
+    <menuitem id="menu_initiative_purchase_request" name="Initiative Purchase Request" parent="purchase_custom_vro.purchase_request_root_menu" action="action_initiative_purchase_request1" groups="purchase_request_initiative_group" sequence="2"/>
+
+    <record id="view_ordinary_purchase_request_inherit" model="ir.ui.view">
+      <field name="name">purchase.request.view.form</field>
+      <field name="model">purchase.request</field>
+      <field name="mode">primary</field>
+      <field name="inherit_id" ref="purchase_requisition_custom.purchase_request_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//header" position="inside">
+          <button string="Approve" groups="odex25_purchase_saip.purchase_request_procurement_unit_group" name="action_procurement_unit" states="procurement_unit" type="object" class="oe_highlight"/>
+        </xpath>
+        <xpath expr="//header//button[@name='action_CSO']" position="replace">
+          <button string="Approve" groups="odex25_purchase_saip.purchase_request_ppmm_group" states="ppmm,dm1" name="action_CSO" type="object" class="oe_highlight"/>
+        </xpath>
+        <xpath expr="//field[@name='state']" position="replace">
+          <field name="state" widget="statusbar" statusbar_visible="draft,procurement_unit,ppmm,dm1,CSO,direct_manager,send_budget,procurement,ceo_purchase,wait_budget,budget_approve,general_supervisor,waiting"/>
+        </xpath>
+        <xpath expr="//field[@name='type_id']" position="replace"/>
+        <xpath expr="//notebook//page[@name='dep_use']" position="after">
+          <page string="Deparments Use Base info" name="base_info_dep_use">
+            <group>
+              <group string="Delivery Info" name="DeliveryInfo">
+                <field name="tender_name" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="purpose_of_tender" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="other_details" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="is_delivered" required="1" widget="radio" options="{'horizontal': true}" />
+                <field name="samples_delivery_address" attrs="{'readonly':[('state' , '!=' , 'draft')],'invisible':[('is_delivered' , '!=' , 'yes')],'required':[('is_delivered' , '=' , 'yes')]}"/>
+                <field name="delivery_building" attrs="{'readonly':[('state' , '!=' , 'draft')],'invisible':[('is_delivered' , '!=' , 'yes')],'required':[('is_delivered' , '=' , 'yes')]}"/>
+                <field name="delivery_floor" attrs="{'readonly':[('state' , '!=' , 'draft')],'invisible':[('is_delivered' , '!=' , 'yes')],'required':[('is_delivered' , '=' , 'yes')]}"/>
+                <field name="delivery_unit" attrs="{'readonly':[('state' , '!=' , 'draft')],'invisible':[('is_delivered' , '!=' , 'yes')],'required':[('is_delivered' , '=' , 'yes')]}"/>
+                <field name="date_time" attrs="{'readonly':[('state' , '!=' , 'draft')],'invisible':[('is_delivered' , '!=' , 'yes')],'required':[('is_delivered' , '=' , 'yes')]}"/>
+              </group>
+              <group name="Info">
+                <field name="activities" required="1"  widget="many2many_tags" options="{'no_create': True}" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="project_duration" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="activity_description" style="white-space: normal;word-break: break-word;" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="competion_description" required="1" style="white-space: normal;word-break: break-word;" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="list_documentaries" required="1" style="white-space: normal;word-break: break-word;" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="attachment_scope_project" required="1" widget="binary" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                <field name="program_action" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+              </group>
+            </group>
+            <group>
+              <group></group>
+              <group string="Project Location">
+                <group >
+                  <field name="work_location_state" />
+                  <field name="work_location_city" />
+                </group>
+                <group >
+                  <field name="work_location_district" />
+                  <field name="work_location_GPS" />
+                </group>
+              </group>
+            </group>
+          </page>
+
+          <page name="procurement_use" string="Procurement use">
+            <group>
+              <group>
+                <field name="type_id" attrs="{'required':[('state','=','procurement_unit')],'readonly':[('state','!=','procurement_unit')]}"/>
+                <field name="document_cost" attrs="{'readonly':[('state','!=','procurement_unit')]}"/>
+                <field name="body_technical" attrs="{'readonly':[('state','!=','procurement_unit')]}"/>
+                <field name="is_competition_divisible" widget="radio" options="{'horizontal': true}" attrs="{'required':[('state','=','procurement_unit')],'readonly':[('state' , '!=' , 'procurement_unit')]}"/>
+                <field name="classify_des" attrs="{'invisible':[('is_competition_divisible','!=','yes')],'required':[('is_competition_divisible','=','yes')],'readonly':[('state','!=','procurement_unit')]}"/>
+
+              </group>
+              <group>
+                <field name="pre_qualification" widget="radio" options="{'horizontal': true}" attrs="{'required':[('state','=','procurement_unit')],'readonly':[('state' , '!=' , 'procurement_unit')]}"/>
+                <field name="initial_guarantee_percentage" attrs="{'invisible':[('pre_qualification','!=','yes')],'required':[('pre_qualification','=','yes')],'readonly':[('state','!=','procurement_unit')]}"/>
+                <field name="applying_address" attrs="{'invisible':[('pre_qualification','!=','yes')],'required':[('pre_qualification','=','yes')],'readonly':[('state','!=','procurement_unit')]}"/>
+                <field name="alternative_offer_allowed" widget="radio" options="{'horizontal': true}" attrs="{'required':[('state','=','procurement_unit')],'readonly':[('state' , '!=' , 'procurement_unit')]}"/>
+              </group>
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="action_ordinary_purchase_request" model="ir.actions.act_window">
+      <field name="name">Ordinary Purchase Request</field>
+      <field name="res_model">purchase.request</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_ids" eval="[(5, 0, 0),
+      (0, 0, {'view_mode': 'tree'}),
+      (0, 0, {'view_mode': 'form', 'view_id': ref('view_ordinary_purchase_request_inherit')})]"/>
+      <field name="domain">[('purchase_request_type','=','ordinary')]</field>
+      <field name="context">{'default_purchase_request_type':'ordinary'}</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <h1>Ordinary Purchase Request</h1>
+        </p>
+      </field>
+    </record>
+
+    <menuitem id="menu_ordinary_purchase_request" name="Ordinary Purchase Request" parent="purchase_custom_vro.purchase_request_root_menu" action="action_ordinary_purchase_request" groups="purchase_request_ordinary_group" sequence="1"/>
+
+    <record id="view_emarket_purchase_request_inherit" model="ir.ui.view">
+      <field name="name">purchase.request.view.form</field>
+      <field name="model">purchase.request</field>
+      <field name="mode">primary</field>
+      <field name="inherit_id" ref="purchase_requisition_custom.purchase_request_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='state']" position="replace">
+          <field name="state" widget="statusbar" statusbar_visible="draft,dm,CSO,direct_manager,send_budget,wait_budget,budget_approve,procurement,ceo_purchase,general_supervisor,waiting"/>
+        </xpath>
+        <xpath expr="//notebook//page[@name='dep_use']//group[@name='attachment_booklet_uploade']" position="replace"/>
+
+      </field>
+    </record>
+
+    <record id="action_emarket_purchase_request" model="ir.actions.act_window">
+      <field name="name">E-market Purchase Request </field>
+      <field name="res_model">purchase.request</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_ids" eval="[(5, 0, 0),
+      (0, 0, {'view_mode': 'tree'}),
+      (0, 0, {'view_mode': 'form', 'view_id': ref('view_emarket_purchase_request_inherit')})]"/>
+      <field name="domain">[('purchase_request_type','=','emarket')]</field>
+      <field name="context">{'default_purchase_request_type':'emarket'}</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <h1>E-market Purchase Request </h1>
+        </p>
+      </field>
+    </record>
+
+    <menuitem id="menu_emarket_purchase_request" name="E-market Purchase Request" parent="purchase_custom_vro.purchase_request_root_menu" action="action_emarket_purchase_request" groups="purchase_request_emarket_group" sequence="3" />
+
+    <record id="purchase_requisition_custom.purchase_request_menu" model="ir.ui.menu">
+      <!-- Use the special many2many value syntax to add a child record,
+             and the `ref()` method to resolve the group XML ID -->
+      <field name="groups_id" eval="[(5,0,0),(4,ref('purchase_request_all_group'))]"/>
+      <field eval="5" name="sequence"/>
+    </record>
+
+    <record id="view_national_strategy_purchase_request_inherit" model="ir.ui.view">
+      <field name="name">purchase.request.view.form</field>
+      <field name="model">purchase.request</field>
+      <field name="mode">primary</field>
+      <field name="inherit_id" ref="purchase_requisition_custom.purchase_request_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='state']" position="replace">
+          <field name="state" widget="statusbar" statusbar_visible="draft,dm,CSO,direct_manager,send_budget,wait_budget,budget_approve,procurement,ceo_purchase,general_supervisor,waiting"/>
+        </xpath>
+        <xpath expr="//page[@name='dep_use']//field[@name='emergency']" position="after">
+          <field name="project_name" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+          <field name="sub_project" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+          <field name="project_duration" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+          <field name="strategic_objective" required="1" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+          <field name="other_strategic_objective" attrs="{'invisible':[('strategic_objective','!=','other')],'required':[('strategic_objective','=','other')],'readonly':[('state' , '!=' , 'draft')]}"/>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="action_national_strategy_purchase_request" model="ir.actions.act_window">
+      <field name="name">National Strategy Purchase Request </field>
+      <field name="res_model">purchase.request</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_ids" eval="[(5, 0, 0),
+      (0, 0, {'view_mode': 'tree'}),
+      (0, 0, {'view_mode': 'form', 'view_id': ref('view_national_strategy_purchase_request_inherit')})]"/>
+      <field name="domain">[('purchase_request_type','=','strategy')]</field>
+      <field name="context">{'default_purchase_request_type':'strategy'}</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          <h1>National Strategy Purchase Request</h1>
+        </p>
+      </field>
+    </record>
+
+    <menuitem id="menu_national_strategy_purchase_request" name="National Strategy Purchase Request" parent="purchase_custom_vro.purchase_request_root_menu" action="action_national_strategy_purchase_request" groups="purchase_request_national_strategy_group" sequence="4" />
+
+  </data>
+</odoo>

@@ -1,0 +1,27 @@
+.line-element-hidden {
+    display: none;
+} 
+
+.line-image {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+}
+
+.pos .order-row .actions .button {
+    border: 1px solid #cecece;
+    background-color: #e6e6e6;
+    padding: 5px;
+    margin-right: 5px;
+    color: #555555;
+}
+.pos .order-row .actions .button:active {
+    background-color: black !important;
+    border-color: black;
+    color: white;
+}
+.pos .order-row .actions .button:hover {
+    background-color: #f0eeee;
+}
+

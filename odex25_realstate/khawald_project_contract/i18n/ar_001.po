@@ -1,0 +1,269 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* khawald_project_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-06 15:13+0000\n"
+"PO-Revision-Date: 2022-04-06 15:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_tree_view
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_search_view
+msgid "Archived"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_search_view
+msgid "Associated Partner"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_search_view
+msgid "Commercial Entity"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: khawald_project_contract
+#: model:ir.model.fields,field_description:khawald_project_contract.field_contract_contract__con_type
+msgid "Contract Type"
+msgstr "نوع العقد"
+
+#. module: khawald_project_contract
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project__con_contract_counts
+#: model:ir.model.fields.selection,name:khawald_project_contract.selection__contract_contract__con_type__contractor
+#: model:ir.model.fields.selection,name:khawald_project_contract.selection__line_contract_installment__payment_type__contractor
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_form_view_contractor
+msgid "Contractor"
+msgstr "المقاول"
+
+#. module: khawald_project_contract
+#: code:addons/khawald_project_contract/models/project_contract_custom.py:0
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project__cont_contract_ids
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.khawald_edit_project_customs
+#, python-format
+msgid "Contractor Contract"
+msgstr "عقود المقاولين"
+
+#. module: khawald_project_contract
+#: code:addons/khawald_project_contract/models/project_contract_custom.py:0
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project__con_installment_line_ids
+#, python-format
+msgid "Contractor Payment"
+msgstr "فعات المقاولين"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.khawald_edit_project_customs
+msgid "Create Contractor Contract"
+msgstr "إنشاء عقد مقاول"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.khawald_edit_project_customs
+msgid "Create Engineering Contract"
+msgstr "إنشاء عقد مكتب هندسي"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_search_view
+msgid "Date End"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model:ir.model.fields,field_description:khawald_project_contract.field_contract_contract__display_name
+#: model:ir.model.fields,field_description:khawald_project_contract.field_line_contract_installment__display_name
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: khawald_project_contract
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project__eng_contract_counts
+#: model:ir.model.fields.selection,name:khawald_project_contract.selection__contract_contract__con_type__engineering
+#: model:ir.model.fields.selection,name:khawald_project_contract.selection__line_contract_installment__payment_type__engineering
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_form_view_engineering
+msgid "Engineering"
+msgstr "مكتب هندسي"
+
+#. module: khawald_project_contract
+#: code:addons/khawald_project_contract/models/project_contract_custom.py:0
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project__eng_contract_ids
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.khawald_edit_project_customs
+#, python-format
+msgid "Engineering Contract"
+msgstr "عقود المكتب الهندسي"
+
+#. module: khawald_project_contract
+#: model:ir.actions.act_window,name:khawald_project_contract.action_project_installment_engineering
+#: model:ir.ui.menu,name:khawald_project_contract.engineering_installment_menu
+msgid "Engineering Installment"
+msgstr "دفعات المكتب الهندسي"
+
+#. module: khawald_project_contract
+#: code:addons/khawald_project_contract/models/project_contract_custom.py:0
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project__eng_installment_line_ids
+#, python-format
+msgid "Engineering Payment"
+msgstr "دفعات المكتب الهندسي"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_view_task_search_form
+msgid "Expired Task"
+msgstr "مهمة منتهية"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_search_view
+msgid "Finished"
+msgstr "منتهي"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_search_view
+msgid "Group By..."
+msgstr "تجميع حسب"
+
+#. module: khawald_project_contract
+#: model:ir.model.fields,field_description:khawald_project_contract.field_contract_contract__id
+#: model:ir.model.fields,field_description:khawald_project_contract.field_line_contract_installment__id
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_search_view
+msgid "In progress"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model:ir.actions.act_window,name:khawald_project_contract.action_project_installment_contract_lines
+msgid "Installment"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model:ir.model,name:khawald_project_contract.model_line_contract_installment
+msgid "Installment Project"
+msgstr "دفعات المشاريع"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.khawald_contract_contract_form_view
+msgid "Installments"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model:ir.model.fields,field_description:khawald_project_contract.field_contract_contract____last_update
+#: model:ir.model.fields,field_description:khawald_project_contract.field_line_contract_installment____last_update
+#: model:ir.model.fields,field_description:khawald_project_contract.field_project_project____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.contract_contract_search_view
+msgid "Next Invoice"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_form_view
+msgid "Payment Info"
+msgstr "معلومات الدفع"
+
+#. module: khawald_project_contract
+#: model:ir.model.fields,field_description:khawald_project_contract.field_line_contract_installment__payment_type
+msgid "Payment Type"
+msgstr "نوع الدفعة"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_form_view
+msgid "Planned Date"
+msgstr "التاريخ المخطط"
+
+#. module: khawald_project_contract
+#: model:ir.model.fields,field_description:khawald_project_contract.field_contract_contract__project_id
+#: model:ir.model.fields,field_description:khawald_project_contract.field_line_contract_installment__project_id
+msgid "Project"
+msgstr "المشروع"
+
+#. module: khawald_project_contract
+#: model:ir.model,name:khawald_project_contract.model_contract_contract
+msgid "Project Contract"
+msgstr "عقود المشاريع"
+
+#. module: khawald_project_contract
+#: model:ir.actions.act_window,name:khawald_project_contract.project_contractor_contract_action
+msgid "Project Contractor Contract"
+msgstr "عقود المقاولين"
+
+#. module: khawald_project_contract
+#: model:ir.actions.act_window,name:khawald_project_contract.project_engineering_contract_action
+msgid "Project Engineering Contract"
+msgstr "عقود المكتب الهندسي"
+
+#. module: khawald_project_contract
+#: model:ir.model,name:khawald_project_contract.model_project_project
+msgid "Project Kh Custom"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_form_view
+msgid "To Pay"
+msgstr "للدفع"
+
+#. module: khawald_project_contract
+#: code:addons/khawald_project_contract/models/project_contract_custom.py:0
+#, python-format
+msgid "To Proceed,Contract Value Cannot be zero"
+
+#. module: khawald_project_contract
+#: model:ir.actions.act_window,name:khawald_project_contract.action_project_installment_subcontractor
+#: model:ir.ui.menu,name:khawald_project_contract.subcontractor_installment_menu
+msgid "Subcontractor Installment"
+msgstr "دفعات المقاوليين"
+
+#. module: khawald_project_contract
+#: code:addons/khawald_project_contract/models/project_contract_custom.py:0
+#: code:addons/khawald_project_contract/models/project_contract_custom.py:0
+#, python-format
+msgid "To Proceed,Please Insert Engineering Office Payment"
+msgstr ""
+
+#. module: khawald_project_contract
+#: code:addons/khawald_project_contract/models/project_contract_custom.py:0
+#, python-format
+msgid "To Proceed,Please Insert Subcontractor"
+msgstr ""
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_tree_view
+msgid "Total Amount"
+msgstr "الإجمالي"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_tree_view
+msgid "Total Tax"
+msgstr "الإجمالي بالضريبة"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_form_view
+msgid "Warrnty Info"
+msgstr "معلومات الضمان"
+
+#. module: khawald_project_contract
+#: model_terms:ir.ui.view,arch_db:khawald_project_contract.kh_project_contract_installment_form_view
+msgid "Installment Name"
+msgstr "إسم القسط"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_purchaseorder_document_area_uom" inherit_id="purchase.report_purchaseorder_document">
+        <xpath expr="//span[@t-field='line.product_qty']/ancestor-or-self::td[hasclass('text-right')]" position="inside">
+            <span t-if="line.product_sold_by_area">( <span t-field="line.length"/> x <span t-field="line.width"/> )</span>
+        </xpath>
+    </template>
+
+</odoo>

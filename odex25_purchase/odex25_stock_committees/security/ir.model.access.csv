@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_committees1_odex25_stock_committees,odex25_stock_committees1,model_inventory_committees,base.group_user,1,1,1,1
+access_committees2_odex25_stock_committees,odex25_stock_committees2,model_item_return_committees,base.group_user,1,1,1,1
+access_committees3_odex25_stock_committees,odex25_stock_committees3,model_item_destrcution_committees,base.group_user,1,1,1,1
+access_committees11_odex25_stock_committees,odex25_stock_committees11,model_res_members,base.group_user,1,1,1,1

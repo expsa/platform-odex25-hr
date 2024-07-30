@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="maj_partner_sequence_cron" model="ir.cron">
+            <field name="name">MAJ Old Partner Sequence</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="type">ir.action.server</field>
+            <field name="state">code</field>
+            <field name="code">
+                model.cron_action_to_update_old_sequence('field_name')
+                # If you need to inject specific value from specific field just give his name as a string
+            </field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active">False</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">months</field>
+            <field name="numbercall">-1</field>
+        </record>
+
+    </data>
+</odoo>

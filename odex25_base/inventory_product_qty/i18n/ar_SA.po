@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* inventory_product_qty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20201201\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-25 06:20+0000\n"
+"PO-Revision-Date: 2023-06-25 06:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: inventory_product_qty
+#: model:ir.model.fields,field_description:inventory_product_qty.field_stock_move_line_new_line
+msgid "New Line"
+msgstr "خط جديد"
+
+#. module: inventory_product_qty
+#: model:ir.model,name:inventory_product_qty.model_stock_move_line
+msgid "Packing Operation"
+msgstr "عملية التعبئة"
+
+#. module: inventory_product_qty
+#: model:ir.model.fields,field_description:inventory_product_qty.field_stock_move_line_qty_warehouse
+msgid "Qty After move"
+msgstr "الكمية بعد التحرك"
+
+#. module: inventory_product_qty
+#: model:ir.model.fields,field_description:inventory_product_qty.field_stock_move_line_first_qty
+msgid "Qty before Move"
+msgstr "الكمية قبل التحرك"
+
